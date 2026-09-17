@@ -2,7 +2,7 @@
 
 **One OpenAlex ID. Conflicting sources. An evidence trail you can inspect.**
 
-SourceCheck is a working, read-only audit tool built for Shrey Patel's OpenAlex application. It checks whether a work's DOI-bearing sources agree on bibliographic identity, exposes disagreements, and exports a review packet with captured HTTP evidence.
+SourceCheck is a working, read-only audit tool built for Shrey Patel's OpenAlex application. It collects DOI-source metadata, flags title disagreements, displays creator and relationship context, and exports a review packet with captured HTTP evidence. It does not automatically decide publication identity.
 
 [Try the live tool](https://openalex-repair-desk.vercel.app/) · [Read the evidence report](docs/SourceCheck-Evidence-Report.pdf) · [Full documentation](docs/REAL-PROBLEM.md) · [Source repository](https://github.com/Shreyp087/OpenAlex)
 
@@ -15,6 +15,14 @@ The record's nine author names and nine ORCIDs match the MizAR paper. Its five D
 This is preserved public data, not an injected fault. SourceCheck solves the detection and evidence-assembly step; it does **not** claim to have repaired OpenAlex, established the internal cause, or safely split the upstream work.
 
 A follow-up check of the first 30 numbered DOI suffixes from ITP 2023 found **25 normalized-title agreements and five disagreements**. This was a targeted cohort chosen after discovery, not a random sample or an estimate of OpenAlex's error rate. Details, original responses, and limits are in [the technical documentation](docs/REAL-PROBLEM.md).
+
+In plain language: the catalogue card mixes the barcode and authors of one paper with the title of another. SourceCheck helps an engineer follow those claims back to their sources before deciding how to correct the record.
+
+## Where it fits, and where it may not
+
+An engineer can paste the ID, run **Check live**, review the source-specific titles and creator context, and export the evidence. Internal investigation, deciding a safe correction, applying it, and checking downstream effects remain maintainer work. [Walk through the concrete support workflow](docs/REAL-PROBLEM.md#5-a-concrete-support-engineer-workflow).
+
+OpenAlex already has an [agent-assisted correction process](https://help.openalex.org/access/fixing-errors/). This tool could contribute repeatable evidence collection; it has not established that an equivalent capability is missing or that another interface saves time. Legitimate versions can cause review flags, and same-title/wrong-author records can pass the automatic title check. The [critical assessment and proposed pilot](docs/REAL-PROBLEM.md#6-challenge-the-value) describe how to evaluate incremental usefulness, including when not to adopt it. No pilot has been run.
 
 ## Use it
 
@@ -84,7 +92,7 @@ The cohort counts are comparisons against DOI-registration metadata, not adjudic
 | `tests/test_sourcecheck.py` | Audit behavior, transport, and conservative decision checks. |
 | `tests/test_evidence.py` | Tamper detection and offline evidence verification. |
 | [docs/REAL-PROBLEM.md](docs/REAL-PROBLEM.md) | Problem, solution, proof, reproduction, and limits. |
-| [docs/SourceCheck-Evidence-Report.pdf](docs/SourceCheck-Evidence-Report.pdf) | Five-page application companion with clickable evidence sources. |
+| [docs/SourceCheck-Evidence-Report.pdf](docs/SourceCheck-Evidence-Report.pdf) | Eight-page companion: plain explanation, evidence, workflow, critical assessment, and reproduction. |
 | [docs/application-note.md](docs/application-note.md) | Submission note and draft application answers. |
 | [docs/evidence-research.md](docs/evidence-research.md) | Discovery and sampling log, including a reported issue that no longer reproduced. |
 

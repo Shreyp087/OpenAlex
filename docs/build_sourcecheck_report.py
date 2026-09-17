@@ -1,4 +1,4 @@
-"""Build the five-page evidence report. Optional authoring dependency: reportlab."""
+"""Build the eight-page evidence report. Optional authoring dependency: reportlab."""
 import json
 from pathlib import Path
 from xml.sax.saxutils import escape
@@ -83,7 +83,7 @@ def page(n, label):
     rule(747, thickness=1.2)
     rule(49)
     txt("SHREY PATEL / OPENALEX APPLICATION / 17 SEPT 2026", 36, 32, 7.1, "Mono", GRAY)
-    txt(f"{n:02d} / 05", 537, 32, 7.1, "Mono", GRAY)
+    txt(f"{n:02d} / 08", 537, 32, 7.1, "Mono", GRAY)
 
 
 # 01: Lead with a real, reviewable finding.
@@ -109,8 +109,25 @@ link("LIVE TOOL", "https://openalex-repair-desk.vercel.app/", 36, 65)
 link("SOURCE + EVIDENCE", "https://github.com/Shreyp087/OpenAlex", 202, 65)
 C.showPage()
 
-# 02: Show why this is more than a title typo, and preserve real versions.
-page(2, "01 / SOURCE LEDGER")
+# 02: Explain the idea before asking the reader to inspect metadata.
+page(2, "01 / IN PLAIN LANGUAGE")
+txt("THINK OF A LIBRARY CATALOG CARD", 36, 704, 32, "Display")
+y = para("A catalog card tells you a book's title, who wrote it, and where to find it. OpenAlex does something similar for research papers. A DOI acts like a persistent barcode for a particular research object.", 36, 680, 540, 12, 17)
+y = para("Now imagine one card carrying <b>Book A's barcode and authors, Book B's title, and links to Book C</b>. Correcting the printed title would make the card look better, but the mixed-up links would still be there.", 36, y, 540, 12, 17)
+rule(y - 2, thickness=1.2)
+y = section("WHAT WE ACTUALLY FOUND", y - 25)
+y = para("The real record W4385245566 has the DOI and nine authors of <b>MizAR 60 for Mizar 50</b>. Its title is <b>Exploiting Generative AI to Scale up Intelligent Tutoring Systems</b>, a different paper with two different authors. It also links to a hardware-compression paper by another author.", 36, y, 540, 11, 16)
+y = para("There are five DOI links: two Dagstuhl papers and three linked records for the hardware paper. The hardware records explicitly relate its versions. That relationship is legitimate. The concern is the three different publication families appearing on one work record.", 36, y, 540, 11, 16)
+y = section("WHAT SOURCECHECK DOES", y - 5)
+y = para("You give it a work ID or DOI. It checks the attached DOI records against public registration metadata, shows which source says what, and saves the evidence. For this case, it gives an engineer a clear reason to review the source associations instead of guessing a replacement title.", 36, y, 540, 11, 16)
+y = section("WHY IT STOPS BEFORE EDITING", y - 5)
+y = para("A safe correction may require separating works and reviewing their citations or other derived data. This tool has neither the internal history nor authority to make those decisions. It supplies a review packet to the people who do. It never writes to OpenAlex.", 36, y, 540, 11, 16)
+y = para("<b>The practical benefit to test:</b> less repeated source lookup and a handoff another engineer can reproduce. The detection works on the captured case. Time saved and usefulness in a real support queue have not yet been measured.", 36, y, 540, 11, 16)
+link("INSPECT THE REAL RECORD", "https://api.openalex.org/works/W4385245566", 36, y - 2, 8.2)
+C.showPage()
+
+# 03: Show why this is more than a title typo, and preserve real versions.
+page(3, "02 / SOURCE LEDGER")
 txt("THREE FAMILIES, ONE RECORD", 36, 704, 35, "Display")
 para("Every DOI below is present in the captured OpenAlex locations. Titles and creators come from each DOI's DataCite record. The two Dagstuhl publisher pages corroborate their own DOI, title, and creator metadata.", 36, 680, 540, 10.5, 15)
 
@@ -134,8 +151,8 @@ y = section("WHY A TITLE-ONLY PATCH IS INSUFFICIENT", y - 3)
 para("Overwriting the title would leave unrelated locations attached. A maintainer must examine the source associations and any affected citations, topics, or extracted text. This investigation has not established which downstream fields need rebuilding.", 36, y, 540, 10.5, 15)
 C.showPage()
 
-# 03: Explain actual product behavior and the point of conservative decisions.
-page(3, "02 / THE SOLUTION")
+# 04: Explain actual product behavior and the point of conservative decisions.
+page(4, "03 / THE SOLUTION")
 txt("MAKE THE CONFLICT REVIEWABLE", 36, 704, 35, "Display")
 y = para("SourceCheck accepts a DOI or OpenAlex work ID. The Python CLI runs locally; the shared site performs live checks in the browser. Both preserve a clear boundary between source disagreement and a decision to edit a scholarly record.", 36, 680, 540, 11, 16)
 
@@ -158,8 +175,46 @@ y = para("The invariant is still clear: a Cites edge must not, on its own, equat
 link("DATACITE RELATIONSHIP SEMANTICS", "https://support.datacite.org/docs/connecting-to-works", 36, y - 3, 8)
 C.showPage()
 
-# 04: A measured cohort, honest denominator, executable reproduction.
-page(4, "03 / REPRODUCTION")
+# 05: Make the handoff concrete without inventing a ticket or completed fix.
+page(5, "04 / SUPPORT WORKFLOW")
+txt("FROM REPORT TO REVIEWED CORRECTION", 36, 704, 31, "Display")
+y = para("<b>Illustrative ticket using the real record:</b> “The DOI on W4385245566 points to the MizAR paper, but the title is about tutoring.” This is a walkthrough, not a ticket that was submitted or handled by OpenAlex.", 36, 679, 540, 10.7, 15.5, gap=13)
+workflow = [
+    ("01", "PASTE THE ID", "The support engineer enters W4385245566. The captured case is available immediately; the engineer chooses Check live to inspect the current public record."),
+    ("02", "CHECK THE SOURCES", "The tool fetches the work and up to six selected DOI records. It records responses and reports review, aligned, or inconclusive. Fetch failures and incomplete coverage remain visible."),
+    ("03", "READ THE CONFLICT", "The engineer compares three title families and checks the legitimate Zenodo version links. Creator names and ORCIDs add context; the automated outcome is based on registered main-title comparisons, not an author-identity decision."),
+    ("04", "EXPORT THE HANDOFF", "The engineer downloads the JSON report with its receipts and the Markdown triage note. Another person can inspect the claims, follow the source URLs, and verify the captured response hashes."),
+    ("05", "MAINTAINER REVIEW / FUTURE HUMAN ACTION", "An authorized maintainer checks internal source history, decides whether a split or other correction is justified, and uses OpenAlex's existing process. SourceCheck does not perform this step."),
+    ("06", "RECHECK / AFTER A FUTURE CORRECTION", "After any approved change is deployed, the engineer runs the same ID again and compares a new receipt with the original. A clean title check alone does not certify that all affected data has been repaired."),
+]
+for n, title, body in workflow:
+    rule(y - 1, color=LINE)
+    txt(n, 36, y - 24, 23, "Display", RED if int(n) < 5 else GRAY)
+    txt(title, 78, y - 18, 8.4, "SansBold")
+    y = para(body, 78, y - 27, 498, 10, 14, gap=12)
+para("Steps 1-4 use the implemented artifact. Steps 5-6 describe a possible follow-through; no upstream correction or end-to-end support outcome has been demonstrated.", 36, y - 4, 540, 9.8, 14, color=GRAY)
+C.showPage()
+
+# 06: Challenge the value proposition; keep proposed evaluation distinct from proof.
+page(6, "05 / DOES IT ADD VALUE?")
+txt("WOULD THIS HELP THE TEAM?", 36, 704, 36, "Display")
+y = para("OpenAlex already documents agents that read tickets, verify proposed corrections against evidence, apply them, or escalate. SourceCheck is a small external companion: deterministic comparisons and a portable evidence packet. It is not a new curation platform or evidence that the team lacks these capabilities.", 36, 680, 540, 10.5, 15)
+link("OPENALEX'S EXISTING CORRECTION WORKFLOW", "https://help.openalex.org/access/fixing-errors/", 36, y - 2, 7.9)
+y = section("WHERE IT CAN FAIL", y - 33)
+y = para("<b>False flags:</b> legitimate versions, translations, alternate titles, or registry updates can make titles differ. A reviewer must inspect the relationships. A differing title is not proof that sources belong to different works.", 36, y, 540, 10.1, 14.3)
+y = para("<b>Missed problems:</b> a same-title record with wrong authors can pass this title-led audit. Creator context is not a full identity model. Records without DOIs, non-DOI locations, and sources beyond the six-DOI cap are outside a complete check.", 36, y, 540, 10.1, 14.3)
+y = para("<b>Illustrative rule limits:</b> stripping punctuation makes “C++ for Biology” and “C for Biology” compare equal. A separately stored subtitle can create a harmless title difference. These are analytical counterexamples, not observed OpenAlex defects. Publisher-page and nine-ORCID verification are case-specific evidence, not general live-check features.", 36, y, 540, 10.1, 14.3)
+y = para("<b>Evidence limits:</b> registry metadata can be wrong and may come from the publisher's own feed. Agreement is not independent proof. The internal cause of this case is unknown. No support-time saving, detector precision, or production reliability has been measured.", 36, y, 540, 10.1, 14.3)
+rule(y - 2, thickness=1.2)
+y = section("PROPOSED PILOT / NOT RUN", y - 25)
+y = para("Take <b>20 consecutive eligible DOI-bearing metadata tickets</b>. Using predefined complexity criteria, form ten matched pairs. Randomly assign one ticket per pair to the team's current agents and tooling, and one to that same process plus SourceCheck: ten per method. Keep every included case and failure in the results.", 36, y, 540, 10.1, 14.3)
+y = para("Balance engineer assignments across methods; no engineer handles the same ticket twice. Have independent adjudicators review standardized, de-branded outputs without knowing the method. This avoids a same-ticket crossover where the first investigation teaches the second.", 36, y, 540, 10.1, 14.3)
+y = para("Measure <b>active engineer minutes</b>, <b>useful newly confirmed findings</b>, <b>false flags</b>, and <b>reproduction completeness</b>. Report each case and uncertainty; twenty tickets are an exploratory pilot, not a corpus-wide accuracy benchmark.", 36, y, 540, 10.1, 14.3)
+y = para("<b>Decision rule:</b> revise or drop the tool if it adds time without additional confirmed findings or more reproducible evidence. Do not adopt it simply because the demo found a real conflict.", 36, y, 540, 10.1, 14.3)
+C.showPage()
+
+# 07: A measured cohort, honest denominator, executable reproduction.
+page(7, "06 / REPRODUCTION")
 txt("30 RECORDS. FIVE DISAGREEMENTS.", 36, 704, 33, "Display")
 para("A targeted check of ITP 2023 DOI suffixes 1-30 found 25 normalized-title agreements and five disagreements. All 60 singleton responses ultimately returned HTTP 200; five transient failures were retried once and logged.", 36, 680, 540, 10.5, 15)
 rect(36, 584, 450, 29, INK)
@@ -186,8 +241,8 @@ y = para("A later live response may differ because the public record has been co
 link("COHORT + DISCOVERY LOG", "https://github.com/Shreyp087/OpenAlex/blob/main/docs/evidence-research.md", 36, y - 3, 8.2)
 C.showPage()
 
-# 05: The exact receipts; complete hashes remain copyable and links actionable.
-page(5, "04 / RECEIPTS + LIMITS")
+# 08: The exact receipts; complete hashes remain copyable and links actionable.
+page(8, "07 / RECEIPTS + LIMITS")
 txt("PROOF YOU CAN INSPECT", 36, 704, 36, "Display")
 para("Eight original response bodies independently captured on 17 September 2026, 17:22:15-17:22:17 UTC. All returned HTTP 200. Click a filename to inspect its live source. The repository manifest retains exact timestamps, URLs, status, byte counts, and hashes.", 36, 680, 540, 10.2, 14.5)
 y = 609

@@ -2,11 +2,23 @@
 
 **Prepared for Shrey Patel's OpenAlex application. Evidence captured September 17, 2026 (UTC).**
 
-SourceCheck checks a practical question: **do the source records attached to one OpenAlex work describe the same research?** It produces a review packet with the original responses, the conflicting fields, and the evidence needed to investigate. It does not change OpenAlex.
+SourceCheck helps investigate a practical question: **do the source records attached to one OpenAlex work describe the same research?** Its automatic rules flag title disagreements; creator names and typed relationships provide context for a reviewer. It produces a review packet with original responses and the evidence needed to investigate. It does not decide publication identity or change OpenAlex.
 
 This project started with a real public record, not an injected error. The earlier Repair Desk's synthetic replay scenarios are not evidence for the findings below.
 
-## 1. The verified problem
+## 1. The problem in plain language
+
+Think of OpenAlex as a library catalogue. Each research paper has a catalogue card listing its title, authors, DOI, and places to read it. A DOI is like a permanent barcode for a research object: it lets us look up which publication the identifier belongs to.
+
+We found a card with **paper A's DOI and authors, paper B's title, and links to a third publication family**. A person or research agent trusting that combination could produce a citation that does not describe one coherent paper.
+
+We followed the links back to the DOI registration records and the publisher. Those checks established the disagreement in the captured case. We also found legitimate version links: three different DOIs really did describe versions of the same publication. That is why counting DOIs or comparing spelling alone cannot settle identity.
+
+Replacing the title would leave the conflicting links attached. The solution we could responsibly build from outside OpenAlex was therefore a **source comparison and evidence-collection tool**: enter a work ID or DOI, fetch its sources, inspect disagreements, and download a packet another engineer can verify. The maintainer still decides whether and how to correct the catalogue.
+
+This is a working investigation aid. We have not established that no similar tool exists, that OpenAlex needs another curation platform, or that this implementation should be adopted in production.
+
+## 2. The verified problem
 
 At capture time, [OpenAlex work W4385245566](https://api.openalex.org/works/W4385245566) had:
 
@@ -31,7 +43,7 @@ The Zenodo records are an important control: **multiple DOIs do not, by themselv
 
 DataCite and the Dagstuhl landing pages are two corroborating retrieval surfaces, not two independent publishers: the publisher deposits its DOI metadata in the registry. We therefore preserve their provenance and describe agreement, not an independent two-vote truth score.
 
-## 2. Why this matters
+## 3. How this could help OpenAlex
 
 A reader, citation exporter, or agent trusting only the OpenAlex work's primary DOI and title can produce a citation with one paper's DOI and another paper's title. The attached source links can also send a reader to materially different publications. This example demonstrates that risk directly; it does not measure how often it occurs across OpenAlex.
 
@@ -39,9 +51,20 @@ A title-only repair would hide part of the problem. Changing the title to “Miz
 
 **The safe actionable output is a source-conflict review packet.** A maintainer can use it to inspect source association, decide whether a work split is appropriate, and rebuild affected derived data. This artifact does not make that upstream decision.
 
-## 3. The solution
+| Team task | What SourceCheck provides today | What would need to be demonstrated |
+| --- | --- | --- |
+| Understand a vague metadata complaint | A work ID, DOI-specific titles, creator context, and direct source links in one view. | Whether this adds information beyond the team's current ticket tooling. |
+| Collect evidence for a reproducible report | Bounded public API retrieval, timestamps, raw bodies, hashes, and JSON/Markdown exports. | Whether engineers spend less active time reaching a correct disposition. |
+| Avoid a title-only patch to a deeper source conflict | Visibility into differing DOI source titles and legitimate version relationships. | Whether this reduces incomplete corrections in an actual workflow. |
+| Keep a useful regression example | A captured case that replays without network access, with explicit limits. | Which internal source-association test should use it after the cause is understood. |
 
-SourceCheck is a read-only audit tool and evidence viewer. It accepts a work identifier or DOI, obtains the public work record, checks registered DOI metadata, and exposes incompatible bibliographic identities instead of silently selecting a title.
+OpenAlex already asks for specific records, fields, proposed corrections, and source evidence. Its documented correction workflow uses agents to verify reports and apply changes, with broader problems escalated for investigation. SourceCheck would supply an inspectable input to that process. It is not a replacement for it. [Existing OpenAlex correction workflow](https://help.openalex.org/access/fixing-errors/).
+
+The direct benefit delivered is automated evidence collection and repeatable comparison. Faster support, fewer incomplete fixes, and more trustworthy downstream citations are **potential outcomes**, not measured results of this project.
+
+## 4. The implemented solution
+
+SourceCheck is a read-only audit tool and evidence viewer. It accepts a work identifier or DOI, obtains the public work record, checks registered DOI metadata, flags title disagreements, and displays creator and relationship context. The stronger conclusion about conflicting publication families in the demonstrated case came from the additional documented investigation, not from title equality alone.
 
 The Python CLI runs locally with the standard library. The shared website runs the audit in the browser and offers the captured case before a live recheck. The available outcomes are **aligned**, **review**, and **inconclusive**; aligned means the compared titles agree, not that authorship or every property of the work has been validated. An audit checks at most six selected/canonical/location DOI records. Crossref is queried first; a Crossref 404 falls back to DataCite. Network failures, missing evidence, and the DOI cap limit coverage.
 
@@ -62,7 +85,50 @@ All five registered DOI records contain `relationType: Cites` with `relatedIdent
 
 One plausible hypothesis is that a citation identifier was treated as an identity signal somewhere in ingestion or merging. **This is not a demonstrated root cause.** A shared citation is common in research metadata, and there is no access here to OpenAlex's internal merge logs or production pipeline. The proposed invariant remains useful regardless: a `Cites` edge must not, on its own, equate two works.
 
-## 4. Proof and reproducibility
+## 5. A concrete support-engineer workflow
+
+**Illustrative ticket, real captured record:** “The DOI and authors on W4385245566 point to MizAR, but the title and some source links point to different papers.” This is an example of how the tool could be used; no actual support ticket has been submitted or resolved.
+
+| Step | What the engineer does | What is available now / decision boundary |
+| --- | --- | --- |
+| 1. Identify the record | Paste `W4385245566` into the website, or use the Python CLI. | Implemented. A saved ID gives the investigation a specific target. |
+| 2. Fetch fresh evidence | Select **Check live**. Keep the captured example available for comparison. | Implemented. The tool retrieves public OpenAlex and DOI registry records. A changed result is a new observation; unavailable data is not proof of a defect. |
+| 3. Examine the disagreement | Compare the main DOI's registered title and names with the OpenAlex values. Inspect the other DOI sources and explicit version relationships. | Implemented comparison and display. At capture time the main DOI described MizAR, another DOI supplied the displayed tutoring title, and the three Zenodo DOIs formed a version family. The report's nine-ORCID and publisher checks are separate archived-case verification, not automatic live checks. |
+| 4. Hand off a review packet | Download **evidence JSON** and the **review packet**. Include the exact record, observed disagreement, source-specific values, and the remaining uncertainty. | Implemented exports. They include timestamps and raw response evidence. The tool does not submit the packet or prescribe a global replacement title. |
+| 5. Investigate and correct internally | A maintainer checks harvested records, matching decisions, and any affected derived data; decides whether a split or another correction is warranted; uses the team's existing correction process. | Maintainer action outside this tool. Internal cause, safe correction, and downstream impact have not been established here. |
+| 6. Verify and retain a regression | After the maintainer's change reaches the public API, run a fresh check, compare it with the preserved evidence, and test the actual corrected behavior internally. | A manual recheck is supported. Scheduling, before/after diffing, verification of citation edges, and integration into internal regression suites are not implemented. An `aligned` title result alone cannot certify the repair. |
+
+A useful handoff would say: “The captured source claims conflict; please investigate source association before replacing the title.” It would not say: “Automatically split this ID into three,” because the safe identifiers, lineage, and downstream consequences need internal review.
+
+## 6. Challenge the value
+
+### What is established, and what is not
+
+The evidence establishes a concrete public-record conflict at the capture time. The implementation establishes that a small tool can retrieve, compare, preserve, and export those sources. Neither establishes a novel research method, an unmet internal tooling need, a production-ready disambiguation system, or savings for OpenAlex.
+
+The strongest present use is **a focused investigation companion and a reproducible case contribution**. A generic “metadata repair platform” would overstate the implementation. OpenAlex's agents may already gather equivalent evidence; if so, a small case fixture or reusable check may be more useful than another interface. This is an assessment, not knowledge of their private tools.
+
+### Failure modes that matter
+
+| Challenge | Why it matters | Current response / remaining limitation |
+| --- | --- | --- |
+| Legitimate versions, translations, or changed titles | Related publications can have different titles and receive a review flag even when the association is acceptable. | Show the titles and typed relationships. The tool does not automatically adjudicate versions, translations, or alternate-title equivalence. |
+| Same title, wrong authors | An identity error can be invisible to a title-based rule. | Creator-name overlap is descriptive only. `aligned` can coexist with incorrect authorship; it is not an identity certificate. |
+| Normalization and subtitle handling | Removing punctuation makes “C++ for Biology” and “C for Biology” compare equal; a separately stored subtitle can cause a harmless disagreement. | These are analytical counterexamples, not observed OpenAlex defects. Inspect original titles and fields before deciding what the flag means. |
+| Correlated or incorrect source metadata | Publisher and registry may share one feed, or a registry record can itself be wrong. | Keep source provenance; their agreement is not two independent votes. A reviewer needs context. |
+| Incomplete coverage | No DOI, unsupported DOI links, the six-DOI limit, and failed requests leave gaps. | Expose scope and failures. The tool does not scan the entire work graph, verify all publisher pages, or handle every research object. |
+| Review work may increase | Title flags can create noise. Capturing many responses can add API latency and storage. | No measured time saving or precision/recall claim. The flag volume needs evaluation against the existing process. |
+| Cause remains unknown | Shared `Cites` identifiers are an investigative lead, not evidence of a particular ingestion bug. | No internal merge logs were inspected. A displayed `merge_evidence: false` is this tool's policy, not a production fix or test of OpenAlex's matcher. |
+
+### A small pilot worth running before adoption
+
+**Proposed evaluation only; not performed.** With the team's permission and existing ticket access, select the next 20 eligible DOI-bearing work-metadata tickets. Define eligibility and ten matched pairs using ticket type and apparent complexity before inspecting SourceCheck's outputs. Randomly assign one ticket per pair to the current workflow and the other to the current workflow plus SourceCheck. Balance engineer assignments; no engineer should process the same ticket twice. The baseline includes the team's existing agents and tools, not an artificially slow manual process.
+
+Record active engineer minutes through a defensible disposition, separately record waiting time, count confirmed useful findings absent from the initial ticket, count unhelpful review flags, and check whether another reviewer can reproduce the evidence. An independent reviewer blinded to the method should assess the dispositions against source evidence and any necessary internal context. With only 20 tickets, report individual results, group differences, and uncertainty; do not generalize to the whole support queue.
+
+Continue only if the tool preserves decision quality and either reduces active review effort or provides confirmed additional findings whose value justifies the effort. **If it adds review time without useful new evidence, do not adopt the extra interface.** Keep the verified case, reusable checks, and evidence format if they are independently useful. No effectiveness result or pilot completion is claimed.
+
+## 7. Proof and reproducibility
 
 ### A bounded investigation beyond one case
 
@@ -151,7 +217,7 @@ The public records may be corrected after capture. If a live recheck differs, pr
 
 The SHA-256 values cover complete raw response bodies, not normalized fields. Independently fetched responses can differ in volatile metadata or serialization while agreeing on the bibliographic facts.
 
-## 5. Scope and limits
+## 8. Scope and limits
 
 - This is an externally verified case and a working audit workflow, not an upstream fix or a claim of affiliation with OpenAlex.
 - The case was found during targeted investigation. It is not a random sample and cannot establish an error rate.
@@ -162,7 +228,7 @@ The SHA-256 values cover complete raw response bodies, not normalized fields. In
 - A maintainer must review any proposed split and downstream consequences. No correction was submitted and no upstream record was altered.
 - Public metadata and local processing are used. No paid API account, model, database, or hosted compute service is required. The shared site uses Vercel's free Hobby plan.
 
-## 6. Sources
+## 9. Sources
 
 1. [OpenAlex work W4385245566](https://api.openalex.org/works/W4385245566): the observed aggregate record.
 2. [DataCite: MizAR 60 for Mizar 50](https://api.datacite.org/dois/10.4230/lipics.itp.2023.19): DOI-specific title, nine creators/ORCIDs, and relations.
@@ -170,5 +236,6 @@ The SHA-256 values cover complete raw response bodies, not normalized fields. In
 4. [DataCite: tutoring paper](https://api.datacite.org/dois/10.4230/oasics.icpec.2026.2) and [Dagstuhl publisher page](https://drops.dagstuhl.de/entities/document/10.4230/OASIcs.ICPEC.2026.2): different creators; exact match to OpenAlex's observed title.
 5. [DataCite: Zenodo family](https://api.datacite.org/dois/10.5281/zenodo.21230429), [v1](https://api.datacite.org/dois/10.5281/zenodo.21230430), and [v2](https://api.datacite.org/dois/10.5281/zenodo.21230434): hardware-compression title, creator, and explicit version relations.
 6. [DataCite: connecting to works](https://support.datacite.org/docs/connecting-to-works) and [contributing citations and references](https://support.datacite.org/docs/contributing-citations-and-references): typed relationship semantics.
+7. [OpenAlex: existing correction workflow](https://help.openalex.org/access/fixing-errors/): the current process this external evidence tool could complement.
 
 Implementation, tests, and evidence are in [Shrey Patel's public repository](https://github.com/Shreyp087/OpenAlex). AI assistance was used for research and implementation; claims are grounded in the preserved public evidence and executable checks.
