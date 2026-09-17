@@ -1,0 +1,2986 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="google" content="notranslate">
+        <meta http-equiv="Content-Language" content="en">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="csrf-token" content="o5cJCuiTPDki5QLCGxSifjZ3jjf6GyB4B9pIKXaI">
+
+        
+    <link rel="canonical" href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2023.19">
+
+    
+    <meta name="DC.Publisher" content="Schloss Dagstuhl – Leibniz-Zentrum für Informatik" >
+    <meta name="DC.Title" xml:lang="en" content="MizAR 60 for Mizar 50" >
+    <meta name="DC.Creator.PersonalName" content="Jakubův, Jan" >
+    <meta name="DC.Creator.PersonalName" content="Chvalovský, Karel" >
+    <meta name="DC.Creator.PersonalName" content="Goertzel, Zarathustra" >
+    <meta name="DC.Creator.PersonalName" content="Kaliszyk, Cezary" >
+    <meta name="DC.Creator.PersonalName" content="Olšák, Mirek" >
+    <meta name="DC.Creator.PersonalName" content="Piotrowski, Bartosz" >
+    <meta name="DC.Creator.PersonalName" content="Schulz, Stephan" >
+    <meta name="DC.Creator.PersonalName" content="Suda, Martin" >
+    <meta name="DC.Creator.PersonalName" content="Urban, Josef" >
+    <meta name="DC.Subject" content="Mizar" >
+    <meta name="DC.Subject" content="ENIGMA" >
+    <meta name="DC.Subject" content="Automated Reasoning" >
+    <meta name="DC.Subject" content="Machine Learning" >
+    <meta name="DC.Date.created" scheme="ISO8601" content="2023-07-26" >
+    <meta name="DC.Date.issued" scheme="ISO8601" content="2023-07-26" >
+    <meta name="DC.Date.modified" scheme="ISO8601" content="2023-07-26" >
+    <meta name="DC.Type" content="InProceedings" >
+    <meta name="DC.Format" scheme="IMT" content="application/pdf" >
+    <meta name="DC.Identifier" scheme="urn:nbn:de" content="urn:nbn:de:0030-drops-183942" >
+    <meta name="DC.Identifier" scheme="DOI" content="10.4230/LIPIcs.ITP.2023.19" >
+    <meta name="DC.Identifier" scheme="URL" content="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2023.19" >
+    <meta name="DC.Source" content="14th International Conference on Interactive Theorem Proving (ITP 2023)" >
+    <meta name="DC.Source.URI" content="https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-268" >
+    <meta name="DC.Language" scheme="ISO639-1" content="en" >
+    <meta name="DC.Description" xml:lang="en" content="As a present to Mizar on its 50th anniversary, we develop an AI/TP system that automatically proves about 60% of the Mizar theorems in the hammer setting. We also automatically prove 75% of the Mizar theorems when the automated provers are helped by using only the premises used in the human-written Mizar proofs. We describe the methods and large-scale experiments leading to these results. This includes in particular the E and Vampire provers, their ENIGMA and Deepire learning modifications, a number of learning-based premise selection methods, and the incremental loop that interleaves growing a corpus of millions of ATP proofs with training increasingly strong AI/TP systems on them. We also present a selection of Mizar problems that were proved automatically." >
+    <meta name="DC.Rights" scheme="DCTERMS.URI" content="https://creativecommons.org/licenses/by/4.0/legalcode" >
+    <meta name="citation_conference_title" content="14th International Conference on Interactive Theorem Proving (ITP 2023)" >
+    <meta name="citation_doi" content="10.4230/LIPIcs.ITP.2023.19" >
+    <meta name="citation_firstpage" content="19:1" >
+    <meta name="citation_lastpage" content="19:22" >
+    <meta name="citation_title" content="MizAR 60 for Mizar 50" >
+    <meta name="citation_language" content="en" >
+    <meta name="citation_keyword" content="Mizar" >
+    <meta name="citation_keyword" content="ENIGMA" >
+    <meta name="citation_keyword" content="Automated Reasoning" >
+    <meta name="citation_keyword" content="Machine Learning" >
+    <meta name="citation_author" content="Jakubův, Jan" >
+    <meta name="citation_author_institution" content="Czech Technical University in Prague, Czech Republic" >
+    <meta name="citation_author" content="Chvalovský, Karel" >
+    <meta name="citation_author_institution" content="Czech Technical University in Prague, Czech Republic" >
+    <meta name="citation_author" content="Goertzel, Zarathustra" >
+    <meta name="citation_author_institution" content="Czech Technical University in Prague, Czech Republic" >
+    <meta name="citation_author" content="Kaliszyk, Cezary" >
+    <meta name="citation_author_institution" content="Universität Innsbruck, Austria; INDRC, Prague, Czech Republic" >
+    <meta name="citation_author" content="Olšák, Mirek" >
+    <meta name="citation_author_institution" content="Institut des Hautes Études Scientifiques, Paris, France" >
+    <meta name="citation_author" content="Piotrowski, Bartosz" >
+    <meta name="citation_author_institution" content="Czech Technical University in Prague, Czech Republic" >
+    <meta name="citation_author" content="Schulz, Stephan" >
+    <meta name="citation_author_institution" content="DHBW Stuttgart, Germany" >
+    <meta name="citation_author" content="Suda, Martin" >
+    <meta name="citation_author_institution" content="Czech Technical University in Prague, Czech Republic" >
+    <meta name="citation_author" content="Urban, Josef" >
+    <meta name="citation_author_institution" content="Czech Technical University in Prague, Czech Republic" >
+    <meta name="citation_date" content="2023" >
+    <meta name="citation_keyword" xml:lang="en" content="Mizar" >
+    <meta name="citation_keyword" xml:lang="en" content="ENIGMA" >
+    <meta name="citation_keyword" xml:lang="en" content="Automated Reasoning" >
+    <meta name="citation_keyword" xml:lang="en" content="Machine Learning" >
+    <meta name="citation_abstract_html_url" content="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2023.19" >
+    <meta name="citation_pdf_url" content="https://drops.dagstuhl.de/storage/00lipics/lipics-vol268-itp2023/LIPIcs.ITP.2023.19/LIPIcs.ITP.2023.19.pdf" >
+    <meta name="citation_reference" content="Martín Abadi, Ashish Agarwal, Paul Barham, Eugene Brevdo, Zhifeng Chen, Craig Citro, Greg S. Corrado, Andy Davis, Jeffrey Dean, Matthieu Devin, Sanjay Ghemawat, Ian Goodfellow, Andrew Harp, Geoffrey Irving, Michael Isard, Yangqing Jia, Rafal Jozefowicz, Lukasz Kaiser, Manjunath Kudlur, Josh Levenberg, Dandelion Mané, Rajat Monga, Sherry Moore, Derek Murray, Chris Olah, Mike Schuster, Jonathon Shlens, Benoit Steiner, Ilya Sutskever, Kunal Talwar, Paul Tucker, Vincent Vanhoucke, Vijay Vasudevan, Fernanda Viégas, Oriol Vinyals, Pete Warden, Martin Wattenberg, Martin Wicke, Yuan Yu, and Xiaoqiang Zheng. TensorFlow: Large-scale machine learning on heterogeneous systems, 2015. Software available from tensorflow.org. URL: https://www.tensorflow.org/." >
+    <meta name="citation_reference" content="Jesse Alama, Tom Heskes, Daniel Kühlwein, Evgeni Tsivtsivadze, and Josef Urban. Premise selection for mathematics by corpus analysis and kernel methods. J. Autom. Reasoning, 52(2):191-213, 2014. URL: https://doi.org/10.1007/s10817-013-9286-5." >
+    <meta name="citation_reference" content="Grzegorz Bancerek, Czeslaw Bylinski, Adam Grabowski, Artur Kornilowicz, Roman Matuszewski, Adam Naumowicz, and Karol Pak. The role of the Mizar Mathematical Library for interactive proof development in Mizar. J. Autom. Reason., 61(1-4):9-32, 2018. URL: https://doi.org/10.1007/s10817-017-9440-6." >
+    <meta name="citation_reference" content="Grzegorz Bancerek, Czeslaw Bylinski, Adam Grabowski, Artur Kornilowicz, Roman Matuszewski, Adam Naumowicz, Karol Pak, and Josef Urban. Mizar: State-of-the-art and beyond. In Manfred Kerber, Jacques Carette, Cezary Kaliszyk, Florian Rabe, and Volker Sorge, editors, Intelligent Computer Mathematics - International Conference, CICM 2015, Washington, DC, USA, July 13-17, 2015, Proceedings, volume 9150 of Lecture Notes in Computer Science, pages 261-279. Springer, 2015. URL: https://doi.org/10.1007/978-3-319-20615-8_17." >
+    <meta name="citation_reference" content="Grzegorz Bancerek and Piotr Rudnicki. A Compendium of Continuous Lattices in MIZAR. J. Autom. Reasoning, 29(3-4):189-224, 2002. URL: https://doi.org/10.1023/A:1021966832558." >
+    <meta name="citation_reference" content="Jasmin Christian Blanchette, David Greenaway, Cezary Kaliszyk, Daniel Kühlwein, and Josef Urban. A learning-based fact selector for Isabelle/HOL. J. Autom. Reasoning, 57(3):219-244, 2016. URL: https://doi.org/10.1007/s10817-016-9362-8." >
+    <meta name="citation_reference" content="Jasmin Christian Blanchette, Cezary Kaliszyk, Lawrence C. Paulson, and Josef Urban. Hammering towards QED. J. Formalized Reasoning, 9(1):101-148, 2016. URL: https://doi.org/10.6092/issn.1972-5787/4593." >
+    <meta name="citation_reference" content="Tianqi Chen and Carlos Guestrin. XGBoost: A scalable tree boosting system. In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, KDD &#039;16, pages 785-794, New York, NY, USA, 2016. ACM. URL: https://doi.org/10.1145/2939672.2939785." >
+    <meta name="citation_reference" content="Kyunghyun Cho, Bart van Merrienboer, Çaglar Gülçehre, Dzmitry Bahdanau, Fethi Bougares, Holger Schwenk, and Yoshua Bengio. Learning phrase representations using RNN encoder-decoder for statistical machine translation. In Alessandro Moschitti, Bo Pang, and Walter Daelemans, editors, Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing, EMNLP 2014, October 25-29, 2014, Doha, Qatar, A meeting of SIGDAT, a Special Interest Group of the ACL, pages 1724-1734. ACL, 2014. URL: https://doi.org/10.3115/v1/d14-1179." >
+    <meta name="citation_reference" content="Karel Chvalovský, Jan Jakubuv, Miroslav Olsák, and Josef Urban. Learning theorem proving components. In Anupam Das and Sara Negri, editors, Automated Reasoning with Analytic Tableaux and Related Methods - 30th International Conference, TABLEAUX 2021, Birmingham, UK, September 6-9, 2021, Proceedings, volume 12842 of Lecture Notes in Computer Science, pages 266-278. Springer, 2021. URL: https://doi.org/10.1007/978-3-030-86059-2_16." >
+    <meta name="citation_reference" content="Karel Chvalovský, Jan Jakubuv, Martin Suda, and Josef Urban. ENIGMA-NG: Efficient neural and gradient-boosted inference guidance for E. In Pascal Fontaine, editor, Automated Deduction - CADE 27 - 27th International Conference on Automated Deduction, Natal, Brazil, August 27-30, 2019, Proceedings, volume 11716 of Lecture Notes in Computer Science, pages 197-215. Springer, 2019. URL: https://doi.org/10.1007/978-3-030-29436-6_12." >
+    <meta name="citation_reference" content="Richard Evans, David Saxton, David Amos, Pushmeet Kohli, and Edward Grefenstette. Can neural networks understand logical entailment? In International Conference on Learning Representations, 2018. URL: https://openreview.net/forum?id=SkZxCk-0Z." >
+    <meta name="citation_reference" content="Thibault Gauthier. Deep reinforcement learning for synthesizing functions in higher-order logic. In LPAR, volume 73 of EPiC Series in Computing, pages 230-248. EasyChair, 2020." >
+    <meta name="citation_reference" content="Thibault Gauthier, Cezary Kaliszyk, and Josef Urban. TacticToe: Learning to reason with HOL4 tactics. In Thomas Eiter and David Sands, editors, LPAR-21, 21st International Conference on Logic for Programming, Artificial Intelligence and Reasoning, Maun, Botswana, May 7-12, 2017, volume 46 of EPiC, pages 125-143. EasyChair, 2017. URL: https://doi.org/10.29007/ntlb." >
+    <meta name="citation_reference" content="Thibault Gauthier, Cezary Kaliszyk, Josef Urban, Ramana Kumar, and Michael Norrish. Tactictoe: Learning to prove with tactics. J. Autom. Reason., 65(2):257-286, 2021. URL: https://doi.org/10.1007/s10817-020-09580-x." >
+    <meta name="citation_reference" content="Thibault Gauthier, Miroslav Olsák, and Josef Urban. Alien coding. CoRR, abs/2301.11479, 2023." >
+    <meta name="citation_reference" content="Thibault Gauthier and Josef Urban. Learning program synthesis for integer sequences from scratch. CoRR, abs/2202.11908, 2022." >
+    <meta name="citation_reference" content="Zarathustra Goertzel, Jan Jakubův, and Josef Urban. ENIGMAWatch: ProofWatch meets ENIGMA. In Serenella Cerrito and Andrei Popescu, editors, Automated Reasoning with Analytic Tableaux and Related Methods, pages 374-388, Cham, 2019. Springer International Publishing." >
+    <meta name="citation_reference" content="Zarathustra Amadeus Goertzel. Make E smart again (short paper). In IJCAR (2), volume 12167 of Lecture Notes in Computer Science, pages 408-415. Springer, 2020." >
+    <meta name="citation_reference" content="Zarathustra Amadeus Goertzel, Karel Chvalovský, Jan Jakubuv, Miroslav Olsák, and Josef Urban. Fast and slow Enigmas and parental guidance. In FroCoS, volume 12941 of Lecture Notes in Computer Science, pages 173-191. Springer, 2021." >
+    <meta name="citation_reference" content="Zarathustra Amadeus Goertzel, Jan Jakubuv, Cezary Kaliszyk, Miroslav Olsák, Jelle Piepenbrock, and Josef Urban. The Isabelle ENIGMA. In ITP, volume 237 of LIPIcs, pages 16:1-16:21. Schloss Dagstuhl - Leibniz-Zentrum für Informatik, 2022." >
+    <meta name="citation_reference" content="Adam Grabowski, Artur Korniłowicz, and Adam Naumowicz. Mizar in a nutshell. J. Formalized Reasoning, 3(2):153-245, 2010." >
+    <meta name="citation_reference" content="Frank Hutter, Holger H. Hoos, Kevin Leyton-Brown, and Thomas Stützle. ParamILS: an automatic algorithm configuration framework. J. Artificial Intelligence Research, 36:267-306, October 2009." >
+    <meta name="citation_reference" content="Jan Jakubův and Josef Urban. Hierarchical invention of theorem proving strategies. AI Commun., 31(3):237-250, 2018. URL: https://doi.org/10.3233/AIC-180761." >
+    <meta name="citation_reference" content="Jan Jakubuv, Karel Chvalovský, Miroslav Olsák, Bartosz Piotrowski, Martin Suda, and Josef Urban. ENIGMA anonymous: Symbol-independent inference guiding machine (system description). In IJCAR (2), volume 12167 of Lecture Notes in Computer Science, pages 448-463. Springer, 2020." >
+    <meta name="citation_reference" content="Jan Jakubuv, Martin Suda, and Josef Urban. Automated invention of strategies and term orderings for vampire. In GCAI, volume 50 of EPiC Series in Computing, pages 121-133. EasyChair, 2017." >
+    <meta name="citation_reference" content="Jan Jakubuv and Josef Urban. BliStrTune: hierarchical invention of theorem proving strategies. In Yves Bertot and Viktor Vafeiadis, editors, Proceedings of the 6th ACM SIGPLAN Conference on Certified Programs and Proofs, CPP 2017, Paris, France, January 16-17, 2017, pages 43-52. ACM, 2017. URL: https://doi.org/10.1145/3018610.3018619." >
+    <meta name="citation_reference" content="Jan Jakubuv and Josef Urban. Enhancing ENIGMA given clause guidance. In Florian Rabe, William M. Farmer, Grant O. Passmore, and Abdou Youssef, editors, Intelligent Computer Mathematics - 11th International Conference, CICM 2018, Hagenberg, Austria, August 13-17, 2018, Proceedings, volume 11006 of Lecture Notes in Computer Science, pages 118-124. Springer, 2018. URL: https://doi.org/10.1007/978-3-319-96812-4_11." >
+    <meta name="citation_reference" content="Jan Jakubuv and Josef Urban. Hammering Mizar by learning clause guidance. In John Harrison, John O&#039;Leary, and Andrew Tolmach, editors, 10th International Conference on Interactive Theorem Proving, ITP 2019, September 9-12, 2019, Portland, OR, USA, volume 141 of LIPIcs, pages 34:1-34:8. Schloss Dagstuhl - Leibniz-Zentrum für Informatik, 2019. URL: https://doi.org/10.4230/LIPIcs.ITP.2019.34." >
+    <meta name="citation_reference" content="Cezary Kaliszyk and Josef Urban. Stronger automation for Flyspeck by feature weighting and strategy evolution. In Jasmin Christian Blanchette and Josef Urban, editors, PxTP 2013, volume 14 of EPiC Series, pages 87-95. EasyChair, 2013." >
+    <meta name="citation_reference" content="Cezary Kaliszyk and Josef Urban. Learning-assisted automated reasoning with Flyspeck. J. Autom. Reasoning, 53(2):173-213, 2014. URL: https://doi.org/10.1007/s10817-014-9303-3." >
+    <meta name="citation_reference" content="Cezary Kaliszyk and Josef Urban. MizAR 40 for Mizar 40. J. Autom. Reasoning, 55(3):245-256, 2015. URL: https://doi.org/10.1007/s10817-015-9330-8." >
+    <meta name="citation_reference" content="Cezary Kaliszyk, Josef Urban, and Jirí Vyskocil. Efficient semantic features for automated reasoning over large theories. In IJCAI, pages 3084-3090. AAAI Press, 2015." >
+    <meta name="citation_reference" content="Cezary Kaliszyk, Josef Urban, and Jirí Vyskocil. Automating formalization by statistical and semantic parsing of mathematics. In ITP, volume 10499 of Lecture Notes in Computer Science, pages 12-27. Springer, 2017." >
+    <meta name="citation_reference" content="Guolin Ke, Qi Meng, Thomas Finley, Taifeng Wang, Wei Chen, Weidong Ma, Qiwei Ye, and Tie-Yan Liu. Lightgbm: A highly efficient gradient boosting decision tree. In NIPS, pages 3146-3154, 2017." >
+    <meta name="citation_reference" content="Artur Korniłowicz and Christoph Schwarzweller. Computers and algorithms in Mizar. Mechanized Mathematics and Its Applications, 4(1):43-50, 2005." >
+    <meta name="citation_reference" content="Laura Kovács and Andrei Voronkov. First-order theorem proving and Vampire. In Natasha Sharygina and Helmut Veith, editors, CAV, volume 8044 of LNCS, pages 1-35. Springer, 2013. URL: https://doi.org/10.1007/978-3-642-39799-8_1." >
+    <meta name="citation_reference" content="Guillaume Lample and François Charton. Deep learning for symbolic mathematics. In 8th International Conference on Learning Representations, ICLR 2020, Addis Ababa, Ethiopia, April 26-30, 2020. OpenReview.net, 2020. URL: https://openreview.net/forum?id=S1eZYeHFDS." >
+    <meta name="citation_reference" content="Miroslav Olsák, Cezary Kaliszyk, and Josef Urban. Property invariant embedding for automated reasoning. In Giuseppe De Giacomo, Alejandro Catalá, Bistra Dilkina, Michela Milano, Senén Barro, Alberto Bugarín, and Jérôme Lang, editors, ECAI 2020 - 24th European Conference on Artificial Intelligence, volume 325 of Frontiers in Artificial Intelligence and Applications, pages 1395-1402. IOS Press, 2020. URL: https://doi.org/10.3233/FAIA200244." >
+    <meta name="citation_reference" content="David W. Opitz and Richard Maclin. Popular ensemble methods: An empirical study. J. Artif. Intell. Res., 11:169-198, 1999. URL: https://doi.org/10.1613/jair.614." >
+    <meta name="citation_reference" content="Bartosz Piotrowski and Josef Urban. ATPboost: Learning premise selection in binary setting with ATP feedback. In Didier Galmiche, Stephan Schulz, and Roberto Sebastiani, editors, Automated Reasoning - 9th International Joint Conference, IJCAR 2018, Held as Part of the Federated Logic Conference, FloC 2018, Oxford, UK, July 14-17, 2018, Proceedings, volume 10900 of Lecture Notes in Computer Science, pages 566-574. Springer, 2018. URL: https://doi.org/10.1007/978-3-319-94205-6_37." >
+    <meta name="citation_reference" content="Bartosz Piotrowski and Josef Urban. Stateful premise selection by recurrent neural networks. In LPAR, volume 73 of EPiC Series in Computing, pages 409-422. EasyChair, 2020." >
+    <meta name="citation_reference" content="Bartosz Piotrowski, Josef Urban, Chad E. Brown, and Cezary Kaliszyk. Can neural networks learn symbolic rewriting? CoRR, abs/1911.04873, 2019." >
+    <meta name="citation_reference" content="John Alan Robinson and Andrei Voronkov, editors. Handbook of Automated Reasoning (in 2 volumes). Elsevier and MIT Press, 2001. URL: https://www.sciencedirect.com/book/9780444508133/handbook-of-automated-reasoning." >
+    <meta name="citation_reference" content="Stephan Schulz. E - A Brainiac Theorem Prover. AI Commun., 15(2-3):111-126, 2002. URL: http://iospress.metapress.com/content/n908n94nmvk59v3c/." >
+    <meta name="citation_reference" content="Stephan Schulz. Simple and efficient clause subsumption with feature vector indexing. In Automated Reasoning and Mathematics, volume 7788 of Lecture Notes in Computer Science, pages 45-67. Springer, 2013." >
+    <meta name="citation_reference" content="Stephan Schulz. System description: E 1.8. In Kenneth L. McMillan, Aart Middeldorp, and Andrei Voronkov, editors, LPAR, volume 8312 of LNCS, pages 735-743. Springer, 2013. URL: https://doi.org/10.1007/978-3-642-45221-5_49." >
+    <meta name="citation_reference" content="Stephan Schulz. System Description: E 1.8. In Ken McMillan, Aart Middeldorp, and Andrei Voronkov, editors, Proc. of the 19th LPAR, Stellenbosch, volume 8312 of LNCS, pages 735-743. Springer, 2013." >
+    <meta name="citation_reference" content="Stephan Schulz, Simon Cruanes, and Petar Vukmirović. Faster, higher, stronger: E 2.3. In Pascal Fontaine, editor, Proc. of the 27th CADE, Natal, Brasil, number 11716 in LNAI, pages 495-507. Springer, 2019." >
+    <meta name="citation_reference" content="Stephan Schulz and Geoff Sutcliffe. Proof generation for saturating first-order theorem provers. In David Delahaye and Bruno Woltzenlogel Paleo, editors, All about Proofs, Proofs for All, volume 55 of Mathematical Logic and Foundations, pages 45-61. College Publications, London, UK, January 2015." >
+    <meta name="citation_reference" content="Martin Suda. Improving ENIGMA-style clause selection while learning from history. In André Platzer and Geoff Sutcliffe, editors, Automated Deduction - CADE 28 - 28th International Conference on Automated Deduction, Virtual Event, July 12-15, 2021, Proceedings, volume 12699 of Lecture Notes in Computer Science, pages 543-561. Springer, 2021. URL: https://doi.org/10.1007/978-3-030-79876-5_31." >
+    <meta name="citation_reference" content="Martin Suda. Vampire with a brain is a good ITP hammer. In Boris Konev and Giles Reger, editors, Frontiers of Combining Systems - 13th International Symposium, FroCoS 2021, Birmingham, UK, September 8-10, 2021, Proceedings, volume 12941 of Lecture Notes in Computer Science, pages 192-209. Springer, 2021. URL: https://doi.org/10.1007/978-3-030-86205-3_11." >
+    <meta name="citation_reference" content="Tanel Tammet. Towards efficient subsumption. In CADE, volume 1421 of Lecture Notes in Computer Science, pages 427-441. Springer, 1998." >
+    <meta name="citation_reference" content="J. Urban. Translating Mizar for First Order Theorem Provers. In A. Asperti, B. Buchberger, and J.H. Davenport, editors, Proceedings of the 2nd International Conference on Mathematical Knowledge Management, number 2594 in LNCS, pages 203-215. Springer, 2003." >
+    <meta name="citation_reference" content="Josef Urban. MPTP - Motivation, Implementation, First Experiments. J. Autom. Reasoning, 33(3-4):319-339, 2004. URL: https://doi.org/10.1007/s10817-004-6245-1." >
+    <meta name="citation_reference" content="Josef Urban. MPTP 0.2: Design, implementation, and initial experiments. J. Autom. Reasoning, 37(1-2):21-43, 2006. URL: https://doi.org/10.1007/s10817-006-9032-3." >
+    <meta name="citation_reference" content="Josef Urban. BliStr: The Blind Strategymaker. In Georg Gottlob, Geoff Sutcliffe, and Andrei Voronkov, editors, Global Conference on Artificial Intelligence, GCAI 2015, Tbilisi, Georgia, October 16-19, 2015, volume 36 of EPiC Series in Computing, pages 312-319. EasyChair, 2015. URL: http://www.easychair.org/publications/paper/BliStr_The_Blind_Strategymaker, URL: https://doi.org/10.29007/8n7m." >
+    <meta name="citation_reference" content="Josef Urban and Jan Jakubuv. First neural conjecturing datasets and experiments. In Christoph Benzmüller and Bruce R. Miller, editors, Intelligent Computer Mathematics - 13th International Conference, CICM 2020, Bertinoro, Italy, July 26-31, 2020, Proceedings, volume 12236 of Lecture Notes in Computer Science, pages 315-323. Springer, 2020. URL: https://doi.org/10.1007/978-3-030-53518-6_24." >
+    <meta name="citation_reference" content="Josef Urban, Geoff Sutcliffe, Petr Pudlák, and Jiří Vyskočil. MaLARea SG1 - Machine Learner for Automated Reasoning with Semantic Guidance. In IJCAR, pages 441-456, 2008. URL: https://doi.org/10.1007/978-3-540-71070-7_37." >
+    <meta name="citation_reference" content="Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin. Attention is all you need. CoRR, abs/1706.03762, 2017. URL: https://arxiv.org/abs/1706.03762." >
+    <meta name="citation_reference" content="Qingxiang Wang, Cezary Kaliszyk, and Josef Urban. First experiments with neural translation of informal to formal mathematics. In Florian Rabe, William M. Farmer, Grant O. Passmore, and Abdou Youssef, editors, 11th International Conference on Intelligent Computer Mathematics (CICM 2018), volume 11006 of LNCS, pages 255-270. Springer, 2018. URL: https://doi.org/10.1007/978-3-319-96812-4_22." >
+    <meta name="citation_publisher" content="Schloss Dagstuhl – Leibniz-Zentrum für Informatik" >
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org/",
+    "@type": "WebPage",
+    "mainEntity": {
+        "@type": "ScholarlyArticle",
+        "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2023.19",
+        "headline": "MizAR 60 for Mizar 50",
+        "name": "MizAR 60 for Mizar 50",
+        "abstract": "As a present to Mizar on its 50th anniversary, we develop an AI/TP system that automatically proves about 60% of the Mizar theorems in the hammer setting. We also automatically prove 75% of the Mizar theorems when the automated provers are helped by using only the premises used in the human-written Mizar proofs. We describe the methods and large-scale experiments leading to these results. This includes in particular the E and Vampire provers, their ENIGMA and Deepire learning modifications, a number of learning-based premise selection methods, and the incremental loop that interleaves growing a corpus of millions of ATP proofs with training increasingly strong AI/TP systems on them. We also present a selection of Mizar problems that were proved automatically.",
+        "keywords": [
+            "Mizar",
+            "ENIGMA",
+            "Automated Reasoning",
+            "Machine Learning"
+        ],
+        "author": [
+            {
+                "@type": "Person",
+                "name": "Jakub\u016fv, Jan",
+                "givenName": "Jan",
+                "familyName": "Jakub\u016fv",
+                "email": "mailto:jakubuv@gmail.com",
+                "sameAs": "https://orcid.org/0000-0002-8848-5537",
+                "affiliation": "Czech Technical University in Prague, Czech Republic"
+            },
+            {
+                "@type": "Person",
+                "name": "Chvalovsk\u00fd, Karel",
+                "givenName": "Karel",
+                "familyName": "Chvalovsk\u00fd",
+                "email": "mailto:karel@chvalovsky.cz",
+                "sameAs": "https://orcid.org/0000-0002-0541-3889",
+                "affiliation": "Czech Technical University in Prague, Czech Republic"
+            },
+            {
+                "@type": "Person",
+                "name": "Goertzel, Zarathustra",
+                "givenName": "Zarathustra",
+                "familyName": "Goertzel",
+                "sameAs": "https://orcid.org/0000-0002-8458-2786",
+                "affiliation": "Czech Technical University in Prague, Czech Republic"
+            },
+            {
+                "@type": "Person",
+                "name": "Kaliszyk, Cezary",
+                "givenName": "Cezary",
+                "familyName": "Kaliszyk",
+                "email": "mailto:cezary.kaliszyk@uibk.ac.at",
+                "sameAs": "https://orcid.org/0000-0002-8273-6059",
+                "affiliation": "Universit\u00e4t Innsbruck, Austria"
+            },
+            {
+                "@type": "Person",
+                "name": "Ol\u0161\u00e1k, Mirek",
+                "givenName": "Mirek",
+                "familyName": "Ol\u0161\u00e1k",
+                "sameAs": "https://orcid.org/0000-0002-9361-1921",
+                "affiliation": "Institut des Hautes \u00c9tudes Scientifiques, Paris, France"
+            },
+            {
+                "@type": "Person",
+                "name": "Piotrowski, Bartosz",
+                "givenName": "Bartosz",
+                "familyName": "Piotrowski",
+                "email": "mailto:bartoszpiotrowski@post.pl",
+                "sameAs": "https://orcid.org/0000-0002-1699-018X",
+                "affiliation": "Czech Technical University in Prague, Czech Republic"
+            },
+            {
+                "@type": "Person",
+                "name": "Schulz, Stephan",
+                "givenName": "Stephan",
+                "familyName": "Schulz",
+                "sameAs": "https://orcid.org/0000-0001-6262-8555",
+                "affiliation": "DHBW Stuttgart, Germany"
+            },
+            {
+                "@type": "Person",
+                "name": "Suda, Martin",
+                "givenName": "Martin",
+                "familyName": "Suda",
+                "email": "mailto:martin.suda@cvut.cz",
+                "sameAs": "https://orcid.org/0000-0003-0989-5800",
+                "affiliation": "Czech Technical University in Prague, Czech Republic"
+            },
+            {
+                "@type": "Person",
+                "name": "Urban, Josef",
+                "givenName": "Josef",
+                "familyName": "Urban",
+                "sameAs": "https://orcid.org/0000-0002-1384-1613",
+                "affiliation": "Czech Technical University in Prague, Czech Republic"
+            }
+        ],
+        "position": 19,
+        "dateCreated": "2023-07-26",
+        "datePublished": "2023-07-26",
+        "isAccessibleForFree": true,
+        "license": "https://creativecommons.org/licenses/by/4.0/legalcode",
+        "copyrightHolder": [
+            {
+                "@type": "Person",
+                "name": "Jakub\u016fv, Jan",
+                "givenName": "Jan",
+                "familyName": "Jakub\u016fv",
+                "email": "mailto:jakubuv@gmail.com",
+                "sameAs": "https://orcid.org/0000-0002-8848-5537",
+                "affiliation": "Czech Technical University in Prague, Czech Republic"
+            },
+            {
+                "@type": "Person",
+                "name": "Chvalovsk\u00fd, Karel",
+                "givenName": "Karel",
+                "familyName": "Chvalovsk\u00fd",
+                "email": "mailto:karel@chvalovsky.cz",
+                "sameAs": "https://orcid.org/0000-0002-0541-3889",
+                "affiliation": "Czech Technical University in Prague, Czech Republic"
+            },
+            {
+                "@type": "Person",
+                "name": "Goertzel, Zarathustra",
+                "givenName": "Zarathustra",
+                "familyName": "Goertzel",
+                "sameAs": "https://orcid.org/0000-0002-8458-2786",
+                "affiliation": "Czech Technical University in Prague, Czech Republic"
+            },
+            {
+                "@type": "Person",
+                "name": "Kaliszyk, Cezary",
+                "givenName": "Cezary",
+                "familyName": "Kaliszyk",
+                "email": "mailto:cezary.kaliszyk@uibk.ac.at",
+                "sameAs": "https://orcid.org/0000-0002-8273-6059",
+                "affiliation": "Universit\u00e4t Innsbruck, Austria"
+            },
+            {
+                "@type": "Person",
+                "name": "Ol\u0161\u00e1k, Mirek",
+                "givenName": "Mirek",
+                "familyName": "Ol\u0161\u00e1k",
+                "sameAs": "https://orcid.org/0000-0002-9361-1921",
+                "affiliation": "Institut des Hautes \u00c9tudes Scientifiques, Paris, France"
+            },
+            {
+                "@type": "Person",
+                "name": "Piotrowski, Bartosz",
+                "givenName": "Bartosz",
+                "familyName": "Piotrowski",
+                "email": "mailto:bartoszpiotrowski@post.pl",
+                "sameAs": "https://orcid.org/0000-0002-1699-018X",
+                "affiliation": "Czech Technical University in Prague, Czech Republic"
+            },
+            {
+                "@type": "Person",
+                "name": "Schulz, Stephan",
+                "givenName": "Stephan",
+                "familyName": "Schulz",
+                "sameAs": "https://orcid.org/0000-0001-6262-8555",
+                "affiliation": "DHBW Stuttgart, Germany"
+            },
+            {
+                "@type": "Person",
+                "name": "Suda, Martin",
+                "givenName": "Martin",
+                "familyName": "Suda",
+                "email": "mailto:martin.suda@cvut.cz",
+                "sameAs": "https://orcid.org/0000-0003-0989-5800",
+                "affiliation": "Czech Technical University in Prague, Czech Republic"
+            },
+            {
+                "@type": "Person",
+                "name": "Urban, Josef",
+                "givenName": "Josef",
+                "familyName": "Urban",
+                "sameAs": "https://orcid.org/0000-0002-1384-1613",
+                "affiliation": "Czech Technical University in Prague, Czech Republic"
+            }
+        ],
+        "copyrightYear": "2023",
+        "creativeWorkStatus": "Published",
+        "inLanguage": "en-US",
+        "identifier": "https://doi.org/10.4230/LIPIcs.ITP.2023.19",
+        "funding": "The funding for the multi-year development of the methods and for the experiments was partially provided by the ERC Consolidator grant AI4REASON no. 649043 (KC, ZG, JJ, BP, MS and JU), the European Regional Development Fund under the Czech project AI&Reasoning no. CZ.02.1.01/0.0/0.0/15_003/0000466 (KC, ZG, JJ, MO, JU), the ERC Starting Grant SMART no. 714034 (JJ, CK, MO), the Czech Science Foundation project 20-06390Y and project RICAIP no. 857306 under the EU-H2020 programme (MS), ERC-CZ project POSTMAN no. LL1902 (KC, JJ, BP), Amazon Research Awards (JU), the EU ICT-48 2020 project TAILOR no. 952215 (JU), and the grant 2018/29/N/ST6/02903 of National Science Center, Poland (BP).",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Schloss Dagstuhl \u2013 Leibniz-Zentrum f\u00fcr Informatik",
+            "alternateName": [
+                "Schloss Dagstuhl - Leibniz Center for Informatics",
+                "Schloss Dagstuhl - LZI GmbH"
+            ],
+            "identifier": "https://ror.org/00k4h2615",
+            "sameAs": [
+                "https://isni.org/isni/0000000100093196",
+                "https://www.dagstuhl.de",
+                "https://de.wikipedia.org/wiki/Leibniz-Zentrum_f%C3%BCr_Informatik"
+            ],
+            "department": {
+                "@type": "Organization",
+                "name": "Dagstuhl Publishing",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.dagstuhl.de/storage/media/0005/5660/publishing-logo.jpg"
+                },
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "customer support",
+                    "email": "mailto:publishing@dagstuhl.de",
+                    "url": "https://www.dagstuhl.de/en/publishing/team"
+                }
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer support",
+                "email": "mailto:lzi@dagstuhl.de",
+                "url": "https://www.dagstuhl.de/en/institute/team"
+            }
+        },
+        "citation": [
+            "https://www.tensorflow.org/",
+            "https://doi.org/10.1007/s10817-013-9286-5",
+            "https://doi.org/10.1007/s10817-017-9440-6",
+            "https://doi.org/10.1007/978-3-319-20615-8_17",
+            "https://doi.org/10.1023/A:1021966832558",
+            "https://doi.org/10.1007/s10817-016-9362-8",
+            "https://doi.org/10.6092/issn.1972-5787/4593",
+            "https://doi.org/10.1145/2939672.2939785",
+            "https://doi.org/10.3115/v1/d14-1179",
+            "https://doi.org/10.1007/978-3-030-86059-2_16",
+            "https://doi.org/10.1007/978-3-030-29436-6_12",
+            "https://openreview.net/forum?id=SkZxCk-0Z",
+            "https://doi.org/10.29007/ntlb",
+            "https://doi.org/10.1007/s10817-020-09580-x",
+            "https://doi.org/10.3233/AIC-180761",
+            "https://doi.org/10.1145/3018610.3018619",
+            "https://doi.org/10.1007/978-3-319-96812-4_11",
+            "https://doi.org/10.4230/LIPIcs.ITP.2019.34",
+            "https://doi.org/10.1007/s10817-014-9303-3",
+            "https://doi.org/10.1007/s10817-015-9330-8",
+            "https://doi.org/10.1007/978-3-642-39799-8_1",
+            "https://openreview.net/forum?id=S1eZYeHFDS",
+            "https://doi.org/10.3233/FAIA200244",
+            "https://doi.org/10.1613/jair.614",
+            "https://doi.org/10.1007/978-3-319-94205-6_37",
+            "https://www.sciencedirect.com/book/9780444508133/handbook-of-automated-reasoning",
+            "http://iospress.metapress.com/content/n908n94nmvk59v3c/",
+            "https://doi.org/10.1007/978-3-642-45221-5_49",
+            "https://doi.org/10.1007/978-3-030-79876-5_31",
+            "https://doi.org/10.1007/978-3-030-86205-3_11",
+            "https://doi.org/10.1007/s10817-004-6245-1",
+            "https://doi.org/10.1007/s10817-006-9032-3",
+            "https://doi.org/10.29007/8n7m",
+            "https://doi.org/10.1007/978-3-030-53518-6_24",
+            "https://doi.org/10.1007/978-3-540-71070-7_37",
+            "https://arxiv.org/abs/1706.03762",
+            "https://doi.org/10.1007/978-3-319-96812-4_22"
+        ],
+        "pageStart": "19:1",
+        "pageEnd": "19:22",
+        "accessMode": "textual",
+        "accessModeSufficient": "textual",
+        "thumbnailUrl": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol268-itp2023/thumbnails/LIPIcs.ITP.2023.19/LIPIcs.ITP.2023.19.png",
+        "potentialAction": {
+            "@type": "ReadAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2023.19",
+                "actionPlatform": [
+                    "https://schema.org/DesktopWebPlatform",
+                    "https://schema.org/AndroidPlatform",
+                    "https://schema.org/IOSPlatform"
+                ]
+            }
+        },
+        "isPartOf": {
+            "@type": "PublicationVolume",
+            "@id": "https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-268",
+            "url": "https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-268",
+            "volumeNumber": 268,
+            "name": "14th International Conference on Interactive Theorem Proving (ITP 2023)",
+            "dateCreated": "2023-07-26",
+            "datePublished": "2023-07-26",
+            "editor": [
+                {
+                    "@type": "Person",
+                    "name": "Naumowicz, Adam",
+                    "givenName": "Adam",
+                    "familyName": "Naumowicz",
+                    "email": "mailto:adamn@math.uwb.edu.pl",
+                    "sameAs": "https://orcid.org/0000-0003-4224-9798",
+                    "affiliation": "University of Bia\u0142ystok, Poland"
+                },
+                {
+                    "@type": "Person",
+                    "name": "Thiemann, Ren\u00e9",
+                    "givenName": "Ren\u00e9",
+                    "familyName": "Thiemann",
+                    "email": "mailto:rene.thiemann@uibk.ac.at",
+                    "sameAs": "https://orcid.org/0000-0002-0323-8829",
+                    "affiliation": "University of Innsbruck, Austria"
+                }
+            ],
+            "isAccessibleForFree": true,
+            "publisher": {
+                "@type": "Organization",
+                "name": "Schloss Dagstuhl \u2013 Leibniz-Zentrum f\u00fcr Informatik",
+                "alternateName": [
+                    "Schloss Dagstuhl - Leibniz Center for Informatics",
+                    "Schloss Dagstuhl - LZI GmbH"
+                ],
+                "identifier": "https://ror.org/00k4h2615",
+                "sameAs": [
+                    "https://isni.org/isni/0000000100093196",
+                    "https://www.dagstuhl.de",
+                    "https://de.wikipedia.org/wiki/Leibniz-Zentrum_f%C3%BCr_Informatik"
+                ],
+                "department": {
+                    "@type": "Organization",
+                    "name": "Dagstuhl Publishing",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://www.dagstuhl.de/storage/media/0005/5660/publishing-logo.jpg"
+                    },
+                    "contactPoint": {
+                        "@type": "ContactPoint",
+                        "contactType": "customer support",
+                        "email": "mailto:publishing@dagstuhl.de",
+                        "url": "https://www.dagstuhl.de/en/publishing/team"
+                    }
+                },
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "customer support",
+                    "email": "mailto:lzi@dagstuhl.de",
+                    "url": "https://www.dagstuhl.de/en/institute/team"
+                }
+            },
+            "isPartOf": {
+                "@type": "BookSeries",
+                "url": "https://drops.dagstuhl.de/entities/series/LIPIcs",
+                "name": "Leibniz International Proceedings in Informatics",
+                "issn": "1868-8969",
+                "isAccessibleForFree": true,
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Schloss Dagstuhl \u2013 Leibniz-Zentrum f\u00fcr Informatik",
+                    "alternateName": [
+                        "Schloss Dagstuhl - Leibniz Center for Informatics",
+                        "Schloss Dagstuhl - LZI GmbH"
+                    ],
+                    "identifier": "https://ror.org/00k4h2615",
+                    "sameAs": [
+                        "https://isni.org/isni/0000000100093196",
+                        "https://www.dagstuhl.de",
+                        "https://de.wikipedia.org/wiki/Leibniz-Zentrum_f%C3%BCr_Informatik"
+                    ],
+                    "department": {
+                        "@type": "Organization",
+                        "name": "Dagstuhl Publishing",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "url": "https://www.dagstuhl.de/storage/media/0005/5660/publishing-logo.jpg"
+                        },
+                        "contactPoint": {
+                            "@type": "ContactPoint",
+                            "contactType": "customer support",
+                            "email": "mailto:publishing@dagstuhl.de",
+                            "url": "https://www.dagstuhl.de/en/publishing/team"
+                        }
+                    },
+                    "contactPoint": {
+                        "@type": "ContactPoint",
+                        "contactType": "customer support",
+                        "email": "mailto:lzi@dagstuhl.de",
+                        "url": "https://www.dagstuhl.de/en/institute/team"
+                    }
+                },
+                "hasPart": "https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-268"
+            }
+        }
+    }
+}
+</script>
+
+    <link rel="alternate" type="application/xml" title="MizAR 60 for Mizar 50 / XML" href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2023.19/metadata/xml">
+    <link rel="alternate" type="application/x-bibtex" title="MizAR 60 for Mizar 50 / BibTeX" href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2023.19/metadata/bibtex/download">
+    <link rel="alternate" type="application/ld+json" title="MizAR 60 for Mizar 50 / Schema.org" href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2023.19/metadata/schema-org">
+    <link rel="alternate" type="application/xml" title="MizAR 60 for Mizar 50 / OAI-DublinCore" href="/oai/?verb=GetRecord&metadataPrefix=oai_dc&identifier=18394">
+
+    <style>
+        
+    </style>
+
+        <title>MizAR 60 for Mizar 50</title>
+
+        <link rel="icon" href="https://drops.dagstuhl.de/favicon.ico">
+        <link rel="stylesheet" href="https://drops.dagstuhl.de/css/app.css?drops-core-2026-08-27.2">
+
+            </head>
+
+    <body>
+        
+    <nav class="navbar main fixed-top navbar-expand-lg navbar-light bg-light">
+
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="https://www.dagstuhl.de">
+            <img class="lzi-logo" src="https://drops.dagstuhl.de/images/LZI-Logo.jpg" width="84" height="62" alt="Schloss Dagstuhl - LZI - Logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item" style="white-space: nowrap">
+                    <a class="nav-link" href="https://drops.dagstuhl.de" title="DROPS Home">
+                        <i class="bi bi-house large-icon"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAboutUs" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false" data-fix-width>
+                        <img width="54" src="https://drops.dagstuhl.de/images/dagpub-bildmarke-grey.png" alt="Dagstuhl Publishing Logo" style="vertical-align: bottom; transform: translateY(-2px)">
+                        <span class="nav-text-dagstuhl-publishing">Dagstuhl Publishing</span>
+                        
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="https://www.dagstuhl.de/en/publishing">
+                                Dagstuhl Publishing
+                            </a>
+                            <a class="dropdown-item" href="https://www.dagstuhl.de/en/publishing/team">
+                                Dagstuhl Publishing Team
+                            </a>
+                        </li>
+                        <li class="dropdown-divider"></li>
+                        <li>
+                            <a class="dropdown-item" href="/docs/ethics">
+                                Publication Ethics
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/docs/gen-ai">
+                                GenAI Statement
+                            </a>
+                        </li>
+                        <li class="dropdown-divider"></li>
+                        <li>
+                            <a class="dropdown-item" href="https://drops.dagstuhl.de/docs/about">
+                                About DROPS
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="https://www.dagstuhl.de/en/publishing/team">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSeries" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false" data-fix-width>
+                        <i class="bi bi-journals large-icon"></i> Series
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        
+                            <li><a class="dropdown-item" href="https://drops.dagstuhl.de/entities/series/LIPIcs">
+                                    LIPIcs – Leibniz International Proceedings in Informatics
+                                </a>
+                            </li>
+                        
+                            <li><a class="dropdown-item" href="https://drops.dagstuhl.de/entities/series/OASIcs">
+                                    OASIcs – Open Access Series in Informatics
+                                </a>
+                            </li>
+                        
+                            <li><a class="dropdown-item" href="https://drops.dagstuhl.de/entities/series/DFU">
+                                    Dagstuhl Follow-Ups
+                                </a>
+                            </li>
+                        
+                            <li><a class="dropdown-item" href="https://drops.dagstuhl.de/entities/series/DagAnnRep">
+                                    Schloss Dagstuhl Jahresbericht
+                                </a>
+                            </li>
+                                                <li class="dropdown-divider"></li>
+                        <li>
+                            <a class="dropdown-item" href="/#discontinued-series">Discontinued Series</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownJournals" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false" data-fix-width>
+                        <i class="bi bi-journal large-icon"></i> Journals
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        
+                            <li><a class="dropdown-item" href="https://drops.dagstuhl.de/entities/journal/DARTS">
+                                    DARTS – Dagstuhl Artifacts Series
+                                </a>
+                            </li>
+                        
+                            <li><a class="dropdown-item" href="https://drops.dagstuhl.de/entities/journal/DagRep">
+                                    Dagstuhl Reports
+                                </a>
+                            </li>
+                        
+                            <li><a class="dropdown-item" href="https://drops.dagstuhl.de/entities/journal/DagMan">
+                                    Dagstuhl Manifestos
+                                </a>
+                            </li>
+                        
+                            <li><a class="dropdown-item" href="https://drops.dagstuhl.de/entities/journal/LITES">
+                                    LITES – Leibniz Transactions on Embedded Systems
+                                </a>
+                            </li>
+                        
+                            <li><a class="dropdown-item" href="https://drops.dagstuhl.de/entities/journal/TGDK">
+                                    TGDK – Transactions on Graph Data and Knowledge
+                                </a>
+                            </li>
+                                            </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownConferences" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false" data-fix-width>
+                        <i class="bi bi-people large-icon"></i> Conferences
+                    </a>
+                    <ul class="dropdown-menu conference-dropdown" aria-labelledby="navbarDropdown">
+                        <div class="row">
+                            <div class="col-sm-4 nav-conference-col">
+                                <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/AFT">
+                AFT
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/AIB">
+                AIB
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/AofA">
+                AofA
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/APPROX">
+                APPROX
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/ATMOS">
+                ATMOS
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/CALCO">
+                CALCO
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/CCC">
+                CCC
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/CONCUR">
+                CONCUR
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/COSIT">
+                COSIT
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/CP">
+                CP
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/CPM">
+                CPM
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/CSL">
+                CSL
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/DISC">
+                DISC
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/DITAM">
+                DITAM
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/DNA">
+                DNA
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/ECOOP">
+                ECOOP
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/ECRTS">
+                ECRTS
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/ESA">
+                ESA
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/FAB">
+                FAB
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/FMBC">
+                FMBC
+            </a>
+        </li>
+                            </div>
+                            <div class="col-sm-4 nav-conference-col">
+                                <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/FORC">
+                FORC
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/FSCD">
+                FSCD
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/FSTTCS">
+                FSTTCS
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/FUN">
+                FUN
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/GD">
+                GD
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/GIScience">
+                GIScience
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/ICALP">
+                ICALP
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/ICDT">
+                ICDT
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/ICPEC">
+                ICPEC
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/IPEC">
+                IPEC
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/iPMVM">
+                iPMVM
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/ISAAC">
+                ISAAC
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/ITC">
+                ITC
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/ITCS">
+                ITCS
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/ITP">
+                ITP
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/LDK">
+                LDK
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/MFCS">
+                MFCS
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/Microservices">
+                Microservices
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/NG-RES">
+                NG-RES
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/OPODIS">
+                OPODIS
+            </a>
+        </li>
+                            </div>
+                            <div class="col-sm-4 nav-conference-col">
+                                <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/PARMA">
+                PARMA
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/RANDOM">
+                RANDOM
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/SAND">
+                SAND
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/SAT">
+                SAT
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/SEA">
+                SEA
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/SLATE">
+                SLATE
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/SNAPL">
+                SNAPL
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/SoCG">
+                SoCG
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/STACS">
+                STACS
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/SWAT">
+                SWAT
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/TIME">
+                TIME
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/Tokenomics">
+                Tokenomics
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/TQC">
+                TQC
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/TYPES">
+                TYPES
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/WABI">
+                WABI
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/conference/WCET">
+                WCET
+            </a>
+        </li>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownArtifacts" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false" data-fix-width>
+                        <i class="bi bi-braces-asterisk large-icon"></i> Artifacts
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                        <li>
+                            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/collection/supplementary-materials">
+                                Supplementary Materials (Software, Datasets, ...)
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/collection/dblp">
+                                dblp Artifacts
+                            </a>
+                        </li>
+                        <li class="dropdown-divider"></li>
+                        <li>
+                            <a class="dropdown-item" href="/entities/journal/DARTS">
+                                DARTS (Evaluated Artifacts)
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+                            <form class="navbar-search d-flex" action="https://drops.dagstuhl.de/search" method="post">
+                    <input type="hidden" name="_token" value="o5cJCuiTPDki5QLCGxSifjZ3jjf6GyB4B9pIKXaI" autocomplete="off">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search"
+                               name="term" autocomplete="off" maxlength="600">
+                        <button class="btn btn-outline-success" type="submit">
+                            <i class="bi bi-search" style="color: #000"></i>
+                        </button>
+                    </div>
+                </form>
+            
+            <ul class="navbar-nav nav-metadata">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMetadata" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-database-down large-icon"></i><span class="nav-text-metadata">Metadata Export</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-metadata" aria-labelledby="navbarDropdownMetadata">
+                        <li>
+                            <a class="dropdown-item" href="https://drops.dagstuhl.de/metadata">Metadata Export</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="https://drops.dagstuhl.de/oai?verb=Identify" target="_blank">OAI Interface</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+                    </div>
+    </div>
+</nav>
+
+    
+    <div id="app"
+         data-release="drops-core-2026-08-27.2"
+         class="container  ">
+
+        <div id="_top-of-page"></div>
+
+        
+                    <div class="fixed-search-button"><i class="bi bi-search"></i></div>
+        
+                
+        
+    <div class="document-details">
+
+        <section class="mt-3 mb-2 title metadata">
+
+    <div class="entity-type document">
+
+        <div class="row">
+
+            <div class="col-lg-3 entity-type-name">
+                <i class="bi bi-file-earmark"></i>
+ Document
+                <img src="https://drops.dagstuhl.de/images/open-access-logo.png" width="80" alt="Open Access Logo"
+                     style="transform: translate(1em, -0.2em);">
+            </div>
+
+            <div class="col-lg-9">
+
+                <input id="doi" type="text" style="position: fixed; top: -50vh"
+                       value="https://doi.org/10.4230/LIPIcs.ITP.2023.19">
+
+                <div class="sharing-section">
+
+                         <span class="permalink">
+                            <span>
+                                <code><span class="hide-mobile">https://doi.org/</span>10.4230/LIPIcs.ITP.2023.19</code>
+
+                                <span class="btn btn-clipboard copy-to-clipboard" title="Copy to clipboard"
+                                      data-selector="doi">
+                                    <i class="bi bi-clipboard" aria-hidden="true"></i>
+                                    <i class="bi bi-check -hidden" aria-hidden="true"></i>
+                                </span>
+                            </span>
+
+                        </span>
+
+                    <span class="sharing-buttons">
+
+    <a class="btn sharing-btn facebook" href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdoi.org%2F10.4230%2FLIPIcs.ITP.2023.19" target="_blank" rel="noopener" aria-hidden="true">
+        <i class="bi bi-facebook"></i>
+    </a>
+
+    <a class="btn sharing-btn reddit" href="https://www.reddit.com/submit?url=https%3A%2F%2Fdoi.org%2F10.4230%2FLIPIcs.ITP.2023.19&title=MizAR+60+for+Mizar+50" target="_blank" rel="noopener" aria-hidden="true">
+        <i class="bi bi-reddit"></i>
+    </a>
+
+    <a class="btn sharing-btn twitter" href="https://twitter.com/intent/tweet/?text=MizAR+60+for+Mizar+50&url=https%3A%2F%2Fdoi.org%2F10.4230%2FLIPIcs.ITP.2023.19" target="_blank" rel="noopener" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+          <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+        </svg>
+    </a>
+
+    <a class="btn sharing-btn email" href="mailto:?subject=MizAR+60+for+Mizar+50&amp;body=https%3A%2F%2Fdoi.org%2F10.4230%2FLIPIcs.ITP.2023.19" target="_self" rel="noopener" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M22 4H2C.9 4 0 4.9 0 6v12c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM7.25 14.43l-3.5 2c-.08.05-.17.07-.25.07-.17 0-.34-.1-.43-.25-.14-.24-.06-.55.18-.68l3.5-2c.24-.14.55-.06.68.18.14.24.06.55-.18.68zm4.75.07c-.1 0-.2-.03-.27-.08l-8.5-5.5c-.23-.15-.3-.46-.15-.7.15-.22.46-.3.7-.14L12 13.4l8.23-5.32c.23-.15.54-.08.7.15.14.23.07.54-.16.7l-8.5 5.5c-.08.04-.17.07-.27.07zm8.93 1.75c-.1.16-.26.25-.43.25-.08 0-.17-.02-.25-.07l-3.5-2c-.24-.13-.32-.44-.18-.68s.44-.32.68-.18l3.5 2c.24.13.32.44.18.68z"/>
+        </svg>
+    </a>
+
+</span>
+
+                    <span class="sharing-buttons">
+        <span class="dropdown">
+            <a class="btn sharing-btn metadata dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-download"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                        <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2023.19/metadata/xml">
+                            Export XML
+                        </a>
+                    </li>
+                                    <li>
+                        <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2023.19/metadata/acm-xml">
+                            Export ACM-XML
+                        </a>
+                    </li>
+                                    <li>
+                        <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2023.19/metadata/doaj-xml">
+                            Export DOAJ-XML
+                        </a>
+                    </li>
+                                    <li>
+                        <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2023.19/metadata/schema-org">
+                            Export Schema.org
+                        </a>
+                    </li>
+                                    <li>
+                        <a class="dropdown-item" href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2023.19/metadata/bibtex">
+                            Export BibTeX
+                        </a>
+                    </li>
+                            </ul>
+        </span>
+    </span>
+
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+
+            <h1>MizAR 60 for Mizar 50</h1>
+    
+    <h3 class="mt-2 authors">
+                    Authors
+        
+                    <a href="#author-details" style="font-size: 0.8em; padding-right: 1em"><i class="bi bi-info-circle"></i></a>
+                            <span class="author">
+                    <a href="https://drops.dagstuhl.de/search/documents?author=Jakubův, Jan"
+                       class="name">Jan Jakubův</a>                    <a href="https://orcid.org/0000-0002-8848-5537"><img class="orcid-logo"
+                                                                    src="https://drops.dagstuhl.de/images/orcid.png"
+                                                                    alt="ORCID-Logo"></a><!--
+                   --><!---->,                </span>
+                            <span class="author">
+                    <a href="https://drops.dagstuhl.de/search/documents?author=Chvalovský, Karel"
+                       class="name">Karel Chvalovský</a>                    <a href="https://orcid.org/0000-0002-0541-3889"><img class="orcid-logo"
+                                                                    src="https://drops.dagstuhl.de/images/orcid.png"
+                                                                    alt="ORCID-Logo"></a><!--
+                   --><!---->,                </span>
+                            <span class="author">
+                    <a href="https://drops.dagstuhl.de/search/documents?author=Goertzel, Zarathustra"
+                       class="name">Zarathustra Goertzel</a>                    <a href="https://orcid.org/0000-0002-8458-2786"><img class="orcid-logo"
+                                                                    src="https://drops.dagstuhl.de/images/orcid.png"
+                                                                    alt="ORCID-Logo"></a><!--
+                   --><!---->,                </span>
+                            <span class="author">
+                    <a href="https://drops.dagstuhl.de/search/documents?author=Kaliszyk, Cezary"
+                       class="name">Cezary Kaliszyk</a>                    <a href="https://orcid.org/0000-0002-8273-6059"><img class="orcid-logo"
+                                                                    src="https://drops.dagstuhl.de/images/orcid.png"
+                                                                    alt="ORCID-Logo"></a><!--
+                   --><!---->,                </span>
+                            <span class="author">
+                    <a href="https://drops.dagstuhl.de/search/documents?author=Olšák, Mirek"
+                       class="name">Mirek Olšák</a>                    <a href="https://orcid.org/0000-0002-9361-1921"><img class="orcid-logo"
+                                                                    src="https://drops.dagstuhl.de/images/orcid.png"
+                                                                    alt="ORCID-Logo"></a><!--
+                   --><!---->,                </span>
+                            <span class="author">
+                    <a href="https://drops.dagstuhl.de/search/documents?author=Piotrowski, Bartosz"
+                       class="name">Bartosz Piotrowski</a>                    <a href="https://orcid.org/0000-0002-1699-018X"><img class="orcid-logo"
+                                                                    src="https://drops.dagstuhl.de/images/orcid.png"
+                                                                    alt="ORCID-Logo"></a><!--
+                   --><!---->,                </span>
+                            <span class="author">
+                    <a href="https://drops.dagstuhl.de/search/documents?author=Schulz, Stephan"
+                       class="name">Stephan Schulz</a>                    <a href="https://orcid.org/0000-0001-6262-8555"><img class="orcid-logo"
+                                                                    src="https://drops.dagstuhl.de/images/orcid.png"
+                                                                    alt="ORCID-Logo"></a><!--
+                   --><!---->,                </span>
+                            <span class="author">
+                    <a href="https://drops.dagstuhl.de/search/documents?author=Suda, Martin"
+                       class="name">Martin Suda</a>                    <a href="https://orcid.org/0000-0003-0989-5800"><img class="orcid-logo"
+                                                                    src="https://drops.dagstuhl.de/images/orcid.png"
+                                                                    alt="ORCID-Logo"></a><!--
+                   --><!---->,                </span>
+                            <span class="author">
+                    <a href="https://drops.dagstuhl.de/search/documents?author=Urban, Josef"
+                       class="name">Josef Urban</a>                    <a href="https://orcid.org/0000-0002-1384-1613"><img class="orcid-logo"
+                                                                    src="https://drops.dagstuhl.de/images/orcid.png"
+                                                                    alt="ORCID-Logo"></a><!--
+                   --><!---->                </span>
+                    
+            </h3>
+
+    <hr>
+
+    <ul class="mt-4">
+        
+        <li>
+        
+            <span style="margin-right: 10px; ">Part of:</span>
+            <span style="white-space: nowrap">
+                <i class="bi bi-book-half"></i>
+                Volume:
+            </span>
+                <a href="https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-268">14th International Conference on Interactive Theorem Proving (ITP 2023) </a>
+            <br> 
+        
+            <span style="margin-right: 10px; visibility: hidden;">Part of:</span>
+            <span style="white-space: nowrap">
+                <i class="bi bi-journals"></i>
+                Series:
+            </span>
+                <a href="https://drops.dagstuhl.de/entities/series/LIPIcs">Leibniz International Proceedings in Informatics (LIPIcs)</a>
+            <br> 
+        
+            <span style="margin-right: 10px; visibility: hidden;">Part of:</span>
+            <span style="white-space: nowrap">
+                <i class="bi bi-people"></i>
+                Conference:
+            </span>
+                <a href="https://drops.dagstuhl.de/entities/conference/ITP">International Conference on Interactive Theorem Proving (ITP)</a>
+            
+                </li>
+                    <li class="mt-2">License: &nbsp; <a href="https://creativecommons.org/licenses/by/4.0/legalcode">
+
+                                <img class="license-logo" src="https://drops.dagstuhl.de/images/cc-by.png" alt="CC-BY Logo">
+                
+    Creative Commons Attribution 4.0 International license
+</a>
+</li>
+                <li>Publication Date: 2023-07-26
+                </li>
+    </ul>
+
+    <hr>
+
+</section>
+
+                    <a class="fixed-pdf-button" href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol268-itp2023/LIPIcs.ITP.2023.19/LIPIcs.ITP.2023.19.pdf" title="View as PDF">
+                <i class="bi bi-file-earmark-pdf-fill" style="color:red; background: #fff; padding-top: .05em; border-radius: .125em"></i><span class="pdf">PDF</span>
+            </a>
+                
+        <div class="row mt-2">
+
+            <div class="col-lg-4 mt-2">
+
+                <section class="metadata files">
+
+                    <h2>File</h2>
+        
+            <section class="metadata thumbnail">
+
+        <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol268-itp2023/LIPIcs.ITP.2023.19/LIPIcs.ITP.2023.19.pdf" title="View PDF"><img src="https://drops.dagstuhl.de/storage/00lipics/lipics-vol268-itp2023/thumbnails/LIPIcs.ITP.2023.19/LIPIcs.ITP.2023.19.png"
+             alt="Thumbnail PDF"></a>
+
+    </section>
+
+        <div class="content mt-4">
+                            <div class="mt-2">
+                    <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol268-itp2023/LIPIcs.ITP.2023.19/LIPIcs.ITP.2023.19.pdf" title="View as PDF">
+                                                    <span class="badge" style="background-color: #444; width: 300px; transform: translateY(-2px); font-size: unset;">
+                                <i class="bi bi-file-earmark-pdf-fill" style="color:red; background-color: #fff; border-radius: 2px; padding-top: 1px"></i> PDF
+                            </span>
+                                                <div class="mt-2">LIPIcs.ITP.2023.19.pdf</div>
+                    </a>
+
+                    <ul>
+                                                    <li>Filesize: 0.91 MB</li>
+                        
+                                                    <li>22 pages</li>
+                        
+                    </ul>
+                </div>
+                    </div>
+
+    </section>
+                <section class="metadata identifiers mt-3">
+
+    <h2>Document Identifiers</h2>
+
+    <div class="content">
+
+        <ul>
+            <li><b>DOI:</b> <a href="https://doi.org/10.4230/LIPIcs.ITP.2023.19">10.4230/LIPIcs.ITP.2023.19</a></li>
+            <li><b>URN:</b> <a href="https://nbn-resolving.org/urn:nbn:de:0030-drops-183942">urn:nbn:de:0030-drops-183942</a></li>
+        </ul>
+
+    </div>
+
+</section>
+                <section class="metadata related-version mt-3">
+
+        <h2>Related Versions</h2>
+
+        <div class="content">
+
+            <ul>
+
+                                    <li>
+                                                                            <b>Extended Version</b> <a style ="word-wrap: break-word;" href="https://doi.org/10.48550/arXiv.2303.06686">https://doi.org/10.48550/arXiv.2303.06686</a>
+                                            </li>
+                
+            </ul>
+
+        </div>
+
+    </section>
+
+                <section class="metadata subject-classifications mt-3">
+
+        <h2>Subject Classification</h2>
+
+        
+            <div class="acm-subject-classifications">
+                <h5>ACM Subject Classification</h5>
+                <div class="content">
+                    <ul>
+                                            <li>Theory of computation → Automated reasoning</li>
+                                        </ul>
+                </div>
+            </div>
+
+        
+        
+            <div class="keywords ">
+                <h5>Keywords</h5>
+                <div class="content">
+                    <ul class="list-style-comma">
+                                                    <li>Mizar</li>
+                                                    <li>ENIGMA</li>
+                                                    <li>Automated Reasoning</li>
+                                                    <li>Machine Learning</li>
+                                            </ul>
+                </div>
+            </div>
+
+        
+            </section>
+
+                <section class="metadata metrics mt-3">
+
+    <h2>Metrics</h2>
+
+    <div class="content">
+        <ul>
+                        <li>
+                <a href="#" class="btn-statistics" data-entity="document/10.4230/LIPIcs.ITP.2023.19" data-title="MizAR 60 for Mizar 50">
+    <i class="bi bi-graph-up"></i> Access Statistics
+</a>
+            </li>
+            <li>
+                Total Accesses (updated on a weekly basis)
+
+<div class="stats-total">
+            <div class="stats total-document-views">
+            <div class="circle">
+                <div class="number -hidden" data-number="0">0</div>
+            </div>
+            <div class="circle-overlay">
+                <div class="number -hidden" data-number="0" data-part="0"></div>
+            </div>
+            <div class="label">
+                Document<br>
+                <span class="icon pdf -hidden"><i class="bi bi-file-earmark-pdf-fill"></i></span>
+                <span class="icon html -hidden"><i class="bi bi-filetype-html"></i></span>
+            </div>
+        </div>
+        <div class="stats total-metadata-views">
+        <div class="circle">
+            <div class="number -hidden" data-number="0">0</div>
+        </div>
+        <div class="label">
+            Metadata<br>
+            <span class="icon metadata -hidden"><i class="bi bi-list-columns-reverse"></i></span>
+        </div>
+    </div>
+    
+</div>
+
+<!-- must be externally available for the series/journal case -->
+            </li>
+        </ul>
+    </div>
+
+</section>
+
+<div class="offcanvas offcanvas-bottom" tabindex="-1" id="statistics-offcanvas" aria-labelledby="statistics-offcanvas">
+    <div class="offcanvas-header series-details document-details">
+        <h2 style="font-weight: bold"><span class="offcanvas-title"></span></h2>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body small"
+         data-context=""
+         data-access-types="abstract,pdf"
+    >
+        <div class="centered-loader"><div class="loader"></div></div>
+        <iframe class="-hidden"></iframe>
+    </div>
+</div>
+
+
+
+            </div>
+
+            <div class="col-lg-8 mt-2">
+
+                                <section class="metadata abstract">
+
+        <h2>Abstract</h2>
+
+                    <pre class="content" style="white-space: -moz-pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word; white-space: pre-wrap;">As a present to Mizar on its 50th anniversary, we develop an AI/TP system that automatically proves about 60% of the Mizar theorems in the hammer setting. We also automatically prove 75% of the Mizar theorems when the automated provers are helped by using only the premises used in the human-written Mizar proofs. We describe the methods and large-scale experiments leading to these results. This includes in particular the E and Vampire provers, their ENIGMA and Deepire learning modifications, a number of learning-based premise selection methods, and the incremental loop that interleaves growing a corpus of millions of ATP proofs with training increasingly strong AI/TP systems on them. We also present a selection of Mizar problems that were proved automatically.</pre>
+        
+    </section>
+                <section class="metadata cite-as mt-3">
+
+    <h2>Cite As <span class="btn btn-primary btn-xs" style="float: right" data-bs-toggle="modal" data-bs-target="#bibtex-modal">Get BibTex</span></h2>
+
+    <div class="content">
+        Jan Jakubův, Karel Chvalovský, Zarathustra Goertzel, Cezary Kaliszyk, Mirek Olšák, Bartosz Piotrowski, Stephan Schulz, Martin Suda, and Josef Urban. MizAR 60 for Mizar 50. In 14th International Conference on Interactive Theorem Proving (ITP 2023). Leibniz International Proceedings in Informatics (LIPIcs), Volume 268, pp. 19:1-19:22, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2023)
+        <a href="https://doi.org/10.4230/LIPIcs.ITP.2023.19">https://doi.org/10.4230/LIPIcs.ITP.2023.19</a>
+    </div>
+
+    <div class="modal fade" id="bibtex-modal" tabindex="-1" aria-labelledby="bibtexModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bibtexModalLabel">BibTex</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <pre class="bibtex">@InProceedings{jakubuv_et_al:LIPIcs.ITP.2023.19,
+  author =	{Jakub\r{u}v, Jan and Chvalovsk\&#039;{y}, Karel and Goertzel, Zarathustra and Kaliszyk, Cezary and Ol\v{s}\&#039;{a}k, Mirek and Piotrowski, Bartosz and Schulz, Stephan and Suda, Martin and Urban, Josef},
+  title =	{{MizAR 60 for Mizar 50}},
+  booktitle =	{14th International Conference on Interactive Theorem Proving (ITP 2023)},
+  pages =	{19:1--19:22},
+  series =	{Leibniz International Proceedings in Informatics (LIPIcs)},
+  ISBN =	{978-3-95977-284-6},
+  ISSN =	{1868-8969},
+  year =	{2023},
+  volume =	{268},
+  editor =	{Naumowicz, Adam and Thiemann, Ren\&#039;{e}},
+  publisher =	{Schloss Dagstuhl -- Leibniz-Zentrum f{\&quot;u}r Informatik},
+  address =	{Dagstuhl, Germany},
+  URL =		{https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2023.19},
+  URN =		{urn:nbn:de:0030-drops-183942},
+  doi =		{10.4230/LIPIcs.ITP.2023.19},
+  annote =	{Keywords: Mizar, ENIGMA, Automated Reasoning, Machine Learning}
+}</pre>
+                    <div style="overflow: hidden">
+                        <textarea style="position: absolute; top: -400vh" id="bibtex-input">@InProceedings{jakubuv_et_al:LIPIcs.ITP.2023.19,
+  author =	{Jakub\r{u}v, Jan and Chvalovsk\&#039;{y}, Karel and Goertzel, Zarathustra and Kaliszyk, Cezary and Ol\v{s}\&#039;{a}k, Mirek and Piotrowski, Bartosz and Schulz, Stephan and Suda, Martin and Urban, Josef},
+  title =	{{MizAR 60 for Mizar 50}},
+  booktitle =	{14th International Conference on Interactive Theorem Proving (ITP 2023)},
+  pages =	{19:1--19:22},
+  series =	{Leibniz International Proceedings in Informatics (LIPIcs)},
+  ISBN =	{978-3-95977-284-6},
+  ISSN =	{1868-8969},
+  year =	{2023},
+  volume =	{268},
+  editor =	{Naumowicz, Adam and Thiemann, Ren\&#039;{e}},
+  publisher =	{Schloss Dagstuhl -- Leibniz-Zentrum f{\&quot;u}r Informatik},
+  address =	{Dagstuhl, Germany},
+  URL =		{https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2023.19},
+  URN =		{urn:nbn:de:0030-drops-183942},
+  doi =		{10.4230/LIPIcs.ITP.2023.19},
+  annote =	{Keywords: Mizar, ENIGMA, Automated Reasoning, Machine Learning}
+}</textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary copy-to-clipboard" data-selector="bibtex-input"><i class="bi bi-clipboard"></i> Copy BibTex To Clipboard<span class="bi bi-check -hidden" style="padding-left: 1em; font-weight: bold"></span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+                <section class="metadata authors mt-3" id="author-details">
+
+        <h2>Author Details</h2>
+
+        
+            <div class="author person-details">
+
+    <div>
+                    <i class="bi bi-person-fill"></i>
+        
+        <span class="name"><b>Jan Jakubův</b></span>
+
+                    <a href="https://orcid.org/0000-0002-8848-5537"><img class="orcid-logo" src="https://drops.dagstuhl.de/images/orcid.png" alt="ORCID-Logo"></a>
+        
+        
+                    <a href="mailto:jakubuv@gmail.com"><i class="bi bi-envelope"></i></a>
+        
+                    <a href="https://drops.dagstuhl.de/search/documents?author=Jakubův, Jan"><small><i class="bi bi-search"></i></small></a>
+            </div>
+
+    
+    <ul>
+                                <li class="affiliation">Czech Technical University in Prague, Czech Republic
+                            </li>
+                        </ul>
+
+</div>
+
+        
+            <div class="author person-details">
+
+    <div>
+                    <i class="bi bi-person-fill"></i>
+        
+        <span class="name"><b>Karel Chvalovský</b></span>
+
+                    <a href="https://orcid.org/0000-0002-0541-3889"><img class="orcid-logo" src="https://drops.dagstuhl.de/images/orcid.png" alt="ORCID-Logo"></a>
+        
+        
+                    <a href="mailto:karel@chvalovsky.cz"><i class="bi bi-envelope"></i></a>
+        
+                    <a href="https://drops.dagstuhl.de/search/documents?author=Chvalovský, Karel"><small><i class="bi bi-search"></i></small></a>
+            </div>
+
+    
+    <ul>
+                                <li class="affiliation">Czech Technical University in Prague, Czech Republic
+                            </li>
+                        </ul>
+
+</div>
+
+        
+            <div class="author person-details">
+
+    <div>
+                    <i class="bi bi-person-fill"></i>
+        
+        <span class="name"><b>Zarathustra Goertzel</b></span>
+
+                    <a href="https://orcid.org/0000-0002-8458-2786"><img class="orcid-logo" src="https://drops.dagstuhl.de/images/orcid.png" alt="ORCID-Logo"></a>
+        
+        
+        
+                    <a href="https://drops.dagstuhl.de/search/documents?author=Goertzel, Zarathustra"><small><i class="bi bi-search"></i></small></a>
+            </div>
+
+    
+    <ul>
+                                <li class="affiliation">Czech Technical University in Prague, Czech Republic
+                            </li>
+                        </ul>
+
+</div>
+
+        
+            <div class="author person-details">
+
+    <div>
+                    <i class="bi bi-person-fill"></i>
+        
+        <span class="name"><b>Cezary Kaliszyk</b></span>
+
+                    <a href="https://orcid.org/0000-0002-8273-6059"><img class="orcid-logo" src="https://drops.dagstuhl.de/images/orcid.png" alt="ORCID-Logo"></a>
+        
+        
+                    <a href="mailto:cezary.kaliszyk@uibk.ac.at"><i class="bi bi-envelope"></i></a>
+        
+                    <a href="https://drops.dagstuhl.de/search/documents?author=Kaliszyk, Cezary"><small><i class="bi bi-search"></i></small></a>
+            </div>
+
+    
+    <ul>
+                                <li class="affiliation">Universität Innsbruck, Austria
+                            </li>
+                                            <li class="affiliation">INDRC, Prague, Czech Republic
+                            </li>
+                        </ul>
+
+</div>
+
+        
+            <div class="author person-details">
+
+    <div>
+                    <i class="bi bi-person-fill"></i>
+        
+        <span class="name"><b>Mirek Olšák</b></span>
+
+                    <a href="https://orcid.org/0000-0002-9361-1921"><img class="orcid-logo" src="https://drops.dagstuhl.de/images/orcid.png" alt="ORCID-Logo"></a>
+        
+        
+        
+                    <a href="https://drops.dagstuhl.de/search/documents?author=Olšák, Mirek"><small><i class="bi bi-search"></i></small></a>
+            </div>
+
+    
+    <ul>
+                                <li class="affiliation">Institut des Hautes Études Scientifiques, Paris, France
+                            </li>
+                        </ul>
+
+</div>
+
+        
+            <div class="author person-details">
+
+    <div>
+                    <i class="bi bi-person-fill"></i>
+        
+        <span class="name"><b>Bartosz Piotrowski</b></span>
+
+                    <a href="https://orcid.org/0000-0002-1699-018X"><img class="orcid-logo" src="https://drops.dagstuhl.de/images/orcid.png" alt="ORCID-Logo"></a>
+        
+        
+                    <a href="mailto:bartoszpiotrowski@post.pl"><i class="bi bi-envelope"></i></a>
+        
+                    <a href="https://drops.dagstuhl.de/search/documents?author=Piotrowski, Bartosz"><small><i class="bi bi-search"></i></small></a>
+            </div>
+
+    
+    <ul>
+                                <li class="affiliation">Czech Technical University in Prague, Czech Republic
+                            </li>
+                        </ul>
+
+</div>
+
+        
+            <div class="author person-details">
+
+    <div>
+                    <i class="bi bi-person-fill"></i>
+        
+        <span class="name"><b>Stephan Schulz</b></span>
+
+                    <a href="https://orcid.org/0000-0001-6262-8555"><img class="orcid-logo" src="https://drops.dagstuhl.de/images/orcid.png" alt="ORCID-Logo"></a>
+        
+        
+        
+                    <a href="https://drops.dagstuhl.de/search/documents?author=Schulz, Stephan"><small><i class="bi bi-search"></i></small></a>
+            </div>
+
+    
+    <ul>
+                                <li class="affiliation">DHBW Stuttgart, Germany
+                            </li>
+                        </ul>
+
+</div>
+
+        
+            <div class="author person-details">
+
+    <div>
+                    <i class="bi bi-person-fill"></i>
+        
+        <span class="name"><b>Martin Suda</b></span>
+
+                    <a href="https://orcid.org/0000-0003-0989-5800"><img class="orcid-logo" src="https://drops.dagstuhl.de/images/orcid.png" alt="ORCID-Logo"></a>
+        
+        
+                    <a href="mailto:martin.suda@cvut.cz"><i class="bi bi-envelope"></i></a>
+        
+                    <a href="https://drops.dagstuhl.de/search/documents?author=Suda, Martin"><small><i class="bi bi-search"></i></small></a>
+            </div>
+
+    
+    <ul>
+                                <li class="affiliation">Czech Technical University in Prague, Czech Republic
+                            </li>
+                        </ul>
+
+</div>
+
+        
+            <div class="author person-details">
+
+    <div>
+                    <i class="bi bi-person-fill"></i>
+        
+        <span class="name"><b>Josef Urban</b></span>
+
+                    <a href="https://orcid.org/0000-0002-1384-1613"><img class="orcid-logo" src="https://drops.dagstuhl.de/images/orcid.png" alt="ORCID-Logo"></a>
+        
+        
+        
+                    <a href="https://drops.dagstuhl.de/search/documents?author=Urban, Josef"><small><i class="bi bi-search"></i></small></a>
+            </div>
+
+    
+    <ul>
+                                <li class="affiliation">Czech Technical University in Prague, Czech Republic
+                            </li>
+                        </ul>
+
+</div>
+
+        
+        
+    </section>
+
+
+                <section class="metadata related-version mt-3">
+
+        <h2>Funding</h2>
+
+        <div class="content">
+
+                            The funding for the multi-year development of the methods and for the experiments was partially provided by the ERC Consolidator grant AI4REASON no. 649043 (KC, ZG, JJ, BP, MS and JU), the European Regional Development Fund under the Czech project AI&amp;Reasoning no. CZ.02.1.01/0.0/0.0/15_003/0000466 (KC, ZG, JJ, MO, JU), the ERC Starting Grant SMART no. 714034 (JJ, CK, MO), the Czech Science Foundation project 20-06390Y and project RICAIP no. 857306 under the EU-H2020 programme (MS), ERC-CZ project POSTMAN no. LL1902 (KC, JJ, BP), Amazon Research Awards (JU), the EU ICT-48 2020 project TAILOR no. 952215 (JU), and the grant 2018/29/N/ST6/02903 of National Science Center, Poland (BP).
+            
+            <ul>
+
+                                                                                                                                                                                                                                                                                                                                                    
+            </ul>
+
+        </div>
+
+    </section>
+
+                <section class="metadata acknowledgements mt-3">
+
+        <h2>Acknowledgements</h2>
+
+        <div class="content">
+            The development of ENIGMA, premise selection and other methods used here, as well as the large-scale experiments, benefited from many informal discussions which involved (at least) Lasse Blaauwbroek, Chad Brown, Thibault Gauthier, Mikoláš Janota, Jelle Piepenbrock, Stanisław Purgał, Bob Veroff, and Jiří Vyskočil.
+        </div>
+
+    </section>
+                                <section class="metadata related-version mt-3">
+
+        <h2>Supplementary Materials</h2>
+
+        <div class="content">
+
+            <ul>
+
+                                    <li style="margin-bottom: 0.3em">
+                                                                            <span style="display: block;">
+                            <b>Software</b>
+                                                                    <i class="bi bi-github"></i>
+                                                                                                    <a href="https://github.com/ai4reason/ATP_Proofs">https://github.com/ai4reason/ATP_Proofs</a>
+                                                            </span>
+                                                                                            </li>
+                
+            </ul>
+
+        </div>
+
+    </section>
+
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="software-heritage-offcanvas" aria-labelledby="software-heritage-offcanvas">
+    <div class="offcanvas-header">
+        <h2 class="offcanvas-title" style="font-weight: bold"></h2>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="small offcanvas-subtitle"></div>
+    <div class="offcanvas-body small">
+        <div style="margin-top: 20vh" class="centered-loader"><div class="loader"></div></div>
+        <iframe class="-hidden"></iframe>
+    </div>
+</div>
+
+
+                <section class="metadata references mt-3">
+
+        <h2>References</h2>
+
+        <div class="content">
+
+            <ol>
+
+                
+                    <li id="bib.bib1">
+                        <span>
+                                                            Martín Abadi, Ashish Agarwal, Paul Barham, Eugene Brevdo, Zhifeng Chen, Craig Citro, Greg S. Corrado, Andy Davis, Jeffrey Dean, Matthieu Devin, Sanjay Ghemawat, Ian Goodfellow, Andrew Harp, Geoffrey Irving, Michael Isard, Yangqing Jia, Rafal Jozefowicz, Lukasz Kaiser, Manjunath Kudlur, Josh Levenberg, Dandelion Mané, Rajat Monga, Sherry Moore, Derek Murray, Chris Olah, Mike Schuster, Jonathon Shlens, Benoit Steiner, Ilya Sutskever, Kunal Talwar, Paul Tucker, Vincent Vanhoucke, Vijay Vasudevan, Fernanda Viégas, Oriol Vinyals, Pete Warden, Martin Wattenberg, Martin Wicke, Yuan Yu, and Xiaoqiang Zheng. TensorFlow: Large-scale machine learning on heterogeneous systems, 2015. Software available from tensorflow.org. URL: <a href="https://www.tensorflow.org/">https://www.tensorflow.org/</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib2">
+                        <span>
+                                                            Jesse Alama, Tom Heskes, Daniel Kühlwein, Evgeni Tsivtsivadze, and Josef Urban. Premise selection for mathematics by corpus analysis and kernel methods. J. Autom. Reasoning, 52(2):191-213, 2014. URL: <a href="https://doi.org/10.1007/s10817-013-9286-5">https://doi.org/10.1007/s10817-013-9286-5</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib3">
+                        <span>
+                                                            Grzegorz Bancerek, Czeslaw Bylinski, Adam Grabowski, Artur Kornilowicz, Roman Matuszewski, Adam Naumowicz, and Karol Pak. The role of the Mizar Mathematical Library for interactive proof development in Mizar. J. Autom. Reason., 61(1-4):9-32, 2018. URL: <a href="https://doi.org/10.1007/s10817-017-9440-6">https://doi.org/10.1007/s10817-017-9440-6</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib4">
+                        <span>
+                                                            Grzegorz Bancerek, Czeslaw Bylinski, Adam Grabowski, Artur Kornilowicz, Roman Matuszewski, Adam Naumowicz, Karol Pak, and Josef Urban. Mizar: State-of-the-art and beyond. In Manfred Kerber, Jacques Carette, Cezary Kaliszyk, Florian Rabe, and Volker Sorge, editors, Intelligent Computer Mathematics - International Conference, CICM 2015, Washington, DC, USA, July 13-17, 2015, Proceedings, volume 9150 of Lecture Notes in Computer Science, pages 261-279. Springer, 2015. URL: <a href="https://doi.org/10.1007/978-3-319-20615-8_17">https://doi.org/10.1007/978-3-319-20615-8_17</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib5">
+                        <span>
+                                                            Grzegorz Bancerek and Piotr Rudnicki. A Compendium of Continuous Lattices in MIZAR. J. Autom. Reasoning, 29(3-4):189-224, 2002. URL: <a href="https://doi.org/10.1023/A:1021966832558">https://doi.org/10.1023/A:1021966832558</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib6">
+                        <span>
+                                                            Jasmin Christian Blanchette, David Greenaway, Cezary Kaliszyk, Daniel Kühlwein, and Josef Urban. A learning-based fact selector for Isabelle/HOL. J. Autom. Reasoning, 57(3):219-244, 2016. URL: <a href="https://doi.org/10.1007/s10817-016-9362-8">https://doi.org/10.1007/s10817-016-9362-8</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib7">
+                        <span>
+                                                            Jasmin Christian Blanchette, Cezary Kaliszyk, Lawrence C. Paulson, and Josef Urban. Hammering towards QED. J. Formalized Reasoning, 9(1):101-148, 2016. URL: <a href="https://doi.org/10.6092/issn.1972-5787/4593">https://doi.org/10.6092/issn.1972-5787/4593</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib8">
+                        <span>
+                                                            Tianqi Chen and Carlos Guestrin. XGBoost: A scalable tree boosting system. In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, KDD '16, pages 785-794, New York, NY, USA, 2016. ACM. URL: <a href="https://doi.org/10.1145/2939672.2939785">https://doi.org/10.1145/2939672.2939785</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib9">
+                        <span>
+                                                            Kyunghyun Cho, Bart van Merrienboer, Çaglar Gülçehre, Dzmitry Bahdanau, Fethi Bougares, Holger Schwenk, and Yoshua Bengio. Learning phrase representations using RNN encoder-decoder for statistical machine translation. In Alessandro Moschitti, Bo Pang, and Walter Daelemans, editors, Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing, EMNLP 2014, October 25-29, 2014, Doha, Qatar, A meeting of SIGDAT, a Special Interest Group of the ACL, pages 1724-1734. ACL, 2014. URL: <a href="https://doi.org/10.3115/v1/d14-1179">https://doi.org/10.3115/v1/d14-1179</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib10">
+                        <span>
+                                                            Karel Chvalovský, Jan Jakubuv, Miroslav Olsák, and Josef Urban. Learning theorem proving components. In Anupam Das and Sara Negri, editors, Automated Reasoning with Analytic Tableaux and Related Methods - 30th International Conference, TABLEAUX 2021, Birmingham, UK, September 6-9, 2021, Proceedings, volume 12842 of Lecture Notes in Computer Science, pages 266-278. Springer, 2021. URL: <a href="https://doi.org/10.1007/978-3-030-86059-2_16">https://doi.org/10.1007/978-3-030-86059-2_16</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib11">
+                        <span>
+                                                            Karel Chvalovský, Jan Jakubuv, Martin Suda, and Josef Urban. ENIGMA-NG: Efficient neural and gradient-boosted inference guidance for E. In Pascal Fontaine, editor, Automated Deduction - CADE 27 - 27th International Conference on Automated Deduction, Natal, Brazil, August 27-30, 2019, Proceedings, volume 11716 of Lecture Notes in Computer Science, pages 197-215. Springer, 2019. URL: <a href="https://doi.org/10.1007/978-3-030-29436-6_12">https://doi.org/10.1007/978-3-030-29436-6_12</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib12">
+                        <span>
+                                                            Richard Evans, David Saxton, David Amos, Pushmeet Kohli, and Edward Grefenstette. Can neural networks understand logical entailment? In International Conference on Learning Representations, 2018. URL: <a href="https://openreview.net/forum?id=SkZxCk-0Z">https://openreview.net/forum?id=SkZxCk-0Z</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib13">
+                        <span>
+                                                            Thibault Gauthier. Deep reinforcement learning for synthesizing functions in higher-order logic. In LPAR, volume 73 of EPiC Series in Computing, pages 230-248. EasyChair, 2020.
+                                <a href="https://scholar.google.com/scholar?hl=en&q=Thibault Gauthier. Deep reinforcement learning for synthesizing functions in higher-order logic. In LPAR, volume 73 of EPiC Series in Computing, pages 230-248. EasyChair, 2020." target="_blank" title="Google Scholar"><img style="opacity: 0.5" src="https://drops.dagstuhl.de/images/google-scholar.dark.16x16.png" alt="Google Scholar"></a>
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib14">
+                        <span>
+                                                            Thibault Gauthier, Cezary Kaliszyk, and Josef Urban. TacticToe: Learning to reason with HOL4 tactics. In Thomas Eiter and David Sands, editors, LPAR-21, 21st International Conference on Logic for Programming, Artificial Intelligence and Reasoning, Maun, Botswana, May 7-12, 2017, volume 46 of EPiC, pages 125-143. EasyChair, 2017. URL: <a href="https://doi.org/10.29007/ntlb">https://doi.org/10.29007/ntlb</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib15">
+                        <span>
+                                                            Thibault Gauthier, Cezary Kaliszyk, Josef Urban, Ramana Kumar, and Michael Norrish. Tactictoe: Learning to prove with tactics. J. Autom. Reason., 65(2):257-286, 2021. URL: <a href="https://doi.org/10.1007/s10817-020-09580-x">https://doi.org/10.1007/s10817-020-09580-x</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib16">
+                        <span>
+                                                            Thibault Gauthier, Miroslav Olsák, and Josef Urban. Alien coding. CoRR, abs/2301.11479, 2023.
+                                <a href="https://scholar.google.com/scholar?hl=en&q=Thibault Gauthier, Miroslav Olsák, and Josef Urban. Alien coding. CoRR, abs/2301.11479, 2023." target="_blank" title="Google Scholar"><img style="opacity: 0.5" src="https://drops.dagstuhl.de/images/google-scholar.dark.16x16.png" alt="Google Scholar"></a>
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib17">
+                        <span>
+                                                            Thibault Gauthier and Josef Urban. Learning program synthesis for integer sequences from scratch. CoRR, abs/2202.11908, 2022.
+                                <a href="https://scholar.google.com/scholar?hl=en&q=Thibault Gauthier and Josef Urban. Learning program synthesis for integer sequences from scratch. CoRR, abs/2202.11908, 2022." target="_blank" title="Google Scholar"><img style="opacity: 0.5" src="https://drops.dagstuhl.de/images/google-scholar.dark.16x16.png" alt="Google Scholar"></a>
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib18">
+                        <span>
+                                                            Zarathustra Goertzel, Jan Jakubův, and Josef Urban. ENIGMAWatch: ProofWatch meets ENIGMA. In Serenella Cerrito and Andrei Popescu, editors, Automated Reasoning with Analytic Tableaux and Related Methods, pages 374-388, Cham, 2019. Springer International Publishing.
+                                <a href="https://scholar.google.com/scholar?hl=en&q=Zarathustra Goertzel, Jan Jakubův, and Josef Urban. ENIGMAWatch: ProofWatch meets ENIGMA. In Serenella Cerrito and Andrei Popescu, editors, Automated Reasoning with Analytic Tableaux and Related Methods, pages 374-388, Cham, 2019. Springer International Publishing." target="_blank" title="Google Scholar"><img style="opacity: 0.5" src="https://drops.dagstuhl.de/images/google-scholar.dark.16x16.png" alt="Google Scholar"></a>
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib19">
+                        <span>
+                                                            Zarathustra Amadeus Goertzel. Make E smart again (short paper). In IJCAR (2), volume 12167 of Lecture Notes in Computer Science, pages 408-415. Springer, 2020.
+                                <a href="https://scholar.google.com/scholar?hl=en&q=Zarathustra Amadeus Goertzel. Make E smart again (short paper). In IJCAR (2), volume 12167 of Lecture Notes in Computer Science, pages 408-415. Springer, 2020." target="_blank" title="Google Scholar"><img style="opacity: 0.5" src="https://drops.dagstuhl.de/images/google-scholar.dark.16x16.png" alt="Google Scholar"></a>
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib20">
+                        <span>
+                                                            Zarathustra Amadeus Goertzel, Karel Chvalovský, Jan Jakubuv, Miroslav Olsák, and Josef Urban. Fast and slow Enigmas and parental guidance. In FroCoS, volume 12941 of Lecture Notes in Computer Science, pages 173-191. Springer, 2021.
+                                <a href="https://scholar.google.com/scholar?hl=en&q=Zarathustra Amadeus Goertzel, Karel Chvalovský, Jan Jakubuv, Miroslav Olsák, and Josef Urban. Fast and slow Enigmas and parental guidance. In FroCoS, volume 12941 of Lecture Notes in Computer Science, pages 173-191. Springer, 2021." target="_blank" title="Google Scholar"><img style="opacity: 0.5" src="https://drops.dagstuhl.de/images/google-scholar.dark.16x16.png" alt="Google Scholar"></a>
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib21">
+                        <span>
+                                                            Zarathustra Amadeus Goertzel, Jan Jakubuv, Cezary Kaliszyk, Miroslav Olsák, Jelle Piepenbrock, and Josef Urban. The Isabelle ENIGMA. In ITP, volume 237 of LIPIcs, pages 16:1-16:21. Schloss Dagstuhl - Leibniz-Zentrum für Informatik, 2022.
+                                <a href="https://scholar.google.com/scholar?hl=en&q=Zarathustra Amadeus Goertzel, Jan Jakubuv, Cezary Kaliszyk, Miroslav Olsák, Jelle Piepenbrock, and Josef Urban. The Isabelle ENIGMA. In ITP, volume 237 of LIPIcs, pages 16:1-16:21. Schloss Dagstuhl - Leibniz-Zentrum für Informatik, 2022." target="_blank" title="Google Scholar"><img style="opacity: 0.5" src="https://drops.dagstuhl.de/images/google-scholar.dark.16x16.png" alt="Google Scholar"></a>
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib22">
+                        <span>
+                                                            Adam Grabowski, Artur Korniłowicz, and Adam Naumowicz. Mizar in a nutshell. J. Formalized Reasoning, 3(2):153-245, 2010.
+                                <a href="https://scholar.google.com/scholar?hl=en&q=Adam Grabowski, Artur Korniłowicz, and Adam Naumowicz. Mizar in a nutshell. J. Formalized Reasoning, 3(2):153-245, 2010." target="_blank" title="Google Scholar"><img style="opacity: 0.5" src="https://drops.dagstuhl.de/images/google-scholar.dark.16x16.png" alt="Google Scholar"></a>
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib23">
+                        <span>
+                                                            Frank Hutter, Holger H. Hoos, Kevin Leyton-Brown, and Thomas Stützle. ParamILS: an automatic algorithm configuration framework. J. Artificial Intelligence Research, 36:267-306, October 2009.
+                                <a href="https://scholar.google.com/scholar?hl=en&q=Frank Hutter, Holger H. Hoos, Kevin Leyton-Brown, and Thomas Stützle. ParamILS: an automatic algorithm configuration framework. J. Artificial Intelligence Research, 36:267-306, October 2009." target="_blank" title="Google Scholar"><img style="opacity: 0.5" src="https://drops.dagstuhl.de/images/google-scholar.dark.16x16.png" alt="Google Scholar"></a>
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib24">
+                        <span>
+                                                            Jan Jakubův and Josef Urban. Hierarchical invention of theorem proving strategies. AI Commun., 31(3):237-250, 2018. URL: <a href="https://doi.org/10.3233/AIC-180761">https://doi.org/10.3233/AIC-180761</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib25">
+                        <span>
+                                                            Jan Jakubuv, Karel Chvalovský, Miroslav Olsák, Bartosz Piotrowski, Martin Suda, and Josef Urban. ENIGMA anonymous: Symbol-independent inference guiding machine (system description). In IJCAR (2), volume 12167 of Lecture Notes in Computer Science, pages 448-463. Springer, 2020.
+                                <a href="https://scholar.google.com/scholar?hl=en&q=Jan Jakubuv, Karel Chvalovský, Miroslav Olsák, Bartosz Piotrowski, Martin Suda, and Josef Urban. ENIGMA anonymous: Symbol-independent inference guiding machine (system description). In IJCAR (2), volume 12167 of Lecture Notes in Computer Science, pages 448-463. Springer, 2020." target="_blank" title="Google Scholar"><img style="opacity: 0.5" src="https://drops.dagstuhl.de/images/google-scholar.dark.16x16.png" alt="Google Scholar"></a>
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib26">
+                        <span>
+                                                            Jan Jakubuv, Martin Suda, and Josef Urban. Automated invention of strategies and term orderings for vampire. In GCAI, volume 50 of EPiC Series in Computing, pages 121-133. EasyChair, 2017.
+                                <a href="https://scholar.google.com/scholar?hl=en&q=Jan Jakubuv, Martin Suda, and Josef Urban. Automated invention of strategies and term orderings for vampire. In GCAI, volume 50 of EPiC Series in Computing, pages 121-133. EasyChair, 2017." target="_blank" title="Google Scholar"><img style="opacity: 0.5" src="https://drops.dagstuhl.de/images/google-scholar.dark.16x16.png" alt="Google Scholar"></a>
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib27">
+                        <span>
+                                                            Jan Jakubuv and Josef Urban. BliStrTune: hierarchical invention of theorem proving strategies. In Yves Bertot and Viktor Vafeiadis, editors, Proceedings of the 6th ACM SIGPLAN Conference on Certified Programs and Proofs, CPP 2017, Paris, France, January 16-17, 2017, pages 43-52. ACM, 2017. URL: <a href="https://doi.org/10.1145/3018610.3018619">https://doi.org/10.1145/3018610.3018619</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib28">
+                        <span>
+                                                            Jan Jakubuv and Josef Urban. Enhancing ENIGMA given clause guidance. In Florian Rabe, William M. Farmer, Grant O. Passmore, and Abdou Youssef, editors, Intelligent Computer Mathematics - 11th International Conference, CICM 2018, Hagenberg, Austria, August 13-17, 2018, Proceedings, volume 11006 of Lecture Notes in Computer Science, pages 118-124. Springer, 2018. URL: <a href="https://doi.org/10.1007/978-3-319-96812-4_11">https://doi.org/10.1007/978-3-319-96812-4_11</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib29">
+                        <span>
+                                                            Jan Jakubuv and Josef Urban. Hammering Mizar by learning clause guidance. In John Harrison, John O'Leary, and Andrew Tolmach, editors, 10th International Conference on Interactive Theorem Proving, ITP 2019, September 9-12, 2019, Portland, OR, USA, volume 141 of LIPIcs, pages 34:1-34:8. Schloss Dagstuhl - Leibniz-Zentrum für Informatik, 2019. URL: <a href="https://doi.org/10.4230/LIPIcs.ITP.2019.34">https://doi.org/10.4230/LIPIcs.ITP.2019.34</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib30">
+                        <span>
+                                                            Cezary Kaliszyk and Josef Urban. Stronger automation for Flyspeck by feature weighting and strategy evolution. In Jasmin Christian Blanchette and Josef Urban, editors, PxTP 2013, volume 14 of EPiC Series, pages 87-95. EasyChair, 2013.
+                                <a href="https://scholar.google.com/scholar?hl=en&q=Cezary Kaliszyk and Josef Urban. Stronger automation for Flyspeck by feature weighting and strategy evolution. In Jasmin Christian Blanchette and Josef Urban, editors, PxTP 2013, volume 14 of EPiC Series, pages 87-95. EasyChair, 2013." target="_blank" title="Google Scholar"><img style="opacity: 0.5" src="https://drops.dagstuhl.de/images/google-scholar.dark.16x16.png" alt="Google Scholar"></a>
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib31">
+                        <span>
+                                                            Cezary Kaliszyk and Josef Urban. Learning-assisted automated reasoning with Flyspeck. J. Autom. Reasoning, 53(2):173-213, 2014. URL: <a href="https://doi.org/10.1007/s10817-014-9303-3">https://doi.org/10.1007/s10817-014-9303-3</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib32">
+                        <span>
+                                                            Cezary Kaliszyk and Josef Urban. MizAR 40 for Mizar 40. J. Autom. Reasoning, 55(3):245-256, 2015. URL: <a href="https://doi.org/10.1007/s10817-015-9330-8">https://doi.org/10.1007/s10817-015-9330-8</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib33">
+                        <span>
+                                                            Cezary Kaliszyk, Josef Urban, and Jirí Vyskocil. Efficient semantic features for automated reasoning over large theories. In IJCAI, pages 3084-3090. AAAI Press, 2015.
+                                <a href="https://scholar.google.com/scholar?hl=en&q=Cezary Kaliszyk, Josef Urban, and Jirí Vyskocil. Efficient semantic features for automated reasoning over large theories. In IJCAI, pages 3084-3090. AAAI Press, 2015." target="_blank" title="Google Scholar"><img style="opacity: 0.5" src="https://drops.dagstuhl.de/images/google-scholar.dark.16x16.png" alt="Google Scholar"></a>
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib34">
+                        <span>
+                                                            Cezary Kaliszyk, Josef Urban, and Jirí Vyskocil. Automating formalization by statistical and semantic parsing of mathematics. In ITP, volume 10499 of Lecture Notes in Computer Science, pages 12-27. Springer, 2017.
+                                <a href="https://scholar.google.com/scholar?hl=en&q=Cezary Kaliszyk, Josef Urban, and Jirí Vyskocil. Automating formalization by statistical and semantic parsing of mathematics. In ITP, volume 10499 of Lecture Notes in Computer Science, pages 12-27. Springer, 2017." target="_blank" title="Google Scholar"><img style="opacity: 0.5" src="https://drops.dagstuhl.de/images/google-scholar.dark.16x16.png" alt="Google Scholar"></a>
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib35">
+                        <span>
+                                                            Guolin Ke, Qi Meng, Thomas Finley, Taifeng Wang, Wei Chen, Weidong Ma, Qiwei Ye, and Tie-Yan Liu. Lightgbm: A highly efficient gradient boosting decision tree. In NIPS, pages 3146-3154, 2017.
+                                <a href="https://scholar.google.com/scholar?hl=en&q=Guolin Ke, Qi Meng, Thomas Finley, Taifeng Wang, Wei Chen, Weidong Ma, Qiwei Ye, and Tie-Yan Liu. Lightgbm: A highly efficient gradient boosting decision tree. In NIPS, pages 3146-3154, 2017." target="_blank" title="Google Scholar"><img style="opacity: 0.5" src="https://drops.dagstuhl.de/images/google-scholar.dark.16x16.png" alt="Google Scholar"></a>
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib36">
+                        <span>
+                                                            Artur Korniłowicz and Christoph Schwarzweller. Computers and algorithms in Mizar. Mechanized Mathematics and Its Applications, 4(1):43-50, 2005.
+                                <a href="https://scholar.google.com/scholar?hl=en&q=Artur Korniłowicz and Christoph Schwarzweller. Computers and algorithms in Mizar. Mechanized Mathematics and Its Applications, 4(1):43-50, 2005." target="_blank" title="Google Scholar"><img style="opacity: 0.5" src="https://drops.dagstuhl.de/images/google-scholar.dark.16x16.png" alt="Google Scholar"></a>
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib37">
+                        <span>
+                                                            Laura Kovács and Andrei Voronkov. First-order theorem proving and Vampire. In Natasha Sharygina and Helmut Veith, editors, CAV, volume 8044 of LNCS, pages 1-35. Springer, 2013. URL: <a href="https://doi.org/10.1007/978-3-642-39799-8_1">https://doi.org/10.1007/978-3-642-39799-8_1</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib38">
+                        <span>
+                                                            Guillaume Lample and François Charton. Deep learning for symbolic mathematics. In 8th International Conference on Learning Representations, ICLR 2020, Addis Ababa, Ethiopia, April 26-30, 2020. OpenReview.net, 2020. URL: <a href="https://openreview.net/forum?id=S1eZYeHFDS">https://openreview.net/forum?id=S1eZYeHFDS</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib39">
+                        <span>
+                                                            Miroslav Olsák, Cezary Kaliszyk, and Josef Urban. Property invariant embedding for automated reasoning. In Giuseppe De Giacomo, Alejandro Catalá, Bistra Dilkina, Michela Milano, Senén Barro, Alberto Bugarín, and Jérôme Lang, editors, ECAI 2020 - 24th European Conference on Artificial Intelligence, volume 325 of Frontiers in Artificial Intelligence and Applications, pages 1395-1402. IOS Press, 2020. URL: <a href="https://doi.org/10.3233/FAIA200244">https://doi.org/10.3233/FAIA200244</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib40">
+                        <span>
+                                                            David W. Opitz and Richard Maclin. Popular ensemble methods: An empirical study. J. Artif. Intell. Res., 11:169-198, 1999. URL: <a href="https://doi.org/10.1613/jair.614">https://doi.org/10.1613/jair.614</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib41">
+                        <span>
+                                                            Bartosz Piotrowski and Josef Urban. ATPboost: Learning premise selection in binary setting with ATP feedback. In Didier Galmiche, Stephan Schulz, and Roberto Sebastiani, editors, Automated Reasoning - 9th International Joint Conference, IJCAR 2018, Held as Part of the Federated Logic Conference, FloC 2018, Oxford, UK, July 14-17, 2018, Proceedings, volume 10900 of Lecture Notes in Computer Science, pages 566-574. Springer, 2018. URL: <a href="https://doi.org/10.1007/978-3-319-94205-6_37">https://doi.org/10.1007/978-3-319-94205-6_37</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib42">
+                        <span>
+                                                            Bartosz Piotrowski and Josef Urban. Stateful premise selection by recurrent neural networks. In LPAR, volume 73 of EPiC Series in Computing, pages 409-422. EasyChair, 2020.
+                                <a href="https://scholar.google.com/scholar?hl=en&q=Bartosz Piotrowski and Josef Urban. Stateful premise selection by recurrent neural networks. In LPAR, volume 73 of EPiC Series in Computing, pages 409-422. EasyChair, 2020." target="_blank" title="Google Scholar"><img style="opacity: 0.5" src="https://drops.dagstuhl.de/images/google-scholar.dark.16x16.png" alt="Google Scholar"></a>
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib43">
+                        <span>
+                                                            Bartosz Piotrowski, Josef Urban, Chad E. Brown, and Cezary Kaliszyk. Can neural networks learn symbolic rewriting? CoRR, abs/1911.04873, 2019.
+                                <a href="https://scholar.google.com/scholar?hl=en&q=Bartosz Piotrowski, Josef Urban, Chad E. Brown, and Cezary Kaliszyk. Can neural networks learn symbolic rewriting? CoRR, abs/1911.04873, 2019." target="_blank" title="Google Scholar"><img style="opacity: 0.5" src="https://drops.dagstuhl.de/images/google-scholar.dark.16x16.png" alt="Google Scholar"></a>
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib44">
+                        <span>
+                                                            John Alan Robinson and Andrei Voronkov, editors. Handbook of Automated Reasoning (in 2 volumes). Elsevier and MIT Press, 2001. URL: <a href="https://www.sciencedirect.com/book/9780444508133/handbook-of-automated-reasoning">https://www.sciencedirect.com/book/9780444508133/handbook-of-automated-reasoning</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib45">
+                        <span>
+                                                            Stephan Schulz. E - A Brainiac Theorem Prover. AI Commun., 15(2-3):111-126, 2002. URL: <a href="http://iospress.metapress.com/content/n908n94nmvk59v3c/">http://iospress.metapress.com/content/n908n94nmvk59v3c/</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib46">
+                        <span>
+                                                            Stephan Schulz. Simple and efficient clause subsumption with feature vector indexing. In Automated Reasoning and Mathematics, volume 7788 of Lecture Notes in Computer Science, pages 45-67. Springer, 2013.
+                                <a href="https://scholar.google.com/scholar?hl=en&q=Stephan Schulz. Simple and efficient clause subsumption with feature vector indexing. In Automated Reasoning and Mathematics, volume 7788 of Lecture Notes in Computer Science, pages 45-67. Springer, 2013." target="_blank" title="Google Scholar"><img style="opacity: 0.5" src="https://drops.dagstuhl.de/images/google-scholar.dark.16x16.png" alt="Google Scholar"></a>
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib47">
+                        <span>
+                                                            Stephan Schulz. System description: E 1.8. In Kenneth L. McMillan, Aart Middeldorp, and Andrei Voronkov, editors, LPAR, volume 8312 of LNCS, pages 735-743. Springer, 2013. URL: <a href="https://doi.org/10.1007/978-3-642-45221-5_49">https://doi.org/10.1007/978-3-642-45221-5_49</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib48">
+                        <span>
+                                                            Stephan Schulz. System Description: E 1.8. In Ken McMillan, Aart Middeldorp, and Andrei Voronkov, editors, Proc. of the 19th LPAR, Stellenbosch, volume 8312 of LNCS, pages 735-743. Springer, 2013.
+                                <a href="https://scholar.google.com/scholar?hl=en&q=Stephan Schulz. System Description: E 1.8. In Ken McMillan, Aart Middeldorp, and Andrei Voronkov, editors, Proc. of the 19th LPAR, Stellenbosch, volume 8312 of LNCS, pages 735-743. Springer, 2013." target="_blank" title="Google Scholar"><img style="opacity: 0.5" src="https://drops.dagstuhl.de/images/google-scholar.dark.16x16.png" alt="Google Scholar"></a>
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib49">
+                        <span>
+                                                            Stephan Schulz, Simon Cruanes, and Petar Vukmirović. Faster, higher, stronger: E 2.3. In Pascal Fontaine, editor, Proc. of the 27th CADE, Natal, Brasil, number 11716 in LNAI, pages 495-507. Springer, 2019.
+                                <a href="https://scholar.google.com/scholar?hl=en&q=Stephan Schulz, Simon Cruanes, and Petar Vukmirović. Faster, higher, stronger: E 2.3. In Pascal Fontaine, editor, Proc. of the 27th CADE, Natal, Brasil, number 11716 in LNAI, pages 495-507. Springer, 2019." target="_blank" title="Google Scholar"><img style="opacity: 0.5" src="https://drops.dagstuhl.de/images/google-scholar.dark.16x16.png" alt="Google Scholar"></a>
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib50">
+                        <span>
+                                                            Stephan Schulz and Geoff Sutcliffe. Proof generation for saturating first-order theorem provers. In David Delahaye and Bruno Woltzenlogel Paleo, editors, All about Proofs, Proofs for All, volume 55 of Mathematical Logic and Foundations, pages 45-61. College Publications, London, UK, January 2015.
+                                <a href="https://scholar.google.com/scholar?hl=en&q=Stephan Schulz and Geoff Sutcliffe. Proof generation for saturating first-order theorem provers. In David Delahaye and Bruno Woltzenlogel Paleo, editors, All about Proofs, Proofs for All, volume 55 of Mathematical Logic and Foundations, pages 45-61. College Publications, London, UK, January 2015." target="_blank" title="Google Scholar"><img style="opacity: 0.5" src="https://drops.dagstuhl.de/images/google-scholar.dark.16x16.png" alt="Google Scholar"></a>
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib51">
+                        <span>
+                                                            Martin Suda. Improving ENIGMA-style clause selection while learning from history. In André Platzer and Geoff Sutcliffe, editors, Automated Deduction - CADE 28 - 28th International Conference on Automated Deduction, Virtual Event, July 12-15, 2021, Proceedings, volume 12699 of Lecture Notes in Computer Science, pages 543-561. Springer, 2021. URL: <a href="https://doi.org/10.1007/978-3-030-79876-5_31">https://doi.org/10.1007/978-3-030-79876-5_31</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib52">
+                        <span>
+                                                            Martin Suda. Vampire with a brain is a good ITP hammer. In Boris Konev and Giles Reger, editors, Frontiers of Combining Systems - 13th International Symposium, FroCoS 2021, Birmingham, UK, September 8-10, 2021, Proceedings, volume 12941 of Lecture Notes in Computer Science, pages 192-209. Springer, 2021. URL: <a href="https://doi.org/10.1007/978-3-030-86205-3_11">https://doi.org/10.1007/978-3-030-86205-3_11</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib53">
+                        <span>
+                                                            Tanel Tammet. Towards efficient subsumption. In CADE, volume 1421 of Lecture Notes in Computer Science, pages 427-441. Springer, 1998.
+                                <a href="https://scholar.google.com/scholar?hl=en&q=Tanel Tammet. Towards efficient subsumption. In CADE, volume 1421 of Lecture Notes in Computer Science, pages 427-441. Springer, 1998." target="_blank" title="Google Scholar"><img style="opacity: 0.5" src="https://drops.dagstuhl.de/images/google-scholar.dark.16x16.png" alt="Google Scholar"></a>
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib54">
+                        <span>
+                                                            J. Urban. Translating Mizar for First Order Theorem Provers. In A. Asperti, B. Buchberger, and J.H. Davenport, editors, Proceedings of the 2nd International Conference on Mathematical Knowledge Management, number 2594 in LNCS, pages 203-215. Springer, 2003.
+                                <a href="https://scholar.google.com/scholar?hl=en&q=J. Urban. Translating Mizar for First Order Theorem Provers. In A. Asperti, B. Buchberger, and J.H. Davenport, editors, Proceedings of the 2nd International Conference on Mathematical Knowledge Management, number 2594 in LNCS, pages 203-215. Springer, 2003." target="_blank" title="Google Scholar"><img style="opacity: 0.5" src="https://drops.dagstuhl.de/images/google-scholar.dark.16x16.png" alt="Google Scholar"></a>
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib55">
+                        <span>
+                                                            Josef Urban. MPTP - Motivation, Implementation, First Experiments. J. Autom. Reasoning, 33(3-4):319-339, 2004. URL: <a href="https://doi.org/10.1007/s10817-004-6245-1">https://doi.org/10.1007/s10817-004-6245-1</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib56">
+                        <span>
+                                                            Josef Urban. MPTP 0.2: Design, implementation, and initial experiments. J. Autom. Reasoning, 37(1-2):21-43, 2006. URL: <a href="https://doi.org/10.1007/s10817-006-9032-3">https://doi.org/10.1007/s10817-006-9032-3</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib57">
+                        <span>
+                                                            Josef Urban. BliStr: The Blind Strategymaker. In Georg Gottlob, Geoff Sutcliffe, and Andrei Voronkov, editors, Global Conference on Artificial Intelligence, GCAI 2015, Tbilisi, Georgia, October 16-19, 2015, volume 36 of EPiC Series in Computing, pages 312-319. EasyChair, 2015. URL: http://www.easychair.org/publications/paper/BliStr_The_Blind_Strategymaker, URL: <a href="https://doi.org/10.29007/8n7m">https://doi.org/10.29007/8n7m</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib58">
+                        <span>
+                                                            Josef Urban and Jan Jakubuv. First neural conjecturing datasets and experiments. In Christoph Benzmüller and Bruce R. Miller, editors, Intelligent Computer Mathematics - 13th International Conference, CICM 2020, Bertinoro, Italy, July 26-31, 2020, Proceedings, volume 12236 of Lecture Notes in Computer Science, pages 315-323. Springer, 2020. URL: <a href="https://doi.org/10.1007/978-3-030-53518-6_24">https://doi.org/10.1007/978-3-030-53518-6_24</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib59">
+                        <span>
+                                                            Josef Urban, Geoff Sutcliffe, Petr Pudlák, and Jiří Vyskočil. MaLARea SG1 - Machine Learner for Automated Reasoning with Semantic Guidance. In IJCAR, pages 441-456, 2008. URL: <a href="https://doi.org/10.1007/978-3-540-71070-7_37">https://doi.org/10.1007/978-3-540-71070-7_37</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib60">
+                        <span>
+                                                            Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin. Attention is all you need. CoRR, abs/1706.03762, 2017. URL: <a href="https://arxiv.org/abs/1706.03762">https://arxiv.org/abs/1706.03762</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+                    <li id="bib.bib61">
+                        <span>
+                                                            Qingxiang Wang, Cezary Kaliszyk, and Josef Urban. First experiments with neural translation of informal to formal mathematics. In Florian Rabe, William M. Farmer, Grant O. Passmore, and Abdou Youssef, editors, 11th International Conference on Intelligent Computer Mathematics (CICM 2018), volume 11006 of LNCS, pages 255-270. Springer, 2018. URL: <a href="https://doi.org/10.1007/978-3-319-96812-4_22">https://doi.org/10.1007/978-3-319-96812-4_22</a>.
+                                                                                                            </span>
+                    </li>
+
+                
+            </ol>
+
+        </div>
+
+    </section>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    </div>
+
+    <span class="_feedback-button">
+    <i class="bi bi-patch-exclamation -hidden"></i>
+    <i class="bi bi-exclamation-circle"></i>
+    <span class="text"><a href="#">Any Issues?</a></span>
+</span>
+
+<div class="_feedback-form -hidden">
+    <span class="_feedback-close"><a href="#">X</a></span>
+    <p>Feedback on the Current Page</p>
+    <div>
+        <textarea class="form-control" name="_feedback"></textarea>
+        <input class="form-control" type="text" name="name" autocomplete="off" placeholder="Name (optional)" maxlength="60">
+        <input class="form-control" type="email" name="email" autocomplete="off" placeholder="Email (optional)" maxlength="60">
+        <div class="_captcha-check">
+            <button class="btn btn-sm btn-default btn-send">Send</button>
+            <div id="captcha" class="mt-2 -hidden">
+                <img src="" alt="CAPTCHA" style="width: 49%">
+                <input class="form-control" type="text" name="captcha" autocomplete="off" placeholder="Enter CAPTCHA" maxlength="60">
+                <input type="hidden" name="phrase">
+                <button class="btn btn-sm btn-default btn-submit">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="alert alert-success _feedback-success -hidden">
+    <span class="glyphicon glyphicon-ok"></span>
+    <h3>Thanks for your feedback!</h3>
+    <div>Feedback submitted to Dagstuhl Publishing</div>
+    <button class="btn btn-white _feedback-done">OK</button>
+</div>
+
+<div class="alert alert-danger _feedback-error -hidden">
+    <span class="glyphicon glyphicon-remove"></span>
+    <h3>Could not send message</h3>
+    <div>Please try again later or send an <a href="mailto:publishing@dagstuhl.de">E-mail</a></div>
+    <button class="btn btn-white _feedback-done">OK</button>
+</div>
+
+
+    <a class="scroll-up-button -hidden" href="#_top-of-page">
+    <i class="bi bi-arrow-up-circle"></i>
+</a>
+
+    <footer class="page-footer dark">
+
+    <div class="container">
+        <h5>About DROPS</h5>
+        <p>Schloss Dagstuhl - Leibniz Center for Informatics has been operating the Dagstuhl Research Online Publication Server (short: DROPS) since 2004. DROPS enables publication of the latest research findings in a fast, uncomplicated manner, in addition to providing unimpeded, open access to them. All the requisite metadata on each publication is administered in accordance with general guidelines pertaining to online publications (cf. Dublin Core). This enables the online publications to be authorized for citation and made accessible to a wide readership on a permanent basis. Access is free of charge for readers following the open access idea which fosters unimpeded access to scientific publications. </p>
+        <ul style="margin-top: -0.5em">
+            <li><a href="https://drops.dagstuhl.de/docs/about">More about DROPS</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-6">
+
+                <h5>Instructions for Authors</h5>
+
+                <div class="row">
+
+                    <div class="col-sm-6">
+
+                        <b>Dagstuhl Series</b><br>
+                        <ul>
+                                                                                                <li><a href="https://submission.dagstuhl.de/series/details/lipics#author">LIPIcs</a></li>
+                                                                                                                                <li><a href="https://submission.dagstuhl.de/series/details/oasics#author">OASIcs</a></li>
+                                                                                                                                <li><a href="https://submission.dagstuhl.de/series/details/dfu#author">Dagstuhl Follow-Ups</a></li>
+                                                                                                                                                </ul>
+
+                    </div>
+                                        <div class="col-sm-6">
+                        <b>Dagstuhl Journals</b><br>
+                        <ul>
+                                                                <li><a href="https://submission.dagstuhl.de/series/details/darts#author">DARTS – Dagstuhl Artifacts Series</a></li>
+                                                                <li><a href="https://submission.dagstuhl.de/series/details/dagrep#author">Dagstuhl Reports</a></li>
+                                                                <li><a href="https://submission.dagstuhl.de/series/details/dagman#author">Dagstuhl Manifestos</a></li>
+                                                                <li><a href="https://submission.dagstuhl.de/series/details/lites#author">LITES</a></li>
+                                                                <li><a href="https://submission.dagstuhl.de/series/details/tgdk#author">TGDK – Transactions on Graph Data and Knowledge</a></li>
+                                                    </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <h5>Instructions for Editors</h5>
+
+                <div class="row">
+
+                    <div class="col-sm-6">
+
+                        <b>Dagstuhl Series</b><br>
+                        <ul>
+                                                                                                <li><a href="https://submission.dagstuhl.de/series/details/lipics#editor">LIPIcs</a></li>
+                                                                                                                                <li><a href="https://submission.dagstuhl.de/series/details/oasics#editor">OASIcs</a></li>
+                                                                                                                                <li><a href="https://submission.dagstuhl.de/series/details/dfu#editor">Dagstuhl Follow-Ups</a></li>
+                                                                                                                                                </ul>
+
+                    </div>
+
+                    <div class="col-sm-6">
+                        <b>Dagstuhl Journals</b><br>
+                        <ul>
+                                                            <li><a href="https://submission.dagstuhl.de/series/details/darts#editor">DARTS – Dagstuhl Artifacts Series</a></li>
+                                                            <li><a href="https://submission.dagstuhl.de/series/details/dagrep#editor">Dagstuhl Reports</a></li>
+                                                            <li><a href="https://submission.dagstuhl.de/series/details/dagman#editor">Dagstuhl Manifestos</a></li>
+                                                            <li><a href="https://submission.dagstuhl.de/series/details/lites#editor">LITES</a></li>
+                                                            <li><a href="https://submission.dagstuhl.de/series/details/tgdk#editor">TGDK – Transactions on Graph Data and Knowledge</a></li>
+                                                    </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<div class="copyright">
+
+    &copy; 2023-2026 <a href="https://www.dagstuhl.de">Schloss Dagstuhl – LZI GmbH</a> <a href="https://www.dagstuhl.de">Schloss Dagstuhl – LZI GmbH</a>
+    <a href="https://drops.dagstuhl.de/docs/about">About&nbsp;DROPS</a>
+
+    <a href="https://drops.dagstuhl.de/docs/imprint">Imprint</a>
+
+    <a href="https://drops.dagstuhl.de/docs/privacy">Privacy</a>
+
+    <a href="https://www.dagstuhl.de/en/publishing/team">Contact</a>
+
+</div>
+
+    <script type="text/javascript" src="https://drops.dagstuhl.de/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://drops.dagstuhl.de/js/app.js?drops-core-2026-08-27.2"></script>
+    <script type="text/javascript" src="https://drops.dagstuhl.de/js/popper.min.js"></script>
+
+        <script type="text/javascript" src="https://drops.dagstuhl.de/js/circle-progress.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            const view = {
+                statsServer: 'https://drops-stats.dagstuhl.de',
+
+                animationStarted: false,
+
+                isScrolledIntoView: function (elem) {
+                    const rect = elem.getBoundingClientRect();
+                    const elemTop = rect.top;
+                    //const elemBottom = rect.bottom;
+                    // const elemHeight = rect.height;
+
+                    return (elemTop >= 0) && (elemTop <= window.innerHeight);
+                },
+
+                progressCircle: function ($el) {
+                    $('.circle .number').removeClass('-hidden');
+
+                    $el.find('.circle').circleProgress({
+                        value: 1,
+                        size: 80,
+                        fill: { color: '#555' },
+                        animation: { duration: 1200 }
+                    });
+
+                    const $overlay = $el.find('.circle-overlay');
+                    const part = $overlay.find('.number').attr('data-part');
+                    setTimeout(function() {
+                        $overlay.circleProgress({
+                            value: part,
+                            size: 80,
+                            fill: { color: '#ffc107' },
+                            animation: { duration: 1200 }
+                        });
+
+                    }.bind(this), 500);
+                },
+
+                countUp: function($el) {
+                    $el.find('.number').each(function() {
+                        const $this = $(this);
+                        const number = parseInt($this.attr('data-number'));
+
+                        let suffix = '';
+                        if (number > 90000) {
+                            $this.text(Math.ceil(number/1000)+' k');
+                            suffix = ' k';
+                        }
+                        else if (number > 90000000) {
+                            $this.text(Math.ceil(number/1000000)+' m');
+                            suffix = ' m';
+                        }
+                        else {
+                            $this.text(Math.ceil(number))
+                        }
+
+                        $({ Counter: 0 }).animate({
+                            Counter: $this.text().replace(suffix, '').replace(',', '')
+                        }, {
+                            duration: 1000,
+                            easing: 'swing',
+                            step: function() {
+                                $this.text(Math.ceil(this.Counter).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + suffix);
+                            }
+                        });
+                    });
+                },
+
+                checkVisibility: function() {
+                    const $container = $('.stats-total');
+
+                    if (view.isScrolledIntoView($container[0])) {
+
+                        if (!view.animationStarted) {
+                            view.animationStarted = true;
+
+                            view.progressCircle($container);
+
+                            setTimeout(function() { view.countUp($container) }, 200);
+                        }
+                    }
+                },
+
+                setIframeAccessTypes: function (accessTypes) {
+                    $('#statistics-offcanvas').find('[data-access-types]').attr('data-access-types', accessTypes.join(','));
+                },
+
+                initialize: function() {
+
+                    $.ajax({
+                        type: 'get',
+                        url: view.statsServer + '/api/external/drops2/document/10.4230/LIPIcs.ITP.2023.19/-/stats',
+                        success: function (result) {
+                            const total = result.total.accessTypes;
+                            const totalDocClicks = total.pdf.clicks + total.html.clicks;
+                            const accessTypes = [ 'abstract' ];
+
+                                                            const $totalDocViews = $('.total-document-views');
+                                accessTypes.push('pdf');
+
+                                $totalDocViews.find('.circle .number').attr('data-number', totalDocClicks);
+                                $totalDocViews.find('.circle-overlay .number').attr('data-number', total.html.clicks).attr('data-part', total.html.clicks / (totalDocClicks + 0.1));
+
+                                let pdfTitle = total.pdf.clicks + ' PDF-Document Views';
+                                let htmlTitle = '';
+
+                                $totalDocViews.find('.icon.pdf').removeClass('-hidden').attr('title', pdfTitle);
+
+                                if (total.html.clicks > 0) {
+                                    htmlTitle = total.html.clicks + ' HTML-Document Views';
+                                    $totalDocViews.find('.icon.html').removeClass('-hidden').attr('title', htmlTitle);
+                                    htmlTitle = ', ' + htmlTitle;
+                                    accessTypes.push('html');
+                                }
+
+                                $totalDocViews.attr('title',pdfTitle + htmlTitle);
+                            
+                            
+                            const $totalMetaViews = $('.total-metadata-views');
+
+                            $totalMetaViews.find('.number').attr('data-number', total.abstract.clicks);
+                            $totalMetaViews.find('.icon.metadata').removeClass('-hidden').attr('title', total.abstract.clicks + ' Metadata Views');
+
+                            $totalMetaViews.attr('title', total.abstract.clicks + ' Metadata Views');
+                            window.addEventListener('scroll', view.checkVisibility);
+                            view.checkVisibility();
+                            view.setIframeAccessTypes(accessTypes);
+                        },
+                        error: function () {
+                            $('.total-downloads .number').text(0);
+                            $('.total-metadata-views .number').text(0);
+
+                            window.addEventListener('scroll', view.checkVisibility);
+                            view.checkVisibility();
+                        }
+                    });
+                }
+            };
+
+            view.initialize();
+        });
+    </script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+
+            const statistics = {
+
+                statsServer: 'https://drops-stats.dagstuhl.de',
+
+                globalStatsParameter: '?accessTypes={accessTypes}&periods=weekly,monthly,yearly',
+
+                showStatistics: function(e) {
+                    e.preventDefault();
+                    const $offCanvas = $('#statistics-offcanvas');
+                    const $iframe = $offCanvas.find('iframe');
+                    const $loader = $offCanvas.find('.centered-loader');
+
+                    $iframe.addClass('-hidden');
+                    $loader.removeClass('-hidden');
+
+                    $iframe[0].onload = function () {
+                        $iframe.removeClass('-hidden');
+                        $loader.addClass('-hidden');
+                    }.bind(this);
+
+
+                    const $target = $(e.currentTarget);
+                    const entityId = $target.attr('data-entity');
+                    const title = $target.attr('data-title');
+                    const accessTypes = $offCanvas.find('[data-access-types]').attr('data-access-types');
+                    let statsParameter = statistics.globalStatsParameter.replace('{accessTypes}', accessTypes);
+                    const embedUrl = statistics.statsServer + '/embed/external/drops2/' + entityId + statsParameter;
+
+                    let context = $offCanvas.find('.offcanvas-body').attr('data-context');
+
+                    if (context === title) {
+                        context = '';
+                    }
+
+                    if (context !== '') {
+                        context += '<br>';
+                    }
+
+                    $offCanvas.find('.offcanvas-title').html(context + title);
+                    $offCanvas.offcanvas('show');
+                    $offCanvas.find('iframe').attr('src', embedUrl);
+
+                    return false;
+                },
+
+                initialize: function() {
+                    $('.btn-statistics').on('click', this.showStatistics);
+                }
+            };
+
+            statistics.initialize();
+        });
+    </script>
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+
+            const $offCanvas = $('#software-heritage-offcanvas');
+            const $offCanvasTitle = $offCanvas.find('.offcanvas-title');
+            const $offCanvasSubtitle = $offCanvas.find('.offcanvas-subtitle');
+            const $iframe = $offCanvas.find('iframe');
+            const $loader = $offCanvas.find('.centered-loader');
+
+            $iframe[0].onload = function () {
+                $iframe.removeClass('-hidden');
+                $loader.addClass('-hidden');
+            }.bind(this);
+
+            $('.btn-software-heritage').on('click', function(event) {
+                event.preventDefault();
+
+                const $target = $(event.currentTarget);
+                console.log($target);
+                const swhId = $target.data('swh-id');
+
+                if (swhId.indexOf('swh:1:dir:') === -1) {
+                    document.location = 'https://archive.softwareheritage.org/browse/' + swhId;
+                    return;
+                }
+
+                const title = $target.data('title');
+                const url = $target.data('url');
+                const embedUrl = 'https://archive.softwareheritage.org/browse/embed/' + swhId;
+
+                $offCanvasTitle.text('Archived Version: ' + title);
+                $offCanvasSubtitle.html('(archived from <a href="' + url +'">'+url+'</a>)');
+
+                $iframe.addClass('-hidden');
+                $loader.removeClass('-hidden');
+                $iframe.attr('src', embedUrl);
+                $offCanvas.offcanvas('show');
+            });
+
+        });
+    </script>
+
+    <script type="text/javascript">
+
+    function _enableFeedback() {
+
+        const $feedbackButton = $('._feedback-button, .fixed-beta-button');
+        const $feedbackClose = $('._feedback-close');
+        const $feedbackForm = $('._feedback-form');
+        const $feedbackSend = $('._feedback-form .btn-send');
+        const $textarea = $feedbackForm.find('textarea');
+        const $captcha = $('#captcha');
+        const $captchaSend = $captcha.find('.btn-submit');
+
+        const $feedbackSuccess = $('._feedback-success');
+        const $feedbackError = $('._feedback-error');
+
+        const $feedbackDoneButton = $('._feedback-done');
+
+        const getCaptchaImage = function() {
+            $.ajax({
+                url: '/api/v1/feedback/captcha',
+                type: 'get',
+                success: function (result) {
+                    replaceCaptchaImage(result);
+                },
+                error: function () {
+                    $feedbackError.removeClass('-hidden');
+                }
+            });
+        }
+
+        const replaceCaptchaImage = function(result) {
+            $captcha.removeClass('-hidden');
+            $captcha.find('input[name="phrase"]').val(result.phrase);
+            $captcha.find('img').attr('src', result.image);
+            $captcha.find('input[name="captcha"]').val('');
+            $captcha.find('input[name="captcha"]').focus();
+            $feedbackSend.addClass('-hidden');
+        }
+
+        const getMessage = function() {
+            let message = $textarea.val();
+
+            if (message === undefined) {
+                message = '';
+            }
+
+            return message.trim();
+        }
+
+        $feedbackButton.addClass('_show');
+
+        $feedbackButton.on('click', function (e) {
+            e.preventDefault();
+            $feedbackButton.addClass('-hidden');
+            $feedbackForm.removeClass('-hidden');
+            $textarea.focus();
+            return false;
+        });
+
+        $feedbackClose.on('click', function (e) {
+            e.preventDefault();
+            $feedbackSuccess.addClass('-hidden');
+            $feedbackForm.addClass('-hidden');
+            $feedbackButton.removeClass('-hidden');
+            return false;
+        });
+
+        $feedbackDoneButton.on('click', function () {
+            $feedbackError.addClass('-hidden');
+            $feedbackSuccess.addClass('-hidden');
+            $feedbackForm.addClass('-hidden');
+            $feedbackButton.removeClass('-hidden');
+            $feedbackSend.removeClass('-hidden');
+        });
+
+        $feedbackSend.on('click', function () {
+            const message = getMessage();
+            if (message.length < 4) {
+                return;
+            }
+
+            getCaptchaImage();
+        });
+
+        $captchaSend.on('click', function () {
+            const message = getMessage();
+            if (message.length < 4) {
+                return;
+            }
+
+            $.ajax({
+                url: '/api/v1/feedback',
+                type: 'post',
+                data: {
+                    content: message,
+                    context: window.location.href,
+                    name: $('input[name="name"]').val(),
+                    email: $('input[name="email"]').val(),
+                    captcha: $('input[name="captcha"]').val(),
+                    phrase: $('input[name="phrase"]').val(),
+                },
+                success: function (result) {
+                    if (result.image !== undefined) {
+                        replaceCaptchaImage(result);
+                    }
+                    else {
+                        $textarea.val('');
+                        $feedbackButton.removeClass('-hidden');
+                        $captcha.addClass('-hidden');
+                        $feedbackSuccess.removeClass('-hidden');
+                    }
+                },
+                error: function () {
+                    $feedbackError.removeClass('-hidden');
+                    $captcha.addClass('-hidden');
+                }
+            });
+        });
+    }
+
+    let _defer_counter = 0;
+
+    function _defer(method) {
+        if (window.jQuery) {
+            method();
+        } else {
+            if (_defer_counter < 20) {
+                setTimeout(function () {
+                    _defer(method);
+                    console.log(_defer_counter);
+                    _defer_counter++;
+                }, 500);
+            }
+        }
+    }
+
+    setTimeout(function() {
+        _defer(_enableFeedback);
+    }, 1000);
+
+</script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        const app = {
+            maxScrollPos: window.innerWidth < 500
+                ? 100	// mobile
+                : 400,	// desktop
+
+            $el : {
+                navbarSearch: $('nav .navbar-search'),
+                fixedSearchButton: $('.fixed-search-button'),
+                copyToClipboard: $('.copy-to-clipboard')
+            },
+
+            methods: {
+                hideMenuOnScroll: function(scrollPos) {
+                    const $menu = $('nav.navbar.main');
+                    const $stickySearch = $('.search.sticky');
+                    const $banner = $('#_banner');
+                    const $fixedSearchButton = $('.fixed-search-button');
+
+                    if (scrollPos > app.maxScrollPos) {
+                        $menu.addClass('-hide');
+                        $banner.addClass('-hide');
+                        $stickySearch.addClass('-top');
+                        $fixedSearchButton.addClass('-show');
+                    }
+                    else {
+                        app.methods.showMenu(null, false);
+                    }
+                },
+
+                showMenu: function(e, focus) {
+                    const $menu = $('nav.navbar.main');
+                    const $stickySearch = $('.search.sticky');
+                    const $banner = $('#_banner');
+                    const $fixedSearchButton = $('.fixed-search-button');
+
+                    $menu.removeClass('-hide');
+                    $banner.removeClass('-hide');
+                    $stickySearch.removeClass('-top');
+                    $fixedSearchButton.removeClass('-show');
+
+                    if (focus !== false) {
+                        $('.navbar-search').find('input[name="term"]').focus();
+                    }
+                },
+
+                showUpLinkOnScroll: function(scrollPos) {
+                    const $upLink = $('.scroll-up-button');
+
+                    if (scrollPos > app.maxScrollPos) {
+                        $upLink.removeClass('-hidden');
+                    }
+                    else {
+                        $upLink.addClass('-hidden');
+                    }
+                },
+
+                scrollHandler: function() {
+                    const scrollPos = $(document).scrollTop();
+
+                    app.methods.hideMenuOnScroll(scrollPos);
+                    app.methods.showUpLinkOnScroll(scrollPos);
+                },
+
+                copyToClipboard: function(e) {
+                    e.preventDefault();
+                    const $current  = $(e.currentTarget); // console.log($current.attr('data-selector'));
+                    const element = $('#'+$current.attr('data-selector'))[0]; console.log(element);
+                    element.select();
+                    document.execCommand("copy");
+                    const $success = $current.find('.bi-check');
+                    $success.removeClass('-hidden');
+                    setTimeout(function() {
+                        $success.addClass('-hidden');
+                    }, 1000);
+                },
+
+                initTooltips: function() {
+                    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+                    const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                        return new bootstrap.Tooltip(tooltipTriggerEl)
+                    });
+                },
+
+                expandSearch: function() {
+                    app.$el.navbarSearch.addClass('expanded');
+                },
+
+                collapseSearch: function(e) {
+                    if (!$(e.currentTarget).is('button.btn-outline-success')) {
+                        app.$el.navbarSearch.removeClass('expanded');
+                    }
+                },
+
+                initDeepLinksTabs: function() {
+
+                    app.methods.initTabLinks();
+
+                    const innerAnchors =[];
+
+                    $('.tab-pane').find('[id]').each(function() {
+                        innerAnchors.push(this.getAttribute('id'));
+                    });
+
+                    const anchors = [];
+
+                    $('a[role="tab"]').each(function() {
+                        anchors.push($(this).attr('aria-controls'));
+                    });
+
+                    innerAnchors.forEach(function(anchor) {
+                        if ($('#'+anchor).length > 0) {
+                            anchors.push(anchor);
+                        }
+                    });
+
+                    if (anchors.length === 0) {
+                        return;
+                    }
+
+                    let selectedAnchor = window.location.hash.substring(1);
+                    if (anchors.indexOf(selectedAnchor) === -1) {
+                        $('#publications-tab').tab('show');
+                        window.scrollTo(0,0);
+                        return;
+                    }
+
+                    if (selectedAnchor !== 'publications') {
+
+                        const innerAnchorIndex = innerAnchors.indexOf(selectedAnchor);
+
+                        // anchor sits inside tab -> open the tab first, then scroll to anchor
+                        if (innerAnchorIndex > -1) {
+                            const $tab = $('#'+selectedAnchor).closest('.tab-pane');
+
+                            console.log($tab);
+
+                            try {
+                                $('#'+$tab.attr('id')+'-tab').tab('show');
+                            }
+                            catch (e) { }
+                            setTimeout(function () {
+                                $('#' + selectedAnchor)[0].scrollIntoView();
+                            }, 800);
+                        } else {
+                            try {
+                                $('#' + selectedAnchor + '-tab').tab('show');
+                            }
+                            catch (e) { }
+                            window.scrollTo(0, 0);
+                        }
+                    }
+                },
+
+                fixNavWidth: function() {
+                    $('[data-fix-width]').each(function() {
+                        let $el = $(this);
+                        $el.css('width', 'unset');
+                        $el.css('width', ($el[0].clientWidth+5)+'px');
+                    });
+                },
+
+                initTabLinks: function() {
+                    $('[data-tab-link]').on('click', function(e) {
+                        e.preventDefault();
+                        const $target = $(e.currentTarget);
+                        document.location.href = $target.attr('href');
+                        document.location.reload();
+                    });
+                },
+            },
+
+            initialize: function() {
+                $(window).on('scroll', app.methods.scrollHandler);
+                $(window).on('scroll-to-top', function() { window.scrollTo(0,0) });
+                $(window).on('resize', app.methods.fixNavWidth);
+
+                $(document).trigger('scroll'); // set correct status for scroll-related parts (navbar/back-to-top) on page reload
+
+                app.$el.copyToClipboard.on('click', app.methods.copyToClipboard);
+                app.$el.fixedSearchButton.on('click', app.methods.showMenu);
+                app.$el.navbarSearch.find('input').on('click', app.methods.expandSearch)
+                app.$el.navbarSearch.find('input').on('blur', app.methods.collapseSearch);
+
+                app.methods.initTooltips();
+                app.methods.fixNavWidth();
+                app.methods.initDeepLinksTabs();
+
+            }
+        };
+
+        app.initialize();
+    });
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,1342 @@
+{
+  "schema_version": "1.0",
+  "rule_version": "title-equality-v1",
+  "checked_at": "2026-09-17T17:26:31.860162+00:00",
+  "status": "review",
+  "summary": "The bounded DOI source set contains differing registry main titles. Review their authors and relationships; versions or translations may explain differences.",
+  "input": {
+    "raw": "W4385245566",
+    "kind": "work_id",
+    "normalized": "W4385245566",
+    "input_doi": null
+  },
+  "work": {
+    "id": "https://openalex.org/W4385245566",
+    "doi": "10.4230/lipics.itp.2023.19",
+    "title": "Exploiting Generative AI to Scale up Intelligent Tutoring Systems",
+    "author_names": [
+      "Jakubův, Jan",
+      "Chvalovský, Karel",
+      "Goertzel, Zarathustra",
+      "Kaliszyk, Cezary",
+      "Olšák, Mirek",
+      "Piotrowski, Bartosz",
+      "Schulz, Stephan",
+      "Suda, Martin",
+      "Urban, Josef"
+    ],
+    "author_family_names": [
+      "Jakubův",
+      "Chvalovský",
+      "Goertzel",
+      "Kaliszyk",
+      "Olšák",
+      "Piotrowski",
+      "Schulz",
+      "Suda",
+      "Urban"
+    ],
+    "author_family_name_method": "Heuristic: comma-leading segment or last whitespace token; not verified personal identity.",
+    "location_dois": [
+      "10.4230/lipics.itp.2023.19",
+      "10.4230/oasics.icpec.2026.2",
+      "10.5281/zenodo.21230429",
+      "10.5281/zenodo.21230430",
+      "10.5281/zenodo.21230434"
+    ]
+  },
+  "registry": {
+    "provider": "datacite",
+    "doi": "10.4230/lipics.itp.2023.19",
+    "status": "found",
+    "main_titles": [
+      "MizAR 60 for Mizar 50"
+    ],
+    "alternate_titles": [],
+    "alternate_title_details": [],
+    "subtitles": [],
+    "author_names": [
+      "Jakubův, Jan",
+      "Chvalovský, Karel",
+      "Goertzel, Zarathustra",
+      "Kaliszyk, Cezary",
+      "Olšák, Mirek",
+      "Piotrowski, Bartosz",
+      "Schulz, Stephan",
+      "Suda, Martin",
+      "Urban, Josef"
+    ],
+    "author_family_names": [
+      "Jakubův",
+      "Chvalovský",
+      "Goertzel",
+      "Kaliszyk",
+      "Olšák",
+      "Piotrowski",
+      "Schulz",
+      "Suda",
+      "Urban"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "10.48550/arXiv.2303.06686",
+        "identifier_type": "DOI",
+        "relation_type": "IsVersionOf",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "https://github.com/ai4reason/ATP_Proofs",
+        "identifier_type": "URL",
+        "relation_type": "IsSupplementedBy",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.4230/LIPIcs.ITP.2023",
+        "identifier_type": "DOI",
+        "relation_type": "IsPartOf",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "978-3-95977-284-6",
+        "identifier_type": "ISBN",
+        "relation_type": "IsPartOf",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "1868-8969",
+        "identifier_type": "ISSN",
+        "relation_type": "IsPartOf",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "https://www.tensorflow.org/",
+        "identifier_type": "URL",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.1007/s10817-013-9286-5",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.1007/s10817-017-9440-6",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.1007/978-3-319-20615-8_17",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.1023/A:1021966832558",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.1007/s10817-016-9362-8",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.6092/issn.1972-5787/4593",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.1145/2939672.2939785",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.3115/v1/d14-1179",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.1007/978-3-030-86059-2_16",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.1007/978-3-030-29436-6_12",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "https://openreview.net/forum?id=SkZxCk-0Z",
+        "identifier_type": "URL",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.29007/ntlb",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.1007/s10817-020-09580-x",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.3233/AIC-180761",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.1145/3018610.3018619",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.1007/978-3-319-96812-4_11",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.4230/LIPIcs.ITP.2019.34",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.1007/s10817-014-9303-3",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.1007/s10817-015-9330-8",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.1007/978-3-642-39799-8_1",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "https://openreview.net/forum?id=S1eZYeHFDS",
+        "identifier_type": "URL",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.3233/FAIA200244",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.1613/jair.614",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.1007/978-3-319-94205-6_37",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "https://www.sciencedirect.com/book/9780444508133/handbook-of-automated-reasoning",
+        "identifier_type": "URL",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "http://iospress.metapress.com/content/n908n94nmvk59v3c/",
+        "identifier_type": "URL",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.1007/978-3-642-45221-5_49",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.1007/978-3-030-79876-5_31",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.1007/978-3-030-86205-3_11",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.1007/s10817-004-6245-1",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.1007/s10817-006-9032-3",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.29007/8n7m",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.1007/978-3-030-53518-6_24",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.1007/978-3-540-71070-7_37",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "arXiv:1706.03762",
+        "identifier_type": "arXiv",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      },
+      {
+        "identifier": "10.1007/978-3-319-96812-4_22",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false
+      }
+    ],
+    "related_identifier_count": 42,
+    "related_identifiers_truncated": false
+  },
+  "registry_sources": [
+    {
+      "provider": "datacite",
+      "doi": "10.4230/lipics.itp.2023.19",
+      "status": "found",
+      "main_titles": [
+        "MizAR 60 for Mizar 50"
+      ],
+      "alternate_titles": [],
+      "alternate_title_details": [],
+      "subtitles": [],
+      "author_names": [
+        "Jakubův, Jan",
+        "Chvalovský, Karel",
+        "Goertzel, Zarathustra",
+        "Kaliszyk, Cezary",
+        "Olšák, Mirek",
+        "Piotrowski, Bartosz",
+        "Schulz, Stephan",
+        "Suda, Martin",
+        "Urban, Josef"
+      ],
+      "author_family_names": [
+        "Jakubův",
+        "Chvalovský",
+        "Goertzel",
+        "Kaliszyk",
+        "Olšák",
+        "Piotrowski",
+        "Schulz",
+        "Suda",
+        "Urban"
+      ],
+      "related_identifiers": [
+        {
+          "identifier": "10.48550/arXiv.2303.06686",
+          "identifier_type": "DOI",
+          "relation_type": "IsVersionOf",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "https://github.com/ai4reason/ATP_Proofs",
+          "identifier_type": "URL",
+          "relation_type": "IsSupplementedBy",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.4230/LIPIcs.ITP.2023",
+          "identifier_type": "DOI",
+          "relation_type": "IsPartOf",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "978-3-95977-284-6",
+          "identifier_type": "ISBN",
+          "relation_type": "IsPartOf",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "1868-8969",
+          "identifier_type": "ISSN",
+          "relation_type": "IsPartOf",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "https://www.tensorflow.org/",
+          "identifier_type": "URL",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1007/s10817-013-9286-5",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1007/s10817-017-9440-6",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1007/978-3-319-20615-8_17",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1023/A:1021966832558",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1007/s10817-016-9362-8",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.6092/issn.1972-5787/4593",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1145/2939672.2939785",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.3115/v1/d14-1179",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1007/978-3-030-86059-2_16",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1007/978-3-030-29436-6_12",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "https://openreview.net/forum?id=SkZxCk-0Z",
+          "identifier_type": "URL",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.29007/ntlb",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1007/s10817-020-09580-x",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.3233/AIC-180761",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1145/3018610.3018619",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1007/978-3-319-96812-4_11",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.4230/LIPIcs.ITP.2019.34",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1007/s10817-014-9303-3",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1007/s10817-015-9330-8",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1007/978-3-642-39799-8_1",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "https://openreview.net/forum?id=S1eZYeHFDS",
+          "identifier_type": "URL",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.3233/FAIA200244",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1613/jair.614",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1007/978-3-319-94205-6_37",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "https://www.sciencedirect.com/book/9780444508133/handbook-of-automated-reasoning",
+          "identifier_type": "URL",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "http://iospress.metapress.com/content/n908n94nmvk59v3c/",
+          "identifier_type": "URL",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1007/978-3-642-45221-5_49",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1007/978-3-030-79876-5_31",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1007/978-3-030-86205-3_11",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1007/s10817-004-6245-1",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1007/s10817-006-9032-3",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.29007/8n7m",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1007/978-3-030-53518-6_24",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1007/978-3-540-71070-7_37",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "arXiv:1706.03762",
+          "identifier_type": "arXiv",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1007/978-3-319-96812-4_22",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        }
+      ],
+      "related_identifier_count": 42,
+      "related_identifiers_truncated": false
+    },
+    {
+      "provider": "datacite",
+      "doi": "10.4230/oasics.icpec.2026.2",
+      "status": "found",
+      "main_titles": [
+        "Exploiting Generative AI to Scale up Intelligent Tutoring Systems"
+      ],
+      "alternate_titles": [],
+      "alternate_title_details": [],
+      "subtitles": [],
+      "author_names": [
+        "Ferreira, Miguel",
+        "Leal, José Paulo"
+      ],
+      "author_family_names": [
+        "Ferreira",
+        "Leal"
+      ],
+      "related_identifiers": [
+        {
+          "identifier": "10.4230/OASIcs.ICPEC.2026",
+          "identifier_type": "DOI",
+          "relation_type": "IsPartOf",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "978-3-95977-443-7",
+          "identifier_type": "ISBN",
+          "relation_type": "IsPartOf",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "2190-6807",
+          "identifier_type": "ISSN",
+          "relation_type": "IsPartOf",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1007/s44163-024-00203-7",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1207/s15327809jls0402_2",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1007/BF01099821",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1145/3636243.3636256",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1145/3626252.3630863",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.3102/0034654315581420",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1109/ISEC61299.2024.10665141",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1037/a0037123",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.48550/arXiv.2410.10650",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1007/978-3-032-03870-8_28",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.48550/arXiv.2509.03269",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.48550/arXiv.2402.07927",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.3233/JAI-2010-0005",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1080/00461520.2011.611369",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "arXiv:1706.03762",
+          "identifier_type": "arXiv",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1038/s41598-025-07422-7",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        }
+      ],
+      "related_identifier_count": 19,
+      "related_identifiers_truncated": false
+    },
+    {
+      "provider": "datacite",
+      "doi": "10.5281/zenodo.21230429",
+      "status": "found",
+      "main_titles": [
+        "Inline Hardware KV-Cache Compression for Long-Context Transformer Inference: An Architectural Case for a Memory-Path Compression Engine"
+      ],
+      "alternate_titles": [],
+      "alternate_title_details": [],
+      "subtitles": [],
+      "author_names": [
+        "Novickis, Alexander"
+      ],
+      "author_family_names": [
+        "Novickis"
+      ],
+      "related_identifiers": [
+        {
+          "identifier": "arXiv:1706.03762",
+          "identifier_type": "arXiv",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "arXiv:2211.05102",
+          "identifier_type": "arXiv",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1145/1498765.1498785",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "arXiv:2305.13245",
+          "identifier_type": "arXiv",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "arXiv:2402.02750",
+          "identifier_type": "arXiv",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "arXiv:2401.18079",
+          "identifier_type": "arXiv",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "arXiv:2403.05527",
+          "identifier_type": "arXiv",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.5281/zenodo.20669977",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.5281/zenodo.21230434",
+          "identifier_type": "DOI",
+          "relation_type": "HasVersion",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.5281/zenodo.21230430",
+          "identifier_type": "DOI",
+          "relation_type": "HasVersion",
+          "merge_evidence": false
+        }
+      ],
+      "related_identifier_count": 10,
+      "related_identifiers_truncated": false
+    },
+    {
+      "provider": "datacite",
+      "doi": "10.5281/zenodo.21230430",
+      "status": "found",
+      "main_titles": [
+        "Inline Hardware KV-Cache Compression for Long-Context Transformer Inference: An Architectural Case for a Memory-Path Compression Engine"
+      ],
+      "alternate_titles": [],
+      "alternate_title_details": [],
+      "subtitles": [],
+      "author_names": [
+        "Novickis, Alexander"
+      ],
+      "author_family_names": [
+        "Novickis"
+      ],
+      "related_identifiers": [
+        {
+          "identifier": "arXiv:1706.03762",
+          "identifier_type": "arXiv",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "arXiv:2211.05102",
+          "identifier_type": "arXiv",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1145/1498765.1498785",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "arXiv:2305.13245",
+          "identifier_type": "arXiv",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "arXiv:2402.02750",
+          "identifier_type": "arXiv",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "arXiv:2401.18079",
+          "identifier_type": "arXiv",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "arXiv:2403.05527",
+          "identifier_type": "arXiv",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.5281/zenodo.20669977",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.5281/zenodo.21230429",
+          "identifier_type": "DOI",
+          "relation_type": "IsVersionOf",
+          "merge_evidence": false
+        }
+      ],
+      "related_identifier_count": 9,
+      "related_identifiers_truncated": false
+    },
+    {
+      "provider": "datacite",
+      "doi": "10.5281/zenodo.21230434",
+      "status": "found",
+      "main_titles": [
+        "Inline Hardware KV-Cache Compression for Long-Context Transformer Inference: An Architectural Case for a Memory-Path Compression Engine"
+      ],
+      "alternate_titles": [],
+      "alternate_title_details": [],
+      "subtitles": [],
+      "author_names": [
+        "Novickis, Alexander"
+      ],
+      "author_family_names": [
+        "Novickis"
+      ],
+      "related_identifiers": [
+        {
+          "identifier": "arXiv:1706.03762",
+          "identifier_type": "arXiv",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "arXiv:2211.05102",
+          "identifier_type": "arXiv",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.1145/1498765.1498785",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "arXiv:2305.13245",
+          "identifier_type": "arXiv",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "arXiv:2402.02750",
+          "identifier_type": "arXiv",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "arXiv:2401.18079",
+          "identifier_type": "arXiv",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "arXiv:2403.05527",
+          "identifier_type": "arXiv",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.5281/zenodo.20669977",
+          "identifier_type": "DOI",
+          "relation_type": "Cites",
+          "merge_evidence": false
+        },
+        {
+          "identifier": "10.5281/zenodo.21230429",
+          "identifier_type": "DOI",
+          "relation_type": "IsVersionOf",
+          "merge_evidence": false
+        }
+      ],
+      "related_identifier_count": 9,
+      "related_identifiers_truncated": false
+    }
+  ],
+  "comparison": {
+    "selected_doi": "10.4230/lipics.itp.2023.19",
+    "input_doi_differs_from_canonical": false,
+    "normalized_work_title": "exploiting generative ai to scale up intelligent tutoring systems",
+    "normalized_registry_main_titles": [
+      "mizar 60 for mizar 50"
+    ],
+    "matched_main_title": null,
+    "token_jaccard": 0.0,
+    "token_jaccard_note": "Descriptive overlap of normalized word sets; not confidence, probability, or an identity rule.",
+    "author_family_overlap": {
+      "shared": [
+        "chvalovský",
+        "goertzel",
+        "jakubův",
+        "kaliszyk",
+        "olšák",
+        "piotrowski",
+        "schulz",
+        "suda",
+        "urban"
+      ],
+      "work_count": 9,
+      "registry_count": 9,
+      "shared_count": 9,
+      "work_fraction": 1.0,
+      "registry_fraction": 1.0,
+      "note": "Unique family-name token overlap is supporting or contradicting context, never an identity decision; OpenAlex names are parsed heuristically."
+    }
+  },
+  "signals": [
+    "title_divergence",
+    "multiple_registry_main_titles_across_location_dois"
+  ],
+  "evidence": [
+    {
+      "url": "https://api.openalex.org/works/W4385245566",
+      "http_status": 200,
+      "retrieved_at": "2026-09-17T17:26:32.053847+00:00",
+      "sha256": "5790629b452fb0c4b1205a3f897be64ec0fbd5a16dc67aeefb163e761b536cc8",
+      "bytes": 28800,
+      "path": "5790629b452fb0c4b1205a3f897be64ec0fbd5a16dc67aeefb163e761b536cc8.body",
+      "attempt": 1,
+      "truncated": false,
+      "error_kind": null
+    },
+    {
+      "url": "https://api.crossref.org/works/10.4230/lipics.itp.2023.19",
+      "http_status": 404,
+      "retrieved_at": "2026-09-17T17:26:32.246286+00:00",
+      "sha256": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92",
+      "bytes": 19,
+      "path": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92.body",
+      "attempt": 1,
+      "truncated": false,
+      "error_kind": null
+    },
+    {
+      "url": "https://api.datacite.org/dois/10.4230/lipics.itp.2023.19",
+      "http_status": 200,
+      "retrieved_at": "2026-09-17T17:26:32.931321+00:00",
+      "sha256": "dd3bd127b81660f435ce82674cbb416bcbf886f55dfb073380bf5f89bf0658cc",
+      "bytes": 31620,
+      "path": "dd3bd127b81660f435ce82674cbb416bcbf886f55dfb073380bf5f89bf0658cc.body",
+      "attempt": 1,
+      "truncated": false,
+      "error_kind": null
+    },
+    {
+      "url": "https://api.crossref.org/works/10.4230/oasics.icpec.2026.2",
+      "http_status": 404,
+      "retrieved_at": "2026-09-17T17:26:33.079521+00:00",
+      "sha256": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92",
+      "bytes": 19,
+      "path": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92.body",
+      "attempt": 1,
+      "truncated": false,
+      "error_kind": null
+    },
+    {
+      "url": "https://api.datacite.org/dois/10.4230/oasics.icpec.2026.2",
+      "http_status": 200,
+      "retrieved_at": "2026-09-17T17:26:33.752577+00:00",
+      "sha256": "3e5299e95990dabd7dd13c57545a3dde9b2a9c8f49a29084662b2bab48ecc1fe",
+      "bytes": 22514,
+      "path": "3e5299e95990dabd7dd13c57545a3dde9b2a9c8f49a29084662b2bab48ecc1fe.body",
+      "attempt": 1,
+      "truncated": false,
+      "error_kind": null
+    },
+    {
+      "url": "https://api.crossref.org/works/10.5281/zenodo.21230429",
+      "http_status": 404,
+      "retrieved_at": "2026-09-17T17:26:33.898713+00:00",
+      "sha256": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92",
+      "bytes": 19,
+      "path": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92.body",
+      "attempt": 1,
+      "truncated": false,
+      "error_kind": null
+    },
+    {
+      "url": "https://api.datacite.org/dois/10.5281/zenodo.21230429",
+      "http_status": 200,
+      "retrieved_at": "2026-09-17T17:26:34.448103+00:00",
+      "sha256": "5451b1fd0d7f92a54538a796043a53c5961e8bc2eafca244dfb78fc372c7a0e3",
+      "bytes": 12251,
+      "path": "5451b1fd0d7f92a54538a796043a53c5961e8bc2eafca244dfb78fc372c7a0e3.body",
+      "attempt": 1,
+      "truncated": false,
+      "error_kind": null
+    },
+    {
+      "url": "https://api.crossref.org/works/10.5281/zenodo.21230430",
+      "http_status": 404,
+      "retrieved_at": "2026-09-17T17:26:34.595795+00:00",
+      "sha256": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92",
+      "bytes": 19,
+      "path": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92.body",
+      "attempt": 1,
+      "truncated": false,
+      "error_kind": null
+    },
+    {
+      "url": "https://api.datacite.org/dois/10.5281/zenodo.21230430",
+      "http_status": 200,
+      "retrieved_at": "2026-09-17T17:26:35.209477+00:00",
+      "sha256": "f64eda439bb712006cc06e49d142eb01a04faa7972dc758542e14ba245b7868e",
+      "bytes": 12190,
+      "path": "f64eda439bb712006cc06e49d142eb01a04faa7972dc758542e14ba245b7868e.body",
+      "attempt": 1,
+      "truncated": false,
+      "error_kind": null
+    },
+    {
+      "url": "https://api.crossref.org/works/10.5281/zenodo.21230434",
+      "http_status": 404,
+      "retrieved_at": "2026-09-17T17:26:35.358409+00:00",
+      "sha256": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92",
+      "bytes": 19,
+      "path": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92.body",
+      "attempt": 1,
+      "truncated": false,
+      "error_kind": null
+    },
+    {
+      "url": "https://api.datacite.org/dois/10.5281/zenodo.21230434",
+      "http_status": 200,
+      "retrieved_at": "2026-09-17T17:26:35.985077+00:00",
+      "sha256": "add0cedee675ad00f1fd8a5135912788f3294fb57a61beebffcf4cec7969a323",
+      "bytes": 12242,
+      "path": "add0cedee675ad00f1fd8a5135912788f3294fb57a61beebffcf4cec7969a323.body",
+      "attempt": 1,
+      "truncated": false,
+      "error_kind": null
+    }
+  ],
+  "errors": [
+    {
+      "provider": "crossref",
+      "doi": "10.4230/lipics.itp.2023.19",
+      "kind": "not_found",
+      "http_status": 404,
+      "message": "Public API returned HTTP 404."
+    },
+    {
+      "provider": "crossref",
+      "doi": "10.4230/oasics.icpec.2026.2",
+      "kind": "not_found",
+      "http_status": 404,
+      "message": "Public API returned HTTP 404."
+    },
+    {
+      "provider": "crossref",
+      "doi": "10.5281/zenodo.21230429",
+      "kind": "not_found",
+      "http_status": 404,
+      "message": "Public API returned HTTP 404."
+    },
+    {
+      "provider": "crossref",
+      "doi": "10.5281/zenodo.21230430",
+      "kind": "not_found",
+      "http_status": 404,
+      "message": "Public API returned HTTP 404."
+    },
+    {
+      "provider": "crossref",
+      "doi": "10.5281/zenodo.21230434",
+      "kind": "not_found",
+      "http_status": 404,
+      "message": "Public API returned HTTP 404."
+    }
+  ],
+  "source_conflicts": {
+    "distinct_normalized_main_titles": [
+      "mizar 60 for mizar 50",
+      "exploiting generative ai to scale up intelligent tutoring systems",
+      "inline hardware kv cache compression for long context transformer inference an architectural case for a memory path compression engine"
+    ],
+    "divergent_source_doi_pairs": [
+      [
+        "10.4230/lipics.itp.2023.19",
+        "10.4230/oasics.icpec.2026.2"
+      ],
+      [
+        "10.4230/lipics.itp.2023.19",
+        "10.5281/zenodo.21230429"
+      ],
+      [
+        "10.4230/lipics.itp.2023.19",
+        "10.5281/zenodo.21230430"
+      ],
+      [
+        "10.4230/lipics.itp.2023.19",
+        "10.5281/zenodo.21230434"
+      ],
+      [
+        "10.4230/oasics.icpec.2026.2",
+        "10.5281/zenodo.21230429"
+      ],
+      [
+        "10.4230/oasics.icpec.2026.2",
+        "10.5281/zenodo.21230430"
+      ],
+      [
+        "10.4230/oasics.icpec.2026.2",
+        "10.5281/zenodo.21230434"
+      ]
+    ],
+    "common_related_identifiers": [
+      {
+        "identifier": "arXiv:1706.03762",
+        "identifier_type": "arXiv",
+        "relation_type": "Cites",
+        "merge_evidence": false,
+        "source_dois": [
+          "10.4230/lipics.itp.2023.19",
+          "10.4230/oasics.icpec.2026.2",
+          "10.5281/zenodo.21230429",
+          "10.5281/zenodo.21230430",
+          "10.5281/zenodo.21230434"
+        ]
+      },
+      {
+        "identifier": "arXiv:2211.05102",
+        "identifier_type": "arXiv",
+        "relation_type": "Cites",
+        "merge_evidence": false,
+        "source_dois": [
+          "10.5281/zenodo.21230429",
+          "10.5281/zenodo.21230430",
+          "10.5281/zenodo.21230434"
+        ]
+      },
+      {
+        "identifier": "10.1145/1498765.1498785",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false,
+        "source_dois": [
+          "10.5281/zenodo.21230429",
+          "10.5281/zenodo.21230430",
+          "10.5281/zenodo.21230434"
+        ]
+      },
+      {
+        "identifier": "arXiv:2305.13245",
+        "identifier_type": "arXiv",
+        "relation_type": "Cites",
+        "merge_evidence": false,
+        "source_dois": [
+          "10.5281/zenodo.21230429",
+          "10.5281/zenodo.21230430",
+          "10.5281/zenodo.21230434"
+        ]
+      },
+      {
+        "identifier": "arXiv:2402.02750",
+        "identifier_type": "arXiv",
+        "relation_type": "Cites",
+        "merge_evidence": false,
+        "source_dois": [
+          "10.5281/zenodo.21230429",
+          "10.5281/zenodo.21230430",
+          "10.5281/zenodo.21230434"
+        ]
+      },
+      {
+        "identifier": "arXiv:2401.18079",
+        "identifier_type": "arXiv",
+        "relation_type": "Cites",
+        "merge_evidence": false,
+        "source_dois": [
+          "10.5281/zenodo.21230429",
+          "10.5281/zenodo.21230430",
+          "10.5281/zenodo.21230434"
+        ]
+      },
+      {
+        "identifier": "arXiv:2403.05527",
+        "identifier_type": "arXiv",
+        "relation_type": "Cites",
+        "merge_evidence": false,
+        "source_dois": [
+          "10.5281/zenodo.21230429",
+          "10.5281/zenodo.21230430",
+          "10.5281/zenodo.21230434"
+        ]
+      },
+      {
+        "identifier": "10.5281/zenodo.20669977",
+        "identifier_type": "DOI",
+        "relation_type": "Cites",
+        "merge_evidence": false,
+        "source_dois": [
+          "10.5281/zenodo.21230429",
+          "10.5281/zenodo.21230430",
+          "10.5281/zenodo.21230434"
+        ]
+      },
+      {
+        "identifier": "10.5281/zenodo.21230429",
+        "identifier_type": "DOI",
+        "relation_type": "IsVersionOf",
+        "merge_evidence": false,
+        "source_dois": [
+          "10.5281/zenodo.21230430",
+          "10.5281/zenodo.21230434"
+        ]
+      }
+    ],
+    "note": "Shared citation targets are never identity evidence. Version relations are review hints only. Distinct titles can be legitimate versions or translations; this audit does not establish conflation or its cause."
+  },
+  "scope": {
+    "registry_doi_limit": 6,
+    "registry_dois_checked": [
+      "10.4230/lipics.itp.2023.19",
+      "10.4230/oasics.icpec.2026.2",
+      "10.5281/zenodo.21230429",
+      "10.5281/zenodo.21230430",
+      "10.5281/zenodo.21230434"
+    ],
+    "registry_dois_omitted": []
+  },
+  "policy": "Read-only comparison. Review is a request for investigation, not an error verdict. No correction, merge, or identity assignment is generated."
+}

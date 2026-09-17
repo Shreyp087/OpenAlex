@@ -1,0 +1,924 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-17T17:24:07.674098+00:00",
+  "cohort": {
+    "name": "ITP 2023, numbered DOI suffixes 1–30",
+    "selection": "Targeted, contiguous first 30 numbered contributions from official LIPIcs volume 268 (which lists 1–38 plus front matter). Chosen after inspecting suffixes18–20. Not a random sample or population estimate.",
+    "source": "https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-268",
+    "dois": [
+      "10.4230/lipics.itp.2023.1",
+      "10.4230/lipics.itp.2023.2",
+      "10.4230/lipics.itp.2023.3",
+      "10.4230/lipics.itp.2023.4",
+      "10.4230/lipics.itp.2023.5",
+      "10.4230/lipics.itp.2023.6",
+      "10.4230/lipics.itp.2023.7",
+      "10.4230/lipics.itp.2023.8",
+      "10.4230/lipics.itp.2023.9",
+      "10.4230/lipics.itp.2023.10",
+      "10.4230/lipics.itp.2023.11",
+      "10.4230/lipics.itp.2023.12",
+      "10.4230/lipics.itp.2023.13",
+      "10.4230/lipics.itp.2023.14",
+      "10.4230/lipics.itp.2023.15",
+      "10.4230/lipics.itp.2023.16",
+      "10.4230/lipics.itp.2023.17",
+      "10.4230/lipics.itp.2023.18",
+      "10.4230/lipics.itp.2023.19",
+      "10.4230/lipics.itp.2023.20",
+      "10.4230/lipics.itp.2023.21",
+      "10.4230/lipics.itp.2023.22",
+      "10.4230/lipics.itp.2023.23",
+      "10.4230/lipics.itp.2023.24",
+      "10.4230/lipics.itp.2023.25",
+      "10.4230/lipics.itp.2023.26",
+      "10.4230/lipics.itp.2023.27",
+      "10.4230/lipics.itp.2023.28",
+      "10.4230/lipics.itp.2023.29",
+      "10.4230/lipics.itp.2023.30"
+    ],
+    "count": 30
+  },
+  "records": [
+    {
+      "suffix": 1,
+      "doi": "10.4230/lipics.itp.2023.1",
+      "openalex_receipt": "itp01-openalex",
+      "registry_receipt": "itp01-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W6948136023",
+      "openalex_title": "Formalisation of Additive Combinatorics in Isabelle/HOL (Invited Talk)",
+      "registry_titles": [
+        "Formalisation of Additive Combinatorics in Isabelle/HOL (Invited Talk)"
+      ],
+      "openalex_authors": [
+        "Koutsoukou-Argyraki, Angeliki"
+      ],
+      "registry_authors": [
+        "Koutsoukou-Argyraki, Angeliki"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.1",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.1"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": true
+    },
+    {
+      "suffix": 2,
+      "doi": "10.4230/lipics.itp.2023.2",
+      "openalex_receipt": "itp02-openalex",
+      "registry_receipt": "itp02-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W6947746801",
+      "openalex_title": "Interactive and Automated Proofs in Modal Separation Logic (Invited Talk)",
+      "registry_titles": [
+        "Interactive and Automated Proofs in Modal Separation Logic (Invited Talk)"
+      ],
+      "openalex_authors": [
+        "Krebbers, Robbert"
+      ],
+      "registry_authors": [
+        "Krebbers, Robbert"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.2",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.2"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": true
+    },
+    {
+      "suffix": 3,
+      "doi": "10.4230/lipics.itp.2023.3",
+      "openalex_receipt": "itp03-openalex",
+      "registry_receipt": "itp03-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W4322759249",
+      "openalex_title": "A Formal Analysis of RANKING",
+      "registry_titles": [
+        "A Formal Analysis of RANKING"
+      ],
+      "openalex_authors": [
+        "Mohammad Abdulaziz",
+        "Christoph Madlener"
+      ],
+      "registry_authors": [
+        "Abdulaziz, Mohammad",
+        "Madlener, Christoph"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.3",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.3",
+        "10.48550/arxiv.2302.13747"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": false
+    },
+    {
+      "suffix": 4,
+      "doi": "10.4230/lipics.itp.2023.4",
+      "openalex_receipt": "itp04-openalex",
+      "registry_receipt": "itp04-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W6929164940",
+      "openalex_title": "Fast, Verified Computation for Candle",
+      "registry_titles": [
+        "Fast, Verified Computation for Candle"
+      ],
+      "openalex_authors": [
+        "Abrahamsson, Oskar",
+        "Myreen, Magnus O."
+      ],
+      "registry_authors": [
+        "Abrahamsson, Oskar",
+        "Myreen, Magnus O."
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.4",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.4"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": true
+    },
+    {
+      "suffix": 5,
+      "doi": "10.4230/lipics.itp.2023.5",
+      "openalex_receipt": "itp05-openalex",
+      "registry_receipt": "itp05-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W4388650233",
+      "openalex_title": "Formalizing Functions as Processes",
+      "registry_titles": [
+        "Formalizing Functions as Processes"
+      ],
+      "openalex_authors": [
+        "Beniamino Accattoli",
+        "Horace Blanc",
+        "Claudio Sacerdoti Coen"
+      ],
+      "registry_authors": [
+        "Accattoli, Beniamino",
+        "Blanc, Horace",
+        "Sacerdoti Coen, Claudio"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.5",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.5"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": false
+    },
+    {
+      "suffix": 6,
+      "doi": "10.4230/lipics.itp.2023.6",
+      "openalex_receipt": "itp06-openalex",
+      "registry_receipt": "itp06-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W6891454933",
+      "openalex_title": "An Elementary Formal Proof of the Group Law on Weierstrass Elliptic Curves in Any Characteristic",
+      "registry_titles": [
+        "An Elementary Formal Proof of the Group Law on Weierstrass Elliptic Curves in Any Characteristic"
+      ],
+      "openalex_authors": [
+        "Angdinata, David Kurniadi",
+        "Xu, Junyan"
+      ],
+      "registry_authors": [
+        "Angdinata, David Kurniadi",
+        "Xu, Junyan"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.6",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.6"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": true
+    },
+    {
+      "suffix": 7,
+      "doi": "10.4230/lipics.itp.2023.7",
+      "openalex_receipt": "itp07-openalex",
+      "registry_receipt": "itp07-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W6929064198",
+      "openalex_title": "A Proof-Producing Compiler for Blockchain Applications",
+      "registry_titles": [
+        "A Proof-Producing Compiler for Blockchain Applications"
+      ],
+      "openalex_authors": [
+        "Avigad, Jeremy",
+        "Goldberg, Lior",
+        "Levit, David",
+        "Seginer, Yoav",
+        "Titelman, Alon"
+      ],
+      "registry_authors": [
+        "Avigad, Jeremy",
+        "Goldberg, Lior",
+        "Levit, David",
+        "Seginer, Yoav",
+        "Titelman, Alon"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.7",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.7"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": true
+    },
+    {
+      "suffix": 8,
+      "doi": "10.4230/lipics.itp.2023.8",
+      "openalex_receipt": "itp08-openalex",
+      "registry_receipt": "itp08-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W6891810062",
+      "openalex_title": "No Unification Variable Left Behind: Fully Grounding Type Inference for the HDM System",
+      "registry_titles": [
+        "No Unification Variable Left Behind: Fully Grounding Type Inference for the HDM System"
+      ],
+      "openalex_authors": [
+        "Bosman, Roger",
+        "Karachalias, Georgios",
+        "Schrijvers, Tom"
+      ],
+      "registry_authors": [
+        "Bosman, Roger",
+        "Karachalias, Georgios",
+        "Schrijvers, Tom"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.8",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.8"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": true
+    },
+    {
+      "suffix": 9,
+      "doi": "10.4230/lipics.itp.2023.9",
+      "openalex_receipt": "itp09-openalex",
+      "registry_receipt": "itp09-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W6948150599",
+      "openalex_title": "Automated Theorem Proving for Metamath",
+      "registry_titles": [
+        "Automated Theorem Proving for Metamath"
+      ],
+      "openalex_authors": [
+        "Carneiro, Mario",
+        "Brown, Chad E.",
+        "Urban, Josef"
+      ],
+      "registry_authors": [
+        "Carneiro, Mario",
+        "Brown, Chad E.",
+        "Urban, Josef"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.9",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.9"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": true
+    },
+    {
+      "suffix": 10,
+      "doi": "10.4230/lipics.itp.2023.10",
+      "openalex_receipt": "itp10-openalex",
+      "registry_receipt": "itp10-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W4366328325",
+      "openalex_title": "Reimplementing Mizar in Rust",
+      "registry_titles": [
+        "Reimplementing Mizar in Rust"
+      ],
+      "openalex_authors": [
+        "Mario Carneiro"
+      ],
+      "registry_authors": [
+        "Carneiro, Mario"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.10",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.10",
+        "10.48550/arxiv.2304.08391"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": false
+    },
+    {
+      "suffix": 11,
+      "doi": "10.4230/lipics.itp.2023.11",
+      "openalex_receipt": "itp11-openalex",
+      "registry_receipt": "itp11-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W4322760334",
+      "openalex_title": "Now It Compiles! Certified Automatic Repair of Uncompilable Protocols",
+      "registry_titles": [
+        "Now It Compiles! Certified Automatic Repair of Uncompilable Protocols"
+      ],
+      "openalex_authors": [
+        "Luı́s Cruz-Filipe",
+        "Fabrizio Montesi"
+      ],
+      "registry_authors": [
+        "Cruz-Filipe, Luís",
+        "Montesi, Fabrizio"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.11",
+      "location_dois": [
+        "10.48550/arxiv.2302.14622",
+        "10.4230/lipics.itp.2023.11"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": false
+    },
+    {
+      "suffix": 12,
+      "doi": "10.4230/lipics.itp.2023.12",
+      "openalex_receipt": "itp12-openalex",
+      "registry_receipt": "itp12-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W4281610263",
+      "openalex_title": "Lessons for Interactive Theorem Proving Researchers from a Survey of Coq Users",
+      "registry_titles": [
+        "Lessons for Interactive Theorem Proving Researchers from a Survey of Coq Users"
+      ],
+      "openalex_authors": [
+        "de Almeida Borges, Ana",
+        "Artís, Annalí, Casanueva",
+        "Falleri, Jean-Rémy",
+        "Gallego Arias, Emilio Jesús",
+        "Martin-Dorel, Érik",
+        "Palmskog, Karl",
+        "Serebrenik, Alexander",
+        "Zimmermann, Théo"
+      ],
+      "registry_authors": [
+        "de Almeida Borges, Ana",
+        "Casanueva Artís, Annalí",
+        "Falleri, Jean-Rémy",
+        "Gallego Arias, Emilio Jesús",
+        "Martin-Dorel, Érik",
+        "Palmskog, Karl",
+        "Serebrenik, Alexander",
+        "Zimmermann, Théo"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.12",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.12"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": false
+    },
+    {
+      "suffix": 13,
+      "doi": "10.4230/lipics.itp.2023.13",
+      "openalex_receipt": "itp13-openalex",
+      "registry_receipt": "itp13-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W4286588472",
+      "openalex_title": "Formalising the Krull Topology in Lean",
+      "registry_titles": [
+        "Formalizing Norm Extensions and Applications to Number Theory"
+      ],
+      "openalex_authors": [
+        "de Frutos-Fernández, María Inés"
+      ],
+      "registry_authors": [
+        "de Frutos-Fernández, María Inés"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.13",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.13",
+        "10.48550/arxiv.2207.09486"
+      ],
+      "title_exact_match": false,
+      "author_name_exact_match": true
+    },
+    {
+      "suffix": 14,
+      "doi": "10.4230/lipics.itp.2023.14",
+      "openalex_receipt": "itp14-openalex",
+      "registry_receipt": "itp14-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W6891691311",
+      "openalex_title": "Tealeaves: Structured Monads for Generic First-Order Abstract Syntax Infrastructure",
+      "registry_titles": [
+        "Tealeaves: Structured Monads for Generic First-Order Abstract Syntax Infrastructure"
+      ],
+      "openalex_authors": [
+        "Dunn, Lawrence",
+        "Tannen, Val",
+        "Zdancewic, Steve"
+      ],
+      "registry_authors": [
+        "Dunn, Lawrence",
+        "Tannen, Val",
+        "Zdancewic, Steve"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.14",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.14"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": true
+    },
+    {
+      "suffix": 15,
+      "doi": "10.4230/lipics.itp.2023.15",
+      "openalex_receipt": "itp15-openalex",
+      "registry_receipt": "itp15-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W4320854724",
+      "openalex_title": "Closure Properties of General Grammars -- Formally Verified",
+      "registry_titles": [
+        "Closure Properties of General Grammars – Formally Verified"
+      ],
+      "openalex_authors": [
+        "Dvorak, Martin",
+        "Jasmin Christian Blanchette"
+      ],
+      "registry_authors": [
+        "Dvorak, Martin",
+        "Blanchette, Jasmin"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.15",
+      "location_dois": [
+        "10.48550/arxiv.2302.06420",
+        "10.4230/lipics.itp.2023.15"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": false
+    },
+    {
+      "suffix": 16,
+      "doi": "10.4230/lipics.itp.2023.16",
+      "openalex_receipt": "itp16-openalex",
+      "registry_receipt": "itp16-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W4322619233",
+      "openalex_title": "Formalising Yoneda Ext in Univalent Foundations",
+      "registry_titles": [
+        "Formalising Yoneda Ext in Univalent Foundations"
+      ],
+      "openalex_authors": [
+        "Jarl G. Taxerås Flaten"
+      ],
+      "registry_authors": [
+        "Flaten, Jarl G. Taxerås"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.16",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.16",
+        "10.48550/arxiv.2302.12678"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": false
+    },
+    {
+      "suffix": 17,
+      "doi": "10.4230/lipics.itp.2023.17",
+      "openalex_receipt": "itp17-openalex",
+      "registry_receipt": "itp17-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W4394639621",
+      "openalex_title": "Isabelle: The Next 700 Theorem Provers",
+      "registry_titles": [
+        "LISA - A Modern Proof System"
+      ],
+      "openalex_authors": [
+        "Guilloud, Simon",
+        "Gambhir, Sankalp",
+        "Kunčak, Viktor"
+      ],
+      "registry_authors": [
+        "Guilloud, Simon",
+        "Gambhir, Sankalp",
+        "Kunčak, Viktor"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.17",
+      "location_dois": [
+        "10.48550/arxiv.cs/9301106",
+        "10.4230/lipics.itp.2023.17"
+      ],
+      "title_exact_match": false,
+      "author_name_exact_match": true
+    },
+    {
+      "suffix": 18,
+      "doi": "10.4230/lipics.itp.2023.18",
+      "openalex_receipt": "itp18-openalex",
+      "registry_receipt": "itp18-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W4298857588",
+      "openalex_title": "Robust Mean Estimation by All Means (Short Paper)",
+      "registry_titles": [
+        "Semantic Foundations of Higher-Order Probabilistic Programs in Isabelle/HOL"
+      ],
+      "openalex_authors": [
+        "Affeldt, Reynald",
+        "Barrett, Clark",
+        "Bruni, Alessandro",
+        "Daukantas, Ieva",
+        "Khan, Harun",
+        "Saikawa, Takafumi",
+        "Schürmann, Carsten"
+      ],
+      "registry_authors": [
+        "Hirata, Michikazu",
+        "Minamide, Yasuhiko",
+        "Sato, Tetsuya"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.18",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.18",
+        "10.4230/lipics.itp.2024.39"
+      ],
+      "title_exact_match": false,
+      "author_name_exact_match": false
+    },
+    {
+      "suffix": 19,
+      "doi": "10.4230/lipics.itp.2023.19",
+      "openalex_receipt": "mizar-openalex-doi",
+      "registry_receipt": "mizar-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W4385245566",
+      "openalex_title": "Exploiting Generative AI to Scale up Intelligent Tutoring Systems",
+      "registry_titles": [
+        "MizAR 60 for Mizar 50"
+      ],
+      "openalex_authors": [
+        "Jakubův, Jan",
+        "Chvalovský, Karel",
+        "Goertzel, Zarathustra",
+        "Kaliszyk, Cezary",
+        "Olšák, Mirek",
+        "Piotrowski, Bartosz",
+        "Schulz, Stephan",
+        "Suda, Martin",
+        "Urban, Josef"
+      ],
+      "registry_authors": [
+        "Jakubův, Jan",
+        "Chvalovský, Karel",
+        "Goertzel, Zarathustra",
+        "Kaliszyk, Cezary",
+        "Olšák, Mirek",
+        "Piotrowski, Bartosz",
+        "Schulz, Stephan",
+        "Suda, Martin",
+        "Urban, Josef"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.19",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.19",
+        "10.4230/oasics.icpec.2026.2",
+        "10.5281/zenodo.21230429",
+        "10.5281/zenodo.21230430",
+        "10.5281/zenodo.21230434"
+      ],
+      "title_exact_match": false,
+      "author_name_exact_match": true
+    },
+    {
+      "suffix": 20,
+      "doi": "10.4230/lipics.itp.2023.20",
+      "openalex_receipt": "itp20-openalex",
+      "registry_receipt": "itp20-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W6948126345",
+      "openalex_title": "Constructive Final Semantics of Finite Bags",
+      "registry_titles": [
+        "Constructive Final Semantics of Finite Bags"
+      ],
+      "openalex_authors": [
+        "Joram, Philipp",
+        "Veltri, Niccolò"
+      ],
+      "registry_authors": [
+        "Joram, Philipp",
+        "Veltri, Niccolò"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.20",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.20"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": true
+    },
+    {
+      "suffix": 21,
+      "doi": "10.4230/lipics.itp.2023.21",
+      "openalex_receipt": "itp21-openalex",
+      "registry_receipt": "itp21-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W4386582108",
+      "openalex_title": "Proof Pearl: Faithful Computation and Extraction of μ-Recursive Algorithms in Coq",
+      "registry_titles": [
+        "Proof Pearl: Faithful Computation and Extraction of μ-Recursive Algorithms in Coq"
+      ],
+      "openalex_authors": [
+        "Dominique Larchey-Wendling",
+        "Jean‐François Monin"
+      ],
+      "registry_authors": [
+        "Larchey-Wendling, Dominique",
+        "Monin, Jean-François"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.21",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.21"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": false
+    },
+    {
+      "suffix": 22,
+      "doi": "10.4230/lipics.itp.2023.22",
+      "openalex_receipt": "itp22-openalex",
+      "registry_receipt": "itp22-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W6966497126",
+      "openalex_title": "Group Cohomology in the Lean Community Library",
+      "registry_titles": [
+        "Group Cohomology in the Lean Community Library"
+      ],
+      "openalex_authors": [
+        "Livingston, Amelia"
+      ],
+      "registry_authors": [
+        "Livingston, Amelia"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.22",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.22"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": true
+    },
+    {
+      "suffix": 23,
+      "doi": "10.4230/lipics.itp.2023.23",
+      "openalex_receipt": "itp23-openalex",
+      "registry_receipt": "itp23-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W4308608442",
+      "openalex_title": "A Formalisation of Gallagher’s Ergodic Theorem",
+      "registry_titles": [
+        "A Formalisation of Gallagher’s Ergodic Theorem"
+      ],
+      "openalex_authors": [
+        "Nash, Oliver"
+      ],
+      "registry_authors": [
+        "Nash, Oliver"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.23",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.23"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": true
+    },
+    {
+      "suffix": 24,
+      "doi": "10.4230/lipics.itp.2023.24",
+      "openalex_receipt": "itp24-openalex",
+      "registry_receipt": "itp24-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W6929086236",
+      "openalex_title": "An Extensible User Interface for Lean 4",
+      "registry_titles": [
+        "An Extensible User Interface for Lean 4"
+      ],
+      "openalex_authors": [
+        "Nawrocki, Wojciech",
+        "Ayers, Edward W.",
+        "Ebner, Gabriel"
+      ],
+      "registry_authors": [
+        "Nawrocki, Wojciech",
+        "Ayers, Edward W.",
+        "Ebner, Gabriel"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.24",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.24"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": true
+    },
+    {
+      "suffix": 25,
+      "doi": "10.4230/lipics.itp.2023.25",
+      "openalex_receipt": "itp25-openalex",
+      "registry_receipt": "itp25-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W4283728475",
+      "openalex_title": "Bel-Games: A Formal Theory of Games of Incomplete Information Based on Belief Functions in the Coq Proof Assistant",
+      "registry_titles": [
+        "Bel-Games: A Formal Theory of Games of Incomplete Information Based on Belief Functions in the Coq Proof Assistant"
+      ],
+      "openalex_authors": [
+        "Pierre Pomeret-Coquot",
+        "Hélène Fargier",
+        "Érik Martin-Dorel"
+      ],
+      "registry_authors": [
+        "Pomeret-Coquot, Pierre",
+        "Fargier, Hélène",
+        "Martin-Dorel, Érik"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.25",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.25"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": false
+    },
+    {
+      "suffix": 26,
+      "doi": "10.4230/lipics.itp.2023.26",
+      "openalex_receipt": "itp26-openalex",
+      "registry_receipt": "itp26-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W1693912443",
+      "openalex_title": "Automatic Repair of Real Bugs: An Experience Report on the Defects4J Dataset",
+      "registry_titles": [
+        "Proof Repair Infrastructure for Supervised Models: Building a Large Proof Repair Dataset"
+      ],
+      "openalex_authors": [
+        "Reichel, Tom",
+        "Henderson, R. Wesley",
+        "Touchet, Andrew",
+        "Gardner, Andrew",
+        "Ringer, Talia"
+      ],
+      "registry_authors": [
+        "Reichel, Tom",
+        "Henderson, R. Wesley",
+        "Touchet, Andrew",
+        "Gardner, Andrew",
+        "Ringer, Talia"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.26",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.26",
+        "10.48550/arxiv.1505.07002"
+      ],
+      "title_exact_match": false,
+      "author_name_exact_match": true
+    },
+    {
+      "suffix": 27,
+      "doi": "10.4230/lipics.itp.2023.27",
+      "openalex_receipt": "itp27-openalex",
+      "registry_receipt": "itp27-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W6966541505",
+      "openalex_title": "POSIX Lexing with Bitcoded Derivatives",
+      "registry_titles": [
+        "POSIX Lexing with Bitcoded Derivatives"
+      ],
+      "openalex_authors": [
+        "Tan, Chengsong",
+        "Urban, Christian"
+      ],
+      "registry_authors": [
+        "Tan, Chengsong",
+        "Urban, Christian"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.27",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.27"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": true
+    },
+    {
+      "suffix": 28,
+      "doi": "10.4230/lipics.itp.2023.28",
+      "openalex_receipt": "itp28-openalex",
+      "registry_receipt": "itp28-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W6966384548",
+      "openalex_title": "A Sound and Complete Projection for Global Types",
+      "registry_titles": [
+        "A Sound and Complete Projection for Global Types"
+      ],
+      "openalex_authors": [
+        "Tirore, Dawit",
+        "Bengtson, Jesper",
+        "Carbone, Marco"
+      ],
+      "registry_authors": [
+        "Tirore, Dawit",
+        "Bengtson, Jesper",
+        "Carbone, Marco"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.28",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.28"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": true
+    },
+    {
+      "suffix": 29,
+      "doi": "10.4230/lipics.itp.2023.29",
+      "openalex_receipt": "itp29-openalex",
+      "registry_receipt": "itp29-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W6910281867",
+      "openalex_title": "Real-Time Double-Ended Queue Verified (Proof Pearl)",
+      "registry_titles": [
+        "Real-Time Double-Ended Queue Verified (Proof Pearl)"
+      ],
+      "openalex_authors": [
+        "Toth, Balazs",
+        "Nipkow, Tobias"
+      ],
+      "registry_authors": [
+        "Toth, Balazs",
+        "Nipkow, Tobias"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.29",
+      "location_dois": [
+        "10.4230/lipics.itp.2023.29"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": true
+    },
+    {
+      "suffix": 30,
+      "doi": "10.4230/lipics.itp.2023.30",
+      "openalex_receipt": "itp30-openalex",
+      "registry_receipt": "itp30-datacite",
+      "openalex_status": 200,
+      "registry_status": 200,
+      "openalex_id": "https://openalex.org/W4321854367",
+      "openalex_title": "Certifying Higher-Order Polynomial Interpretations",
+      "registry_titles": [
+        "Certifying Higher-Order Polynomial Interpretations"
+      ],
+      "openalex_authors": [
+        "Niels van der Weide",
+        "Deivid Vale",
+        "Cynthia Kop"
+      ],
+      "registry_authors": [
+        "van der Weide, Niels",
+        "Vale, Deivid",
+        "Kop, Cynthia"
+      ],
+      "openalex_doi": "https://doi.org/10.4230/lipics.itp.2023.30",
+      "location_dois": [
+        "10.48550/arxiv.2302.11892",
+        "10.4230/lipics.itp.2023.30"
+      ],
+      "title_exact_match": true,
+      "author_name_exact_match": false
+    }
+  ],
+  "counts": {
+    "requested": 30,
+    "comparable": 30,
+    "title_agreements": 25,
+    "title_disagreements": 5,
+    "author_name_agreements": 19,
+    "author_name_disagreements": 11
+  }
+}

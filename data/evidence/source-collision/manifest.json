@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Unmodified public HTTP response bodies for independently verified source-collision case",
+  "openalex_work_id": "W4385245566",
+  "responses": [
+    {
+      "file": "openalex-work.json",
+      "url": "https://api.openalex.org/works/W4385245566",
+      "final_url": "https://api.openalex.org/works/W4385245566",
+      "retrieved_at_utc": "2026-09-17T17:22:15.365445+00:00",
+      "http_status": 200,
+      "content_type": "application/json",
+      "bytes": 28800,
+      "sha256": "5529440446752467ff2c6b6f41e0f2098d8cf67aab1cd9673e1d6d35f146b69e"
+    },
+    {
+      "file": "datacite-mizar.json",
+      "url": "https://api.datacite.org/dois/10.4230/lipics.itp.2023.19",
+      "final_url": "https://api.datacite.org/dois/10.4230/lipics.itp.2023.19",
+      "retrieved_at_utc": "2026-09-17T17:22:15.365883+00:00",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 31620,
+      "sha256": "dd3bd127b81660f435ce82674cbb416bcbf886f55dfb073380bf5f89bf0658cc"
+    },
+    {
+      "file": "datacite-tutoring.json",
+      "url": "https://api.datacite.org/dois/10.4230/oasics.icpec.2026.2",
+      "final_url": "https://api.datacite.org/dois/10.4230/oasics.icpec.2026.2",
+      "retrieved_at_utc": "2026-09-17T17:22:15.612064+00:00",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 22514,
+      "sha256": "3e5299e95990dabd7dd13c57545a3dde9b2a9c8f49a29084662b2bab48ecc1fe"
+    },
+    {
+      "file": "datacite-zenodo-concept.json",
+      "url": "https://api.datacite.org/dois/10.5281/zenodo.21230429",
+      "final_url": "https://api.datacite.org/dois/10.5281/zenodo.21230429",
+      "retrieved_at_utc": "2026-09-17T17:22:16.174179+00:00",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 12251,
+      "sha256": "5451b1fd0d7f92a54538a796043a53c5961e8bc2eafca244dfb78fc372c7a0e3"
+    },
+    {
+      "file": "datacite-zenodo-v1.json",
+      "url": "https://api.datacite.org/dois/10.5281/zenodo.21230430",
+      "final_url": "https://api.datacite.org/dois/10.5281/zenodo.21230430",
+      "retrieved_at_utc": "2026-09-17T17:22:16.328530+00:00",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 12190,
+      "sha256": "f64eda439bb712006cc06e49d142eb01a04faa7972dc758542e14ba245b7868e"
+    },
+    {
+      "file": "datacite-zenodo-v2.json",
+      "url": "https://api.datacite.org/dois/10.5281/zenodo.21230434",
+      "final_url": "https://api.datacite.org/dois/10.5281/zenodo.21230434",
+      "retrieved_at_utc": "2026-09-17T17:22:16.721827+00:00",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 12242,
+      "sha256": "add0cedee675ad00f1fd8a5135912788f3294fb57a61beebffcf4cec7969a323"
+    },
+    {
+      "file": "publisher-mizar.html",
+      "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2023.19",
+      "final_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2023.19",
+      "retrieved_at_utc": "2026-09-17T17:22:16.869337+00:00",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 176794,
+      "sha256": "65f9b50e26d765df5a540c073b77ff8d1075538a743903047835a7ab7d364a2e"
+    },
+    {
+      "file": "publisher-tutoring.html",
+      "url": "https://drops.dagstuhl.de/entities/document/10.4230/OASIcs.ICPEC.2026.2",
+      "final_url": "https://drops.dagstuhl.de/entities/document/10.4230/OASIcs.ICPEC.2026.2",
+      "retrieved_at_utc": "2026-09-17T17:22:17.281377+00:00",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 108186,
+      "sha256": "f9df38c84ab9fe791d5c039e5c4164647fe14c47d61ccffee6b55e8b78dbff01"
+    }
+  ]
+}

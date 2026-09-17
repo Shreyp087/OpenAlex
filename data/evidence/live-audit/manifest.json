@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "description": "Unmodified HTTP response bodies from the live sourcecheck CLI run; includes actual Crossref 404 responses. report.json paths are relative to this directory.",
+  "receipts": [
+    {
+      "url": "https://api.openalex.org/works/W4385245566",
+      "http_status": 200,
+      "retrieved_at": "2026-09-17T17:26:32.053847+00:00",
+      "sha256": "5790629b452fb0c4b1205a3f897be64ec0fbd5a16dc67aeefb163e761b536cc8",
+      "bytes": 28800,
+      "path": "5790629b452fb0c4b1205a3f897be64ec0fbd5a16dc67aeefb163e761b536cc8.body",
+      "attempt": 1,
+      "truncated": false,
+      "error_kind": null,
+      "file": "5790629b452fb0c4b1205a3f897be64ec0fbd5a16dc67aeefb163e761b536cc8.body"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.4230/lipics.itp.2023.19",
+      "http_status": 404,
+      "retrieved_at": "2026-09-17T17:26:32.246286+00:00",
+      "sha256": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92",
+      "bytes": 19,
+      "path": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92.body",
+      "attempt": 1,
+      "truncated": false,
+      "error_kind": null,
+      "file": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92.body"
+    },
+    {
+      "url": "https://api.datacite.org/dois/10.4230/lipics.itp.2023.19",
+      "http_status": 200,
+      "retrieved_at": "2026-09-17T17:26:32.931321+00:00",
+      "sha256": "dd3bd127b81660f435ce82674cbb416bcbf886f55dfb073380bf5f89bf0658cc",
+      "bytes": 31620,
+      "path": "dd3bd127b81660f435ce82674cbb416bcbf886f55dfb073380bf5f89bf0658cc.body",
+      "attempt": 1,
+      "truncated": false,
+      "error_kind": null,
+      "file": "dd3bd127b81660f435ce82674cbb416bcbf886f55dfb073380bf5f89bf0658cc.body"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.4230/oasics.icpec.2026.2",
+      "http_status": 404,
+      "retrieved_at": "2026-09-17T17:26:33.079521+00:00",
+      "sha256": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92",
+      "bytes": 19,
+      "path": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92.body",
+      "attempt": 1,
+      "truncated": false,
+      "error_kind": null,
+      "file": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92.body"
+    },
+    {
+      "url": "https://api.datacite.org/dois/10.4230/oasics.icpec.2026.2",
+      "http_status": 200,
+      "retrieved_at": "2026-09-17T17:26:33.752577+00:00",
+      "sha256": "3e5299e95990dabd7dd13c57545a3dde9b2a9c8f49a29084662b2bab48ecc1fe",
+      "bytes": 22514,
+      "path": "3e5299e95990dabd7dd13c57545a3dde9b2a9c8f49a29084662b2bab48ecc1fe.body",
+      "attempt": 1,
+      "truncated": false,
+      "error_kind": null,
+      "file": "3e5299e95990dabd7dd13c57545a3dde9b2a9c8f49a29084662b2bab48ecc1fe.body"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.5281/zenodo.21230429",
+      "http_status": 404,
+      "retrieved_at": "2026-09-17T17:26:33.898713+00:00",
+      "sha256": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92",
+      "bytes": 19,
+      "path": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92.body",
+      "attempt": 1,
+      "truncated": false,
+      "error_kind": null,
+      "file": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92.body"
+    },
+    {
+      "url": "https://api.datacite.org/dois/10.5281/zenodo.21230429",
+      "http_status": 200,
+      "retrieved_at": "2026-09-17T17:26:34.448103+00:00",
+      "sha256": "5451b1fd0d7f92a54538a796043a53c5961e8bc2eafca244dfb78fc372c7a0e3",
+      "bytes": 12251,
+      "path": "5451b1fd0d7f92a54538a796043a53c5961e8bc2eafca244dfb78fc372c7a0e3.body",
+      "attempt": 1,
+      "truncated": false,
+      "error_kind": null,
+      "file": "5451b1fd0d7f92a54538a796043a53c5961e8bc2eafca244dfb78fc372c7a0e3.body"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.5281/zenodo.21230430",
+      "http_status": 404,
+      "retrieved_at": "2026-09-17T17:26:34.595795+00:00",
+      "sha256": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92",
+      "bytes": 19,
+      "path": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92.body",
+      "attempt": 1,
+      "truncated": false,
+      "error_kind": null,
+      "file": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92.body"
+    },
+    {
+      "url": "https://api.datacite.org/dois/10.5281/zenodo.21230430",
+      "http_status": 200,
+      "retrieved_at": "2026-09-17T17:26:35.209477+00:00",
+      "sha256": "f64eda439bb712006cc06e49d142eb01a04faa7972dc758542e14ba245b7868e",
+      "bytes": 12190,
+      "path": "f64eda439bb712006cc06e49d142eb01a04faa7972dc758542e14ba245b7868e.body",
+      "attempt": 1,
+      "truncated": false,
+      "error_kind": null,
+      "file": "f64eda439bb712006cc06e49d142eb01a04faa7972dc758542e14ba245b7868e.body"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.5281/zenodo.21230434",
+      "http_status": 404,
+      "retrieved_at": "2026-09-17T17:26:35.358409+00:00",
+      "sha256": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92",
+      "bytes": 19,
+      "path": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92.body",
+      "attempt": 1,
+      "truncated": false,
+      "error_kind": null,
+      "file": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92.body"
+    },
+    {
+      "url": "https://api.datacite.org/dois/10.5281/zenodo.21230434",
+      "http_status": 200,
+      "retrieved_at": "2026-09-17T17:26:35.985077+00:00",
+      "sha256": "add0cedee675ad00f1fd8a5135912788f3294fb57a61beebffcf4cec7969a323",
+      "bytes": 12242,
+      "path": "add0cedee675ad00f1fd8a5135912788f3294fb57a61beebffcf4cec7969a323.body",
+      "attempt": 1,
+      "truncated": false,
+      "error_kind": null,
+      "file": "add0cedee675ad00f1fd8a5135912788f3294fb57a61beebffcf4cec7969a323.body"
+    }
+  ]
+}

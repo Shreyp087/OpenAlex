@@ -1,109 +1,117 @@
-# The Repair Desk
+# SourceCheck
 
-**My research is in this library. I made something small to help keep its records trustworthy.**
+**One OpenAlex ID. Conflicting sources. An evidence trail you can inspect.**
 
-An independent OpenAlex application prototype for Shrey Patel: follow a synthetic support case from preserved source evidence through a local pipeline replay, an explicit decision, and a regression test.
+SourceCheck is a working, read-only audit tool built for Shrey Patel's OpenAlex application. It checks whether a work's DOI-bearing sources agree on bibliographic identity, exposes disagreements, and exports a review packet with captured HTTP evidence.
 
-The proposal is simple: **every resolved ticket should leave behind a regression test.** OpenAlex already has agent-assisted curation. This is a small engineering replay harness that explores the handoff from a report to a durable check, not a replacement for that workflow.
+[Try the live tool](https://openalex-repair-desk.vercel.app/) · [Read the evidence report](docs/SourceCheck-Evidence-Report.pdf) · [Full documentation](docs/REAL-PROBLEM.md) · [Source repository](https://github.com/Shreyp087/OpenAlex)
 
-## Try it in two minutes
+## The real problem
 
-For a zero-setup walkthrough, open `web/index.html` in a browser. It is one self-contained file with no CDN, network font request, API key, or external script dependency. The typefaces are embedded in the file. It displays recorded, verified Python outputs and clearly labels that mode. The buttons let a reviewer inspect source/transform/decision evidence and export case bundles, executable regression tests, and illustrative replies.
+On September 17, 2026, [OpenAlex W4385245566](https://api.openalex.org/works/W4385245566) returned the primary DOI `10.4230/lipics.itp.2023.19` with the title **Exploiting Generative AI to Scale up Intelligent Tutoring Systems**. For that DOI, [DataCite](https://api.datacite.org/dois/10.4230/lipics.itp.2023.19) and [the publisher](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2023.19) instead identify **MizAR 60 for Mizar 50**.
 
-For live execution, use the local server below. The same interface detects the Python engine and runs each scenario through its API.
+The record's nine author names and nine ORCIDs match the MizAR paper. Its five DOI locations describe three distinct title/author families, including legitimate Zenodo versions within one family. The observed OpenAlex title matches a different attached DOI's publication. A title-only overwrite would leave the source conflict unresolved.
 
-Requires **Python 3.9+**. The application uses only the Python standard library; no package installation, API key, or network access is needed for the bundled demonstration.
+This is preserved public data, not an injected fault. SourceCheck solves the detection and evidence-assembly step; it does **not** claim to have repaired OpenAlex, established the internal cause, or safely split the upstream work.
 
-From this directory:
+A follow-up check of the first 30 numbered DOI suffixes from ITP 2023 found **25 normalized-title agreements and five disagreements**. This was a targeted cohort chosen after discovery, not a random sample or an estimate of OpenAlex's error rate. Details, original responses, and limits are in [the technical documentation](docs/REAL-PROBLEM.md).
+
+## Use it
+
+Open [the site](https://openalex-repair-desk.vercel.app/) to inspect the captured case, enter an OpenAlex work ID or DOI, and explicitly run a live check. The browser reads the public OpenAlex, Crossref, and DataCite APIs directly. Report and evidence downloads are generated locally in the browser.
+
+The Python CLI requires **Python 3.9+** and only the standard library:
 
 ```sh
-python3 -m repairdesk serve --port 8765
+python3 -m sourcecheck audit W4385245566 \
+  --output /tmp/sourcecheck-report.json \
+  --evidence-dir /tmp/sourcecheck-evidence
 ```
 
-Open [localhost:8765](http://127.0.0.1:8765). The service binds to loopback. Stop it with `Ctrl-C`.
+A raw DOI such as `10.4230/lipics.itp.2023.19` can replace the work ID. Supported identifier URLs are validated rather than fetched as arbitrary addresses. The CLI writes a JSON report and original response receipts, not changes to OpenAlex.
 
-Then try the executable backend directly:
+No paid service, API account, model, database, or backend hosting is required. The site is statically hosted on Vercel's free Hobby plan. A live audit still depends on the public APIs being reachable and within their free access limits; failed or incomplete checks are surfaced.
+
+## Decisions and boundaries
+
+| Outcome | Meaning |
+| --- | --- |
+| `aligned` | The primary title equals a registry main title, with no title conflict among the checked sources. This does not certify authorship or the entire work. |
+| `review` | The sources contain a disagreement requiring investigation. The evidence identifies what differed. |
+| `inconclusive` | There is insufficient usable evidence for a complete comparison. |
+
+An audit checks at most six selected, canonical, or location DOI records. It queries Crossref first and uses DataCite after a Crossref 404. Registry failures and skipped sources remain visible. Titles and creator context are compared; alternate titles and typed relations are preserved. `Cites` relationships never establish identity. Different titles are review signals, not an instruction to merge or split records automatically.
+
+DataCite and publisher metadata can share the same upstream feed. Their agreement is corroboration, not an independent two-vote truth score. Public records can change after capture; a subsequent correction should be reported as a new observation.
+
+## Reproduce the evidence and tests
+
+These commands run locally from the repository root:
 
 ```sh
-python3 -m repairdesk replay --scenario affiliation-drop --output /tmp/repair-desk-replay.json
-python3 -m repairdesk evaluate --output /tmp/repair-desk-evaluation.json
+# Recompute the archived case and cohort; network disabled.
+python3 scripts/verify_evidence.py
+
+# Independently verify eight case receipts and source-identity facts.
+python3 docs/verify_collision_evidence.py
+
+# Python tests, including evidence tampering and negative controls.
 python3 -m unittest discover -s tests -v
-```
 
-To retain replay state in SQLite:
-
-```sh
-python3 -m repairdesk replay --scenario doi-replay --db /tmp/repair-desk.sqlite
-```
-
-To rebuild the precomputed casebook data from the same Python engine:
-
-```sh
-python3 -m repairdesk build --output data/demo.json
+# Build the static site, then verify the browser implementation.
 python3 scripts/build_web.py
+node scripts/verify_sourcecheck_web.mjs
 ```
 
-The second command embeds the verified results, CSS, and JavaScript into `web/index.html`. Commit the rebuilt HTML when changing the casebook or interface. No Node build is required. Vercel serves the checked-in `web/` directory using `vercel.json`. The hosted walkthrough displays recorded Python outputs; the Python API runs only through the local server.
+The [GitHub Actions workflow](https://github.com/Shreyp087/OpenAlex/actions/workflows/verify.yml) runs the same checks on pushes and pull requests using a standard runner in this public repository. It requests read-only repository access, uploads no artifacts, and uses no cache or paid service.
 
-To use an exported regression, save the downloaded `test_*.py` in `tests/` and run the same unittest command above.
+Node is needed only for the optional browser-code verification. The full Python suite also includes legacy localhost HTTP tests; those need permission to bind a loopback socket in restricted environments. [The validation record](docs/validation.md) distinguishes automated checks from actual browser inspection.
 
-## Publish on Vercel
+The cohort counts are comparisons against DOI-registration metadata, not adjudicated error labels or detector precision/recall. Unit tests exercise deliberately constructed boundary conditions; those fixtures are not presented as real OpenAlex defects.
 
-The source repository is [Shreyp087/OpenAlex](https://github.com/Shreyp087/OpenAlex).
-
-1. Open [Vercel's new-project page](https://vercel.com/new) and import `Shreyp087/OpenAlex` from GitHub.
-2. Keep the Root Directory at the repository root. The checked-in `vercel.json` selects **Other** as the framework, skips installation and building, and serves **web** as the Output Directory.
-3. Select **Deploy**. Once connected, pushes to the production branch deploy automatically; other branches receive preview deployments.
-
-No environment variables or API keys are required. The published demo uses the same recorded evidence as the standalone HTML. Download buttons generate files in the browser. Only `web/` is served as static content; the Python engine, tests, source snapshots, and documentation remain available in the GitHub repository.
-
-To deploy from an authenticated Vercel CLI instead, run `vercel --prod` from the repository root. See Vercel's [Git deployment guide](https://vercel.com/docs/git) and [static configuration reference](https://vercel.com/docs/project-configuration/vercel-json).
-
-## Start with four decisions
-
-| Scenario ID | What to inspect | Useful outcome |
-| --- | --- | --- |
-| `affiliation-drop` | The preserved affiliation versus an injected transform loss | Diagnose the local regression and reproduce its repair. |
-| `orcid-conflict` | Fictional conflicting identity evidence | Require review rather than merge people by name. |
-| `sparse-metadata` | A legitimate metadata gap | Preserve uncertainty and leave the record unchanged. |
-| `doi-replay` | Repeated deliveries with different DOI formatting | Retain stable work identity without a duplicate materialization. |
-
-**All tickets and faults are synthetic.** The seed is a real public snapshot of [W4410234973](https://openalex.org/W4410234973), the paper *IoT-enabled smart waste management: applications, adoption barriers, and mitigation strategies in the Indian scenario*, co-authored by Shrey Patel. The snapshot does not demonstrate a live OpenAlex bug. The artifact never submits a correction to OpenAlex.
-
-## What is inside
+## Project map
 
 | Path | Purpose |
 | --- | --- |
-| `repairdesk/` | Standard-library Python replay engine, CLI, and local API. |
-| `schema.sql` | SQLite evidence and materialization tables. |
-| `data/source/` | Public source snapshot and its provenance. |
-| `data/demo.json` | Precomputed casebook output from the engine. |
-| `web/` | Interactive demonstration. |
-| `tests/` | Executable checks for the local engine and its failure boundaries. |
-| [docs/Repair-Desk-Brief.pdf](docs/Repair-Desk-Brief.pdf) | One-page application companion with clickable source links. |
-| [docs/application-note.md](docs/application-note.md) | Submission note, 90-second demo script, and draft application answers. |
-| [docs/engineering-notes.md](docs/engineering-notes.md) | Architecture, evaluation limits, and a proposed route to a larger pipeline. |
+| `sourcecheck/` | Standard-library Python audit implementation and CLI. |
+| `data/evidence/` | Captured public responses, manifests, and cohort comparisons. |
+| `web/sourcecheck.template.html` | Main site structure. |
+| `web/sourcecheck-core.js` | Browser audit logic. |
+| `web/sourcecheck-ui.js` | Evidence viewer and live-check interface. |
+| `web/sourcecheck.css` | Black/chalk/vermilion visual system. |
+| `scripts/build_web.py` | Build the checked-in static site. |
+| `scripts/verify_evidence.py` | Verify hashes and recompute captured evidence without network access. |
+| `tests/test_sourcecheck.py` | Audit behavior, transport, and conservative decision checks. |
+| `tests/test_evidence.py` | Tamper detection and offline evidence verification. |
+| [docs/REAL-PROBLEM.md](docs/REAL-PROBLEM.md) | Problem, solution, proof, reproduction, and limits. |
+| [docs/SourceCheck-Evidence-Report.pdf](docs/SourceCheck-Evidence-Report.pdf) | Five-page application companion with clickable evidence sources. |
+| [docs/application-note.md](docs/application-note.md) | Submission note and draft application answers. |
+| [docs/evidence-research.md](docs/evidence-research.md) | Discovery and sampling log, including a reported issue that no longer reproduced. |
 
-## Why this shape
+## Hosting and authoring
 
-The bronze layer retains delivered payload bytes and a content hash. Silver keeps work identity separate from formatting differences in incoming metadata. The case output makes findings, evidence, and decisions inspectable. A negative control matters as much as a repaired failure: an empty field is not by itself evidence that a record is wrong.
+The repository is connected to [the Vercel site](https://openalex-repair-desk.vercel.app/). `vercel.json` serves the checked-in `web/` directory as static files, with no install or build step. Rebuild and commit the generated HTML when changing the site. No environment variables or API keys are needed.
 
-This is a deliberately small local implementation. The bronze/silver/gold terminology describes responsibilities; it does not imply a Databricks deployment. No learned model, production-scale benchmark, or corpus-wide accuracy claim is included. Local counts describe local fixtures. See the engineering notes before interpreting results.
+To preview locally:
 
-## Sources and authorship
+```sh
+python3 -m http.server 8765 --directory web --bind 127.0.0.1
+```
 
-- [Shrey Patel's portfolio](https://shrey-portforlio.netlify.app/)
-- [Seed work in OpenAlex](https://openalex.org/W4410234973) and [published paper](https://doi.org/10.1007/s10163-025-02248-x)
-- [OpenAlex's existing correction workflow](https://help.openalex.org/access/fixing-errors/)
-- [AI curation guide](https://help.openalex.org/access/fixing-errors/ai-curation-guide/)
-- [Raw affiliation data and provenance](https://help.openalex.org/data/raw-affiliation-strings/)
+Open [localhost:8765](http://127.0.0.1:8765/). This serves files; the live check still calls the public APIs from the browser.
 
-Created with AI assistance for Shrey's application. The candidate should run it, review the implementation, and own the choices before submitting. Application answers are drafts, not assertions of unverified experience. The project makes no claim of affiliation with or endorsement by OpenAlex.
+The optional PDF authoring command requires the open-source `reportlab` package:
 
-Original project code and documentation are available under the [MIT license](LICENSE). OpenAlex source metadata is CC0.
+```sh
+python3 docs/build_sourcecheck_report.py
+```
 
-The optional PDF builder, `docs/build_brief.py`, requires `reportlab`; this is an authoring dependency only. The application itself has no third-party dependencies.
+ReportLab is not an application runtime dependency. Barlow Condensed, IBM Plex Sans, and IBM Plex Mono are included with their SIL Open Font Licenses in `assets/fonts/`. The interface uses a ruled research register layout.
 
-## Visual system
+## Earlier prototype and attribution
 
-The interface is arranged as a repair register: Barlow Condensed display type, IBM Plex Sans for reading, IBM Plex Mono for record fields, and a black/chalk/vermilion palette. Original records, injected faults, and review decisions remain explicitly labelled. Font files and SIL Open Font Licenses are included in `assets/fonts/`; the HTML builder embeds them for offline use.
+The earlier four-case synthetic replay remains at [web/archive/prototype.html](web/archive/prototype.html). Its Python code is in `repairdesk/`, with `scripts/build_legacy.py` preserving the prior build. It is a clearly labeled historical prototype and is not evidence for SourceCheck's real findings.
+
+Built with AI assistance for Shrey Patel's application. Shrey's [portfolio](https://shrey-portforlio.netlify.app/) and [co-authored paper](https://doi.org/10.1007/s10163-025-02248-x) provide personal context; the real conflict investigated here concerns a different paper. This project is independent and does not imply OpenAlex endorsement. Application answers are drafts to review and own before submission.
+
+Original code and documentation use the [MIT license](LICENSE). Source metadata and publisher pages retain their applicable terms and attribution, with retrieval URLs preserved in the manifests.

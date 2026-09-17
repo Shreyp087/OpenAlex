@@ -53,7 +53,7 @@ try {
     action('reply');
     assert.match(await downloads.at(-1).blob.text(), /Fictional ticket; no message has been sent/);
   }
-  const html = fs.readFileSync(path.join(root,'web/index.html'),'utf8');
+  const html = fs.readFileSync(path.join(root,'web/archive/prototype.html'),'utf8');
   const inertJson = html.match(/<script id="demo-data" type="application\/json">([\s\S]*?)<\/script>/)[1];
   assert.deepEqual(JSON.parse(inertJson), data);
   assert.equal((html.match(/<script/g)||[]).length, 2);

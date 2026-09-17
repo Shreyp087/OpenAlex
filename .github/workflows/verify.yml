@@ -1,0 +1,35 @@
+name: Verify SourceCheck evidence
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  evidence-and-code:
+    # Standard runner in this public repository: free. No caches or artifacts.
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Verify archived evidence without API requests
+        run: |
+          python3 scripts/verify_evidence.py
+          python3 docs/verify_collision_evidence.py
+      - name: Test Python behavior and local HTTP boundary
+        run: python3 -m unittest discover -s tests -v
+      - name: Build and verify browser parity and exports
+        run: |
+          python3 scripts/build_web.py
+          node scripts/verify_sourcecheck_web.mjs
+          node scripts/verify_web.mjs
