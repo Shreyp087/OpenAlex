@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#E84427">
+  <meta name="description" content="The Repair Desk. An independent OpenAlex experiment by Shrey Patel: one research record, four failure cases, and a regression left behind.">
+  <title>The Repair Desk — Shrey Patel / OpenAlex</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23E84427'/%3E%3Cpath d='M14 12h22q14 0 14 13 0 9-8 12l11 15H39L25 32h10q4 0 4-6t-4-5H25v31H14z' fill='%23171716'/%3E%3C/svg%3E">
+  <style>/*__FONTS__*/
+/*__STYLE__*/</style>
+</head>
+<body>
+  <a class="skip" href="#workbench">Skip to the interactive workbench</a>
+  <header class="masthead wrap">
+    <a href="#" class="brand" aria-label="The Repair Desk home"><span class="brand-mark" aria-hidden="true">R/</span><span>THE REPAIR DESK<small>AN OPENALEX APPLICATION EXPERIMENT</small></span></a>
+    <nav aria-label="Main navigation"><a href="#workbench">01—Cases</a><a href="#build-notes">02—Method</a><a href="data:application/pdf;base64,/*__BRIEF__*/" download="Repair-Desk-Brief.pdf">Brief ↓</a><a href="https://github.com/Shreyp087/OpenAlex" target="_blank" rel="noopener">Source ↗</a></nav>
+  </header>
+  <main>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow hero-kicker"><span class="registration" aria-hidden="true">+</span> SHREY PATEL / SOFTWARE ENGINEER APPLICATION</p>
+        <h1 id="hero-title">REPAIR<br>DESK<span>.</span></h1>
+        <div class="hero-caption"><span class="caption-index">[01]</span><div><h2>My research is in your library.</h2><p>I built a small tool to follow a broken record from a support ticket to a test that catches it next time.</p></div></div>
+        <a class="button primary" href="#workbench">Open the case files <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="research-scene">
+        <div class="exhibit-caption"><span>EXHIBIT A</span><span>ONE REAL RECORD / 2025</span></div>
+        <article class="library-card">
+          <div class="catalog-id"><span class="catalog-prefix">W</span><span>4410234973</span></div>
+          <p class="record-type">JOURNAL ARTICLE / PINNED SOURCE SNAPSHOT</p>
+          <h2>IoT-enabled smart waste management</h2>
+          <p class="record-subtitle">Applications, adoption barriers, and mitigation strategies in the Indian scenario</p>
+          <div class="byline">Smita Agrawal · Parita Oza · <mark>Shrey Patel</mark><br>Harsh Oza · Yash Pal Sharma · Tirth Patel</div>
+          <div class="record-evidence">
+            <div class="ledger-row"><span>01 / SOURCE</span><p>Nirma University<code>I165831266</code></p><b aria-hidden="true">↙</b></div>
+            <div class="ledger-row fault"><span>02 / INJECTED LOSS</span><p>[ ]<code>authorships[2].institutions</code></p><b aria-hidden="true">×</b></div>
+          </div>
+          <p class="record-boundary">The fault exists only in a local copy.<br>The public record is intact.</p>
+          <a href="https://openalex.org/W4410234973" target="_blank" rel="noopener" class="record-id">Inspect the actual OpenAlex record <span>↗</span></a>
+        </article>
+        <div class="exhibit-foot"><span>NO. 001</span><p>Restore only what<br>the source can prove.</p></div>
+      </div>
+    </section>
+    <div class="principle-bar"><div class="wrap"><span class="eyebrow">THE WORKING RULE</span><p>A resolved ticket leaves behind <strong>a regression test.</strong></p><span class="rule-arrow" aria-hidden="true">↴</span></div></div>
+    <section class="work-section wrap" id="workbench" aria-labelledby="workbench-title">
+      <div class="section-heading"><div><p class="eyebrow">REGISTER 01 / FOUR CONSTRUCTED CASES</p><h2 id="workbench-title">THE CASE FILES<span> / 04</span></h2></div><div class="mode-pill" id="mode-pill"><span></span> Bundled evidence · offline ready</div></div>
+      <p class="section-intro">The interesting part is deciding what to change. And what to leave alone.</p>
+      <div class="desk">
+        <aside class="case-sidebar" aria-label="Choose a support case"><div class="sidebar-label">SELECT A CASE <span>↓</span></div><div id="case-list"></div><div class="sidebar-bottom"><span class="mini-icon" aria-hidden="true">[!]</span><p>Real source metadata.<br>Constructed tickets.<br>Faults injected locally.</p></div></aside>
+        <div class="case-content" id="case-content"></div>
+      </div>
+      <div class="desk-footnote"><span>[NOTE]</span><p>Independent application project. Tickets and faults are constructed; no live OpenAlex defect is alleged. The demo never writes to OpenAlex.</p></div>
+    </section>
+    <section class="evaluation-section" id="evaluation" aria-labelledby="evaluation-title"><div class="wrap">
+      <div class="section-heading"><div><p class="eyebrow">REGISTER 02 / COUNTEREXAMPLES INCLUDED</p><h2 id="evaluation-title">PROVE IT WRONG.</h2></div><button class="button light" id="evaluation-button">Inspect the test results <span aria-hidden="true">↗</span></button></div>
+      <div class="evaluation-grid">
+        <div class="test-score"><div><strong id="test-passed">—</strong><span>/ <span id="test-total">—</span></span></div><p>DETERMINISTIC CHECKS PASSED</p><span class="micro-label">Local fixtures.<br>Not a production accuracy claim.</span></div>
+        <div class="assertion-register"><div class="test-principle"><span>01</span><h3>Absence ≠ corruption.</h3><p>A missing ORCID or institution match is not sufficient evidence for a correction.</p></div><div class="test-principle"><span>02</span><h3>Identity requires evidence.</h3><p>A conflicting identifier goes to review. No automatic author reassignment.</p></div><div class="test-principle"><span>03</span><h3>A retry is not a new work.</h3><p>Same work ID, same normalized content: one materialization, preserved deliveries.</p></div></div>
+      </div>
+      <div id="evaluation-details" class="evaluation-details" hidden></div>
+    </div></section>
+    <section class="notes-section wrap" id="build-notes" aria-labelledby="notes-title">
+      <div class="section-heading"><div><p class="eyebrow">REGISTER 03 / DESIGN DECISIONS</p><h2 id="notes-title">UNDER THE DESK.</h2></div><span class="tech-label">PYTHON / SQLITE / JAVASCRIPT</span></div>
+      <div class="method-layout"><p class="method-intro">Keep the source.<br>Show the change.<br>Explain the decision.<br><small>A local replay harness with three inspectable stages.</small></p>
+      <div class="architecture" aria-label="Local pipeline architecture">
+        <div><span class="layer-dot bronze">01</span><p class="eyebrow">BRONZE / ORIGINAL EVIDENCE</p><h3>Keep the receipt.</h3><p>Original payload bytes and their SHA-256 digest. Raw affiliation strings stay untouched.</p></div>
+        <div><span class="layer-dot silver">02</span><p class="eyebrow">SILVER / DERIVED RECORD</p><h3>Normalize the representation.</h3><p>Normalize DOI transport variants. Materialize by work ID. Preserve source lineage.</p></div>
+        <div><span class="layer-dot gold">03</span><p class="eyebrow">GOLD / REVIEW</p><h3>Make a bounded decision.</h3><p>Deterministic checks produce evidence, a local outcome, and a regression result.</p></div>
+      </div></div>
+      <div class="decision-grid">
+        <article><span class="decision-number">A.</span><h3>Why this problem?</h3><p>The role connects ingestion, data quality, APIs, and support. This follows one issue across that loop, with a runnable Python engine behind it.</p></article>
+        <article><span class="decision-number">B.</span><h3>Why no model call?</h3><p>These fixtures test invariants. A model could propose a mapping later; it would still need source evidence, an abstention path, and reviewed evaluation cases.</p></article>
+        <article><span class="decision-number">C.</span><h3>What changes at scale?</h3><p>Partitioned storage, incremental checks, versioned rules, and shadow evaluation. SQLite establishes the local contract, not distributed throughput.</p></article>
+      </div>
+      <details class="source-details"><summary>Source references, provenance & limits <span aria-hidden="true">+</span></summary><div id="source-notes"></div></details>
+    </section>
+    <section class="personal-section wrap"><div class="personal-letter"><p class="eyebrow">FILED BY</p><h2>SHREY<br>PATEL<span>↗</span></h2><p>Evidence and uncertainty run through my work on prompt safety, triage, and incident research. This experiment brings them to a library I’m already part of.</p><a href="https://shrey-portforlio.netlify.app/" target="_blank" rel="noopener">Open my portfolio ↗</a></div><div class="personal-links"><a href="https://shrey-portforlio.netlify.app/work/prompt-firewall/" target="_blank" rel="noopener"><small>01 / PROMPT FIREWALL</small><span>Bound what an agent can do.</span><b aria-hidden="true">↗</b></a><a href="https://shrey-portforlio.netlify.app/work/aegis-desk/" target="_blank" rel="noopener"><small>02 / AEGIS DESK</small><span>Make uncertainty visible.</span><b aria-hidden="true">↗</b></a><a href="https://shrey-portforlio.netlify.app/work/ai-incident-observatory/" target="_blank" rel="noopener"><small>03 / AI INCIDENT OBSERVATORY · TEAM PROJECT</small><span>Keep the evidence in view.</span><b aria-hidden="true">↗</b></a><a class="source-repo-link" href="https://github.com/Shreyp087/OpenAlex" target="_blank" rel="noopener"><small>04 / THIS EXPERIMENT</small><span>Read every line of the source.</span><b aria-hidden="true">↗</b></a></div></section>
+  </main>
+  <footer class="wrap"><div><strong>END OF REGISTER.</strong><span>Shrey Patel / Independent application project / 2026</span></div><p>Built with AI assistance. Open to inspection.<br>Code: MIT · OpenAlex metadata: CC0 · Fonts: SIL OFL</p><a href="#" aria-label="Back to top">↑</a></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script id="demo-data" type="application/json">/*__DATA__*/</script>
+  <script>/*__APP__*/</script>
+</body>
+</html>

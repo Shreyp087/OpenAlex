@@ -1,0 +1,10 @@
+{
+  "label": "OpenAlex public work snapshot: applicant-coauthored paper",
+  "url": "https://api.openalex.org/works/https://doi.org/10.1007/s10163-025-02248-x",
+  "work_id": "https://openalex.org/W4410234973",
+  "retrieved_at": "2026-09-17T15:38:37+00:00",
+  "sha256": "05ff657d68d0f4d13e767313e017f4e9a7d7b9936d5ae7a4936d5044bea22a01",
+  "license": "CC0 metadata",
+  "license_url": "https://docs.openalex.org/additional-help/faq",
+  "usage": "Unmodified public metadata snapshot. Faults and replay deliveries are deliberately injected or synthetic; this is not evidence of an OpenAlex production incident. Paper full text is not included."
+}

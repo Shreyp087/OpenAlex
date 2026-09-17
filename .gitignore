@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.sqlite
+*.sqlite3
+.DS_Store
+docs/rendered/
+artifacts/
+.vercel/
