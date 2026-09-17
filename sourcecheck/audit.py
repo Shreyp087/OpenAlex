@@ -103,11 +103,51 @@ class _TextExtractor(HTMLParser):
         self.handle_starttag(tag, [])
 
 
+def _complete_markup_prefix(text):
+    """Drop an unfinished markup-like tail before HTMLParser sees it.
+
+    HTMLParser.close() changed its treatment of unfinished tags between Python
+    releases. Define that boundary here: '<' followed immediately by a letter,
+    slash+letter, '!' or '?' starts markup, and a tag needs an unquoted '>'.
+    A literal comparison such as 'x < y' or 'x < 3' remains text.
+    """
+    index = 0
+    while True:
+        start = text.find("<", index)
+        if start < 0:
+            return text
+        if text.startswith("<!--", start):
+            end = text.find("-->", start + 4)
+            if end < 0:
+                return text[:start]
+            index = end + 3
+            continue
+        tag = re.match(r"</?[A-Za-z][\w:.-]*(?=[\s/>]|$)", text[start:])
+        if not tag and not text.startswith(("<!", "<?"), start):
+            index = start + 1
+            continue
+        quote_char = None
+        end = start + 1
+        while end < len(text):
+            char = text[end]
+            if quote_char:
+                if char == quote_char:
+                    quote_char = None
+            elif char in {"\"", "'"}:
+                quote_char = char
+            elif char == ">":
+                break
+            end += 1
+        if end == len(text):
+            return text[:start]
+        index = end + 1
+
+
 def normalize_title(value):
     if not isinstance(value, str):
         return ""
     parser = _TextExtractor()
-    parser.feed(html.unescape(value))
+    parser.feed(_complete_markup_prefix(html.unescape(value)))
     parser.close()
     text = unicodedata.normalize("NFKC", html.unescape("".join(parser.parts))).casefold()
     text = "".join(" " if unicodedata.category(c)[0] in {"P", "S"} else c for c in text)

@@ -74,7 +74,7 @@ normalization={'casefold':{chr(i):chr(i).casefold() for i in range(0x110000) if 
 print(json.dumps({'receipt_count':receipt_count,'records':records,'edges':[[x,normalize_title(x)] for x in edges],
  'inputs':input_results,'normalization':normalization,'live_report':report},ensure_ascii=False))
 `;
-const python=spawnSync('python3',['-c',exporter],{cwd:root,encoding:'utf8',maxBuffer:32*1024*1024});
+const python=spawnSync(process.env.SOURCECHECK_PYTHON||'python3',['-c',exporter],{cwd:root,encoding:'utf8',maxBuffer:32*1024*1024});
 assert.equal(python.status,0,python.stderr);
 const fixtures=JSON.parse(python.stdout);
 const normalizationContext={};
@@ -98,6 +98,7 @@ for(const record of fixtures.records){
   for(const [title,expected] of record.normalizations)same(core.normalizeTitle(title),expected,'Title parity: '+record.file);
 }
 for(const [title,expected] of fixtures.edges)same(core.normalizeTitle(title),expected,'Normalization edge: '+JSON.stringify(title));
+for(const [title,expected] of [['<i unfinished',''],['<i',''],['Title <span data-x="unfinished','title'],['Title <span data-x="a>b" unfinished','title'],['Title &lt;span unfinished','title'],['x < y and y > 0','x y and y 0'],['x < 3','x 3'],['x <span title="a>b">y</span>','x y']])same(core.normalizeTitle(title),expected,'Version-independent incomplete markup rule');
 for(const [input,expected] of fixtures.inputs){
   if(expected===null){assert.throws(()=>core.parseInput(input),undefined,'Reject '+input);assertions++;}
   else same(core.parseInput(input),expected,'Input parity: '+input);

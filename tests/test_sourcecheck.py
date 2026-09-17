@@ -90,6 +90,17 @@ class SourcecheckTests(unittest.TestCase):
         self.assertEqual(normalize_title("ÉTUDE &amp; café"), "étude café")
         self.assertNotEqual(normalize_title("café"), normalize_title("cafe"))
 
+    def test_unfinished_markup_has_a_version_independent_boundary(self):
+        cases = [("<i unfinished", ""), ("<i", ""),
+                 ('Title <span data-x="unfinished', "title"),
+                 ('Title <span data-x="a>b" unfinished', "title"),
+                 ("Title &lt;span unfinished", "title"),
+                 ("x < y and y > 0", "x y and y 0"), ("x < 3", "x 3"),
+                 ('x <span title="a>b">y</span>', "x y")]
+        for title, expected in cases:
+            with self.subTest(title=title):
+                self.assertEqual(normalize_title(title), expected)
+
     def test_accepted_and_malicious_inputs(self):
         self.assertEqual(parse_input("https://api.openalex.org/works/W123")["normalized"], "W123")
         self.assertEqual(parse_input("https://doi.org/10.4230%2FLIPICS.ITP.2023.19")["input_doi"], DOI)

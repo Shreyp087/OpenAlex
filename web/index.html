@@ -355,10 +355,12 @@ const SourceCheck = (() => {
       const at=s.indexOf('<',i);if(at<0){out.push(unescapeHTML(s.slice(i)));break;}
       out.push(unescapeHTML(s.slice(i,at)));
       if(s.startsWith('<!--',at)){const end=s.indexOf('-->',at+4);if(end<0)break;i=end+3;continue;}
-      const tag=/^<\/?([a-zA-Z][\w:.-]*)(?=[\s/>])/.exec(s.slice(at));
+      const tag=/^<\/?([a-zA-Z][\w:.-]*)(?=[\s/>]|$)/.exec(s.slice(at));
       if(!tag&&!s.startsWith('<!',at)&&!s.startsWith('<?',at)){out.push('<');i=at+1;continue;}
       let end=at+1,quote=null;for(;end<s.length;end++){const c=s[end];if(quote){if(c===quote)quote=null;}else if(c==='"'||c==="'")quote=c;else if(c==='>')break;}
-      if(end===s.length){out.push(unescapeHTML(s.slice(at)));break;}
+      // Explicit policy shared with Python: discard an unfinished markup-like
+      // tail; preserve literal '<' comparisons which did not match a tag.
+      if(end===s.length)break;
       if(tag){const name=tag[1].toLowerCase();if(blocks.has(name))out.push(' ');
         if((name==='script'||name==='style')&&s[at+1]!=='/'&&!s.slice(at,end).endsWith('/')){const close=new RegExp('</'+name+'\\s*>','ig');close.lastIndex=end+1;const found=close.exec(s);if(!found)break;out.push(s.slice(end+1,found.index));i=close.lastIndex;continue;}}
       i=end+1;

@@ -1,3 +1,5 @@
+> Historical synthetic prototype. For the current real-source audit and its evidence, see [SourceCheck documentation](REAL-PROBLEM.md).
+
 # Engineering notes
 
 Repair Desk asks a narrow question: can one data-quality report become an evidence-backed, repeatable engineering case?

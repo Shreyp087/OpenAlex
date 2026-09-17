@@ -4,21 +4,23 @@ Verified on September 17, 2026. The current artifact audits real public metadata
 
 ## Completed checks
 
-- The full Python unittest suite passed: **42 tests**, covering SourceCheck, archived-evidence checks, and the retained legacy engine. Tests include malformed inputs, identifier allowlists, bounded retries, redirects, response-size caps, registry fallbacks, missing evidence, alternate titles, creator-context limits, six-DOI coverage, evidence tampering, and a shared citation that must not establish identity.
+- The full Python unittest suite passed: **43 tests**, covering SourceCheck, archived-evidence checks, and the retained legacy engine. Tests include malformed inputs, identifier allowlists, bounded retries, redirects, response-size caps, registry fallbacks, missing evidence, alternate titles, creator-context limits, six-DOI coverage, evidence tampering, and a shared citation that must not establish identity.
 - `python3 scripts/verify_evidence.py` verified **89 captured HTTP receipts**, recomputed the 30-record cohort as 25 title agreements and five disagreements, and replayed the full real conflict through the Python audit with **zero network requests**. The result was `review`, with five registry DOIs and three distinct title groups. Receipt totals include repeated captures of some sources; they are not counts of unique publications.
 - `python3 docs/verify_collision_evidence.py` independently verified eight case receipts, seven OpenAlex locations, five DOI locations, three distinct registered titles, all nine MizAR author names and ORCIDs, publisher citation metadata, explicit Zenodo version relations, and the shared typed citation. This ran without network access.
 - The five-page evidence PDF was rendered and every page visually reviewed. No clipping or overlap was found. All eight full SHA-256 values were extracted from the PDF and verified; all eight receipt URLs are clickable. There are 13 actionable links in the report.
 - Live Python audit execution was verified against the real public work. Its result is point-in-time evidence; public records can change.
 
-The first full-suite attempt in a restricted shell could not bind a localhost socket for the legacy HTTP integration class. Re-running with loopback access passed all 42 tests. This was an environment restriction, not a failing audit assertion.
+The first full-suite attempt in a restricted shell could not bind a localhost socket for the legacy HTTP integration class. Re-running with loopback access passed all 43 tests. This was an environment restriction, not a failing audit assertion.
+
+A CI run initially exposed a malformed-HTML difference between Python 3.9 and 3.12. An explicit shared rule now discards incomplete markup tails while preserving literal comparisons. SourceCheck tests and browser parity were rerun on both Python 3.9.6 and 3.12.14; captured real-case results remained unchanged.
 
 ## Final browser and deployment checks
 
-- The final browser verifier passes **336 assertions**, validates 89 receipt hashes, matches 77 API-response parses against Python, and checks 28 Unicode/HTML edge cases. It reproduces the full 11-response audit, tests transport failures and response caps, and verifies all three captured cases and six export callbacks. Every exported raw body is checked against its SHA-256. Malicious HTML/Markdown is escaped and generated shell commands quote identifiers safely.
+- The final browser verifier passes **344 assertions**, validates 89 receipt hashes, matches 77 API-response parses against Python, and checks 28 Unicode/HTML edge cases. It reproduces the full 11-response audit, tests transport failures and response caps, and verifies all three captured cases and six export callbacks. Every exported raw body is checked against its SHA-256. Malicious HTML/Markdown is escaped and generated shell commands quote identifiers safely.
 - Actual browser checks on localhost verified the conflict and aligned control against the live APIs: 11 and two response receipts respectively. Both results were explicitly labelled live and showed fresh timestamps. All three captured cases render and retain their original timestamps and scope.
 - Desktop and 390px mobile layouts were visually inspected. At 390px, document width equals viewport width; no horizontal overflow was present. Browser console checks returned no errors or warnings.
 - The downloadable evidence ZIP was extracted into a clean temporary directory and its offline verifier passed, independently of the working repository.
-- Production deployment verification is recorded after publication; no earlier prototype deployment is treated as proof for SourceCheck.
+- The public Vercel site returned HTTP 200 for the page, the evidence PDF, and the ZIP; each response matched its local SHA-256 exactly. A live audit on the deployed site fetched 11 real response receipts and returned `review`, with no browser console errors or warnings. No earlier prototype deployment is treated as proof for SourceCheck.
 
 ## Reproduction
 
